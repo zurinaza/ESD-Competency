@@ -122,6 +122,21 @@ label.fl .hint{font-weight:400;color:#8A9793}
 .pilltog{background:var(--card);border:0;padding:9px 18px;font-size:14px;font-weight:600;color:var(--ink-soft);cursor:pointer;transition:background .14s,color .14s}
 .pilltog:hover{background:#EEF3F0}
 .pilltog.on{background:var(--moss-tint);color:var(--moss)}
+.aicfg{border:1px solid var(--line);border-radius:6px;padding:10px 14px;background:var(--paper)}
+.aicfg summary{cursor:pointer;font-weight:600;font-size:14px;color:var(--moss)}
+.aicfgbody{margin-top:10px}
+.aicfg input,.aicfg select{width:100%;box-sizing:border-box}
+.aiopt{border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin-bottom:14px;background:var(--card)}
+.aiopt-h{font-weight:700;font-size:14px;color:var(--moss);margin-bottom:6px}
+.aiopt-tag{display:inline-block;margin-left:8px;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--amber);background:var(--amber-tint);padding:2px 7px;border-radius:10px;vertical-align:middle}
+.locard{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:16px}
+.locard .lonum{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;color:#fff;font-weight:700;font-family:"IBM Plex Mono",monospace;font-size:16px}
+.locard h4{margin:12px 0 6px;font-size:16px}
+.locard p{font-size:14px;color:var(--ink-soft);margin:0}
+.devgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:8px}
+.dev{border-left:3px solid var(--moss-tint);padding:2px 0 2px 14px}
+.devname{font-weight:600;font-size:15px}
+.devaff{font-size:13px;color:var(--ink-soft);margin-top:3px}
 .tbl tr td:first-child{width:26%}
 
 .callout{background:var(--ink);color:#E4EDE9;padding:18px 20px;border-radius:var(--radius);margin:18px 0}
@@ -241,6 +256,16 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     <h1>Seven capacities, plus one that integrates them.</h1>
     <p class="lede">Start here, before your discipline and before assessment. Open each row for what the competency actually claims, the shift it demands of student work, and the three observable behaviours &#8212; these seed criteria 1&#8211;3 of every rubric later, with a fourth criterion added for what the student does with the analysis.</p>
 
+    <div class="card">
+      <span class="tag">Learning outcomes</span>
+      <h3 style="margin:12px 0 2px">Three objectives to achieve by the end of this workshop</h3>
+      <div class="grid3" style="margin-top:14px">
+        <div class="locard"><span class="lonum" style="background:var(--moss)">1</span><h4>Understand &amp; internalise</h4><p>Deeply comprehend and internalise the core Education for Sustainable Development (ESD) competencies.</p></div>
+        <div class="locard"><span class="lonum" style="background:var(--amber)">2</span><h4>Design course content</h4><p>Structure curriculum and content capable of delivering ESD competencies through active and suitable pedagogy.</p></div>
+        <div class="locard"><span class="lonum" style="background:var(--slate)">3</span><h4>Assess ESD competencies</h4><p>Evaluate and measure student attainment of ESD competencies using an appropriate, defensible rubric.</p></div>
+      </div>
+    </div>
+
     <div class="ledger" id="ledger"></div>
 
     <div class="card noprint" style="margin-top:26px">
@@ -269,6 +294,17 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
     <div class="callout">
       <strong>The line to carry into every later stage.</strong> If a student could score full marks without using the competency, you have not assessed it &#8212; whatever your outline claims.
+    </div>
+
+    <div class="card" style="margin-top:26px">
+      <span class="tag slate">Content developers</span>
+      <h3 style="margin:12px 0 8px">Developed by</h3>
+      <div class="devgrid">
+        <div class="dev"><div class="devname">Prof. Dr Zurina Zainal Abidin</div><div class="devaff">Department of Chemical and Environmental Engineering, Faculty of Engineering, Universiti Putra Malaysia</div></div>
+        <div class="dev"><div class="devname">Assoc. Prof. Dr Suriati Paiman</div><div class="devaff">Department of Physics, Faculty of Science, Universiti Putra Malaysia</div></div>
+        <div class="dev"><div class="devname">Dr Rafidah Hod</div><div class="devaff">Department of Medical Education, Faculty of Medicine and Life Sciences, Universiti Putra Malaysia</div></div>
+        <div class="dev"><div class="devname">Dr Siti Mastura Md Ishak</div><div class="devaff">Department of Industrial Design, Faculty of Design and Architecture, Universiti Putra Malaysia</div></div>
+      </div>
     </div>
     <p class="noprint"><button class="btn moss" data-goto="lens">Next: see them in your field &#8594;</button></p>
   </section>
@@ -536,7 +572,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
   <section id="view-build" class="hidden">
     <div class="eyebrow">Stage 08 &#183; Build your module</div>
     <h1>One course, turned into an ESD module.</h1>
-    <p class="lede">Work the guidebook workflow end to end: pick the SDG, choose one or two competencies, write the CLO, design the activities and output, describe the assignment topic, then let Claude build a complete rubric tied to it. Everything you enter saves on this device, and the Claude-assisted step runs inside Claude.</p>
+    <p class="lede">Work the guidebook workflow end to end: pick the SDG, choose one or two competencies, write the CLO, design the activities and output, describe the assignment topic, then let an AI build a complete rubric tied to it. Everything you enter saves on this device; the AI step uses your chosen provider (Claude by default) and you can set it in step 8.</p>
     <div class="wf-steps" id="wfSteps"></div>
     <div id="buildBody"></div>
   </section>
@@ -1317,10 +1353,24 @@ function renderBuild(){
     // STEP 8 suggest the complete rubric
     h+=`<div class="stepcard${b.comps.every(k=>rubricFilled(k))?' ok':''}">
       <div class="stephead"><span class="stepnum">8</span><h3>Build the rubric</h3></div>
-      <div class="stepsub">From the course name, topic, CLO and competencies, Claude drafts the complete rubric for this content and displays it below. Criteria 1&#8211;3 come from the observable behaviours; criterion 4 is the &#8220;so what&#8221;. Review and edit every cell &#8212; the mark must be one you could defend at an exam board.</div>
+      <div class="stepsub">From the course name, topic, CLO and competencies, an AI drafts the complete rubric for this content. Use it two ways: copy the prompt into any AI you already have, or connect a provider to do it in one click. Criteria 1&#8211;3 come from the observable behaviours; criterion 4 is the &#8220;so what&#8221;. Review and edit every cell &#8212; the mark must be one you could defend at an exam board.</div>
       <div style="margin-left:36px;margin-bottom:14px" class="noprint">
-        <button class="btn action small" id="bSuggestRub">Build the rubric with Claude</button>
-        <div id="aiRubOut" style="margin-top:12px"></div>
+        <div class="aiopt">
+          <div class="aiopt-h">Option A &#183; Use any AI, by copy and paste <span class="aiopt-tag">works with anything, no key</span></div>
+          <p class="hint" style="margin:0 0 10px">Copy the prompt, paste it into any AI you already have &#8212; ChatGPT, Gemini, Claude, Copilot, DeepSeek, a local model &#8212; then paste its reply back here. No account or API key needed.</p>
+          <button class="btn action small" id="bCopyPrompt">Copy the rubric prompt</button>
+          <label class="fl" style="margin-top:12px">Paste the AI's reply here</label>
+          <textarea id="aiPasteIn" class="cloin" style="min-height:96px" placeholder="Paste the AI's full reply. It should contain a JSON block like { &quot;A&quot;: [ ... ], &quot;B&quot;: [ ... ] }."></textarea>
+          <div style="margin-top:10px"><button class="btn small" id="bFillPaste">Fill rubric from reply</button></div>
+          <div class="status" id="aiPasteStatus" style="margin-top:8px"></div>
+        </div>
+        <div class="aiopt">
+          <div class="aiopt-h">Option B &#183; Connect an AI provider (one click)</div>
+          <p class="hint" style="margin:0 0 10px">Do it automatically instead of copy and paste. Default is Claude (inside Claude, no key); or plug in any OpenAI-compatible endpoint, the Anthropic API, or Google Gemini with your own key.</p>
+          ${aiSettingsHTML()}
+          <button class="btn action small" id="bSuggestRub" style="margin-top:12px">Build the rubric with the connected AI</button>
+          <div id="aiRubOut" style="margin-top:12px"></div>
+        </div>
       </div>`;
     b.comps.forEach((k,ci)=>{
       const c=byKey(k); const rr=b.rubric[k];
@@ -1420,6 +1470,31 @@ function wireBuild(){
   const at=document.getElementById("bAssignText");
   if(at)at.addEventListener("input",e=>{b.assignment=e.target.value;saveLocal();updateAlign();markBuildTick();});
   const sg=document.getElementById("bSuggestRub"); if(sg)sg.addEventListener("click",suggestRubric);
+  const cpp=document.getElementById("bCopyPrompt"); if(cpp)cpp.addEventListener("click",copyRubricPrompt);
+  const flp=document.getElementById("bFillPaste"); if(flp)flp.addEventListener("click",fillRubricFromPaste);
+  const aip=document.getElementById("aiProvider");
+  if(aip)aip.addEventListener("change",e=>{
+    const p=e.target.value, fields=document.getElementById("aiFields");
+    if(fields)fields.style.display=(p==="claude")?"none":"";
+    const bu=document.getElementById("aiBaseUrl"), md=document.getElementById("aiModel");
+    const defs={openai:["https://api.openai.com/v1","gpt-4o-mini"],anthropic:["https://api.anthropic.com","claude-3-5-sonnet-latest"],gemini:["https://generativelanguage.googleapis.com","gemini-1.5-flash"]};
+    if(defs[p]){ if(bu&&!bu.value.trim())bu.value=defs[p][0]; if(md&&!md.value.trim())md.value=defs[p][1]; }
+  });
+  const aisv=document.getElementById("aiSave");
+  if(aisv)aisv.addEventListener("click",()=>{
+    const g=id=>{const el=document.getElementById(id);return el?el.value:"";};
+    const cfg={provider:g("aiProvider"),baseUrl:g("aiBaseUrl").trim(),apiKey:g("aiKey").trim(),model:g("aiModel").trim()};
+    const okc=setAICfg(cfg); const st=document.getElementById("aiCfgStatus");
+    if(st)st.textContent=okc?("Saved \u2014 the rubric will use "+cfg.provider+"."):"Could not save settings in this browser.";
+  });
+  const aicl=document.getElementById("aiClear");
+  if(aicl)aicl.addEventListener("click",()=>{
+    clearAICfg();
+    const aip2=document.getElementById("aiProvider"); if(aip2)aip2.value="claude";
+    const fields=document.getElementById("aiFields"); if(fields)fields.style.display="none";
+    ["aiBaseUrl","aiKey","aiModel"].forEach(id=>{const el=document.getElementById(id);if(el)el.value="";});
+    const st=document.getElementById("aiCfgStatus"); if(st)st.textContent="Cleared \u2014 back to the default (Claude).";
+  });
   const pr=document.getElementById("bPrint"); if(pr)pr.addEventListener("click",()=>window.print());
   const cp=document.getElementById("bCopy"); if(cp)cp.addEventListener("click",copyModule);
   const rs=document.getElementById("bReset"); if(rs)rs.addEventListener("click",()=>{
@@ -1482,9 +1557,10 @@ function fallbackCopy(txt,done){
 }
 
 /* ============================================================
-   07 BUILD \u2014 Claude-assisted refine + rubric
-   These call Claude's API and only connect when this app runs
-   inside Claude. Everything else works without them.
+   08 BUILD \u2014 AI-assisted rubric (provider-agnostic)
+   The default path uses Claude and only connects inside Claude;
+   any other provider uses the user's own endpoint, key and model.
+   Everything else in the app works with no AI at all.
    ============================================================ */
 const AIBOX={brief:null,rub:null};
 function esc(s){return (s==null?"":String(s)).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
@@ -1506,6 +1582,78 @@ function extractJSON(text){
   const a=t.indexOf("{"),z=t.lastIndexOf("}");
   if(a>=0&&z>a)t=t.slice(a,z+1);
   return JSON.parse(t);
+}
+
+/* ---- provider-agnostic AI adapter ----
+   Default "claude" uses the in-app path (no key, works only inside Claude).
+   Any other provider uses the user's own endpoint, key and model, stored in this browser. */
+function getAICfg(){ try{const r=localStorage.getItem("esd8:aicfg");return r?JSON.parse(r):null;}catch(e){return null;} }
+function setAICfg(c){ try{localStorage.setItem("esd8:aicfg",JSON.stringify(c));return true;}catch(e){return false;} }
+function clearAICfg(){ try{localStorage.removeItem("esd8:aicfg");}catch(e){} }
+function aiMsg(d,status){ const e=d&&d.error; return (e&&(e.message||(typeof e==="string"?e:null)))||("service returned "+status); }
+
+async function callModel(prompt){
+  const cfg=getAICfg()||{};
+  const provider=cfg.provider||"claude";
+  if(provider==="claude"){ return callClaude(prompt); }
+  const key=(cfg.apiKey||"").trim();
+  if(provider==="anthropic"){
+    const base=(cfg.baseUrl||"https://api.anthropic.com").replace(/\/+$/,"");
+    const res=await fetch(base+"/v1/messages",{method:"POST",
+      headers:{"Content-Type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true"},
+      body:JSON.stringify({model:cfg.model||"claude-3-5-sonnet-latest",max_tokens:2048,messages:[{role:"user",content:prompt}]})});
+    const d=await res.json(); if(!res.ok)throw new Error(aiMsg(d,res.status));
+    return (d.content||[]).filter(x=>x&&x.type==="text").map(x=>x.text).join("\n");
+  }
+  if(provider==="gemini"){
+    const base=(cfg.baseUrl||"https://generativelanguage.googleapis.com").replace(/\/+$/,"");
+    const model=cfg.model||"gemini-1.5-flash";
+    const res=await fetch(base+"/v1beta/models/"+encodeURIComponent(model)+":generateContent?key="+encodeURIComponent(key),
+      {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({contents:[{parts:[{text:prompt}]}]})});
+    const d=await res.json(); if(!res.ok)throw new Error(aiMsg(d,res.status));
+    return ((((d.candidates||[])[0]||{}).content||{}).parts||[]).map(p=>p.text||"").join("");
+  }
+  // openai-compatible chat completions (OpenAI, OpenRouter, Groq, Together, local Ollama / LM Studio, ...)
+  const base=(cfg.baseUrl||"https://api.openai.com/v1").replace(/\/+$/,"");
+  const res=await fetch(base+"/chat/completions",{method:"POST",
+    headers:{"Content-Type":"application/json","Authorization":"Bearer "+key},
+    body:JSON.stringify({model:cfg.model||"gpt-4o-mini",messages:[{role:"user",content:prompt}],temperature:0.3,max_tokens:2048})});
+  const d=await res.json(); if(!res.ok)throw new Error(aiMsg(d,res.status));
+  return (((d.choices||[])[0]||{}).message||{}).content||"";
+}
+
+function escA(s){return esc(s).replace(/"/g,"&quot;");}
+function aiSettingsHTML(){
+  const cfg=getAICfg()||{provider:"claude",baseUrl:"",apiKey:"",model:""};
+  const p=cfg.provider||"claude";
+  const sel=v=>p===v?" selected":"";
+  return `<details class="aicfg"${p!=="claude"?" open":""}>
+    <summary>AI provider settings${p!=="claude"?" \u2014 using "+p:" \u2014 default: Claude"}</summary>
+    <div class="aicfgbody">
+      <p class="hint" style="margin:0 0 10px">Choose who generates the rubric. The default uses Claude and needs no key, but only works when this page is opened inside Claude. To use any other AI, pick a provider and paste your own key. Settings are stored only in this browser, on this device.</p>
+      <label class="fl">Provider</label>
+      <select id="aiProvider">
+        <option value="claude"${sel("claude")}>Claude (inside Claude \u2014 no key needed)</option>
+        <option value="openai"${sel("openai")}>OpenAI-compatible (OpenAI, OpenRouter, Groq, Together, local Ollama / LM Studio)</option>
+        <option value="anthropic"${sel("anthropic")}>Anthropic API (your own key)</option>
+        <option value="gemini"${sel("gemini")}>Google Gemini</option>
+      </select>
+      <div id="aiFields"${p==="claude"?' style="display:none"':""}>
+        <label class="fl" style="margin-top:10px">API base URL</label>
+        <input type="text" id="aiBaseUrl" value="${escA(cfg.baseUrl||"")}" placeholder="e.g. https://api.openai.com/v1  (or http://localhost:11434/v1 for Ollama)">
+        <label class="fl" style="margin-top:10px">API key</label>
+        <input type="password" id="aiKey" value="${escA(cfg.apiKey||"")}" placeholder="paste your key" autocomplete="off">
+        <label class="fl" style="margin-top:10px">Model</label>
+        <input type="text" id="aiModel" value="${escA(cfg.model||"")}" placeholder="e.g. gpt-4o-mini">
+      </div>
+      <div style="margin-top:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <button class="btn small" id="aiSave">Save settings</button>
+        <button class="btn ghost small" id="aiClear">Clear</button>
+        <span class="hint" id="aiCfgStatus"></span>
+      </div>
+      <p class="hint" style="margin-top:8px">Note: some hosted providers block direct calls from a web page (CORS). Local models (Ollama, LM Studio) and OpenRouter generally work from the browser; for others you may need their browser-access option, or run the page through a small proxy.</p>
+    </div>
+  </details>`;
 }
 
 function rubricPrompt(b){
@@ -1575,9 +1723,9 @@ async function suggestRubric(){
   if(!(b.assignment||"").trim()){out.innerHTML=aiErr("Describe the assignment topic in step 7 first, so the rubric can be specific to it.");return;}
   b.comps.forEach(ensureRubric);
   const old=btn.textContent;btn.disabled=true;btn.textContent="Working\u2026";
-  out.innerHTML='<p class="bsub" style="margin:0">Claude is drafting the complete rubric for this content\u2026</p>';
+  out.innerHTML='<p class="bsub" style="margin:0">The AI is drafting the complete rubric for this content\u2026</p>';
   try{
-    const txt=await callClaude(rubricPrompt(b));
+    const txt=await callModel(rubricPrompt(b));
     const j=extractJSON(txt);
     AIBOX.rub={};
     AIBOX.rub[b.comps[0]]=j.A||[];
@@ -1585,18 +1733,63 @@ async function suggestRubric(){
     out.innerHTML=rubricPreviewHTML(b);
     const ins=document.getElementById("bInsertRub");
     if(ins)ins.addEventListener("click",()=>{
-      b.comps.forEach(k=>{
-        const rows=(AIBOX.rub&&AIBOX.rub[k])||[];
-        (b.rubric[k]||[]).forEach((row,ri)=>{
-          const s=rows[ri];if(!s)return;
-          if(s.l1)row.l1=s.l1;if(s.l2)row.l2=s.l2;if(s.l3)row.l3=s.l3;if(s.l4)row.l4=s.l4;
-        });
-      });
-      saveLocal();renderBuild();
+      const n=fillRubricInPlace(AIBOX.rub);
+      const o=document.getElementById("aiRubOut");
+      if(o)o.innerHTML='<div class="status">Rubric inserted ('+n+' cells). Review and edit every cell below.</div>';
     });
   }catch(e){
-    out.innerHTML=aiErr("Could not reach Claude ("+e.message+"). This feature only connects when this app runs inside Claude; if the file was opened straight from disk it will not work. The rubric editor below still works by hand.");
+    out.innerHTML=aiErr("Could not reach the AI ("+e.message+"). Check the AI provider settings above \u2014 the default only works inside Claude; to use another AI, choose a provider and paste your key. Some hosted providers also block direct browser calls (CORS). You can instead use the copy-and-paste option above, which works with any AI. The rubric editor below still works by hand.");
   }finally{btn.disabled=false;btn.textContent=old;}
+}
+
+/* Fill the editable rubric in place (no full re-render) so the paste box and status survive. */
+function fillRubricInPlace(byComp){
+  const b=B(); let filled=0;
+  b.comps.forEach(k=>{
+    const rows=(byComp&&byComp[k])||[];
+    (b.rubric[k]||[]).forEach((row,ri)=>{
+      const s=rows[ri]; if(!s)return;
+      ["l1","l2","l3","l4"].forEach(lv=>{
+        if(s[lv]){ row[lv]=s[lv];
+          const el=document.querySelector('[data-rub="'+k+"|"+ri+"|"+lv+'"]');
+          if(el)el.value=s[lv];
+          filled++;
+        }
+      });
+    });
+  });
+  saveLocal(); if(typeof markBuildTick==="function")markBuildTick();
+  return filled;
+}
+function copyTextTo(txt,statusEl,okMsg){
+  const ok=()=>{if(statusEl)statusEl.textContent=okMsg;};
+  const fb=()=>{const ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();
+    try{document.execCommand("copy");ok();}catch(e){if(statusEl)statusEl.innerHTML='<span class="err">Copy failed \u2014 select the text and copy it manually.</span>';}ta.remove();};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok).catch(fb);}
+  else fb();
+}
+/* Copy-and-paste path: works with ANY AI (ChatGPT, Gemini, Claude, Copilot, local models, ...). No key, no API, no CORS. */
+function copyRubricPrompt(){
+  const b=B(); const st=document.getElementById("aiPasteStatus");
+  const set=(m,err)=>{if(st)st.innerHTML=err?'<span class="err">'+m+'</span>':m;};
+  if(b.comps.length<1){set("Select one or two competencies first (step 3).",true);return;}
+  if(!(b.assignment||"").trim()){set("Describe the assignment topic in step 7 first, so the rubric can be specific to it.",true);return;}
+  b.comps.forEach(ensureRubric);
+  copyTextTo(rubricPrompt(b),st,"Prompt copied. Paste it into any AI, let it answer, then paste the whole reply in the box below and press Fill.");
+}
+function fillRubricFromPaste(){
+  const b=B(); const st=document.getElementById("aiPasteStatus");
+  const set=(m,err)=>{if(st)st.innerHTML=err?'<span class="err">'+m+'</span>':m;};
+  if(b.comps.length<1){set("Select one or two competencies first (step 3).",true);return;}
+  b.comps.forEach(ensureRubric);
+  const ta=document.getElementById("aiPasteIn"); const raw=ta?ta.value:"";
+  if(!raw.trim()){set("Paste the AI's reply in the box first.",true);return;}
+  let j;
+  try{ j=extractJSON(raw); }catch(e){ set("Could not find JSON in that text. Paste the AI's full reply \u2014 it should contain a { ... } block with an \"A\" (and, for two competencies, a \"B\") array.",true); return; }
+  const byComp={}; byComp[b.comps[0]]=j.A||[]; if(b.comps[1])byComp[b.comps[1]]=j.B||[];
+  if(!Object.values(byComp).some(r=>Array.isArray(r)&&r.length)){ set("That JSON did not contain the expected \"A\" (and \"B\") arrays of level descriptors. Re-copy the prompt and try again.",true); return; }
+  const n=fillRubricInPlace(byComp);
+  set(n?("Rubric filled ("+n+" cells) from the pasted reply. Review and edit every cell below."):"No matching descriptors were found in that reply.",!n);
 }
 
 
