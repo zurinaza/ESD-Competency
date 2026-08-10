@@ -129,6 +129,8 @@ label.fl .hint{font-weight:400;color:#8A9793}
 .aiopt{border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin-bottom:14px;background:var(--card)}
 .aiopt-h{font-weight:700;font-size:14px;color:var(--moss);margin-bottom:6px}
 .aiopt-tag{display:inline-block;margin-left:8px;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--amber);background:var(--amber-tint);padding:2px 7px;border-radius:10px;vertical-align:middle}
+.ai-steps{margin:6px 0 0;padding-left:20px}
+.ai-steps li{margin:0;font-size:14.5px}
 .locard{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:16px}
 .locard .lonum{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;color:#fff;font-weight:700;font-family:"IBM Plex Mono",monospace;font-size:16px}
 .locard h4{margin:12px 0 6px;font-size:16px}
@@ -1353,23 +1355,20 @@ function renderBuild(){
     // STEP 8 suggest the complete rubric
     h+=`<div class="stepcard${b.comps.every(k=>rubricFilled(k))?' ok':''}">
       <div class="stephead"><span class="stepnum">8</span><h3>Build the rubric</h3></div>
-      <div class="stepsub">From the course name, topic, CLO and competencies, an AI drafts the complete rubric for this content. Use it two ways: copy the prompt into any AI you already have, or connect a provider to do it in one click. Criteria 1&#8211;3 come from the observable behaviours; criterion 4 is the &#8220;so what&#8221;. Review and edit every cell &#8212; the mark must be one you could defend at an exam board.</div>
+      <div class="stepsub">From the course name, topic, CLO and competencies, an AI drafts the complete rubric for this content. Copy the prompt into any AI you already have, then paste its answer back to fill the rubric. Criteria 1&#8211;3 come from the observable behaviours; criterion 4 is the &#8220;so what&#8221;. Review and edit every cell &#8212; the mark must be one you could defend at an exam board.</div>
       <div style="margin-left:36px;margin-bottom:14px" class="noprint">
         <div class="aiopt">
-          <div class="aiopt-h">Option A &#183; Use any AI, by copy and paste <span class="aiopt-tag">works with anything, no key</span></div>
-          <p class="hint" style="margin:0 0 10px">Copy the prompt, paste it into any AI you already have &#8212; ChatGPT, Gemini, Claude, Copilot, DeepSeek, a local model &#8212; then paste its reply back here. No account or API key needed.</p>
-          <button class="btn action small" id="bCopyPrompt">Copy the rubric prompt</button>
-          <label class="fl" style="margin-top:12px">Paste the AI's reply here</label>
-          <textarea id="aiPasteIn" class="cloin" style="min-height:96px" placeholder="Paste the AI's full reply. It should contain a JSON block like { &quot;A&quot;: [ ... ], &quot;B&quot;: [ ... ] }."></textarea>
-          <div style="margin-top:10px"><button class="btn small" id="bFillPaste">Fill rubric from reply</button></div>
+          <div class="aiopt-h">Use any AI to draft the rubric <span class="aiopt-tag">works with anything, no key</span></div>
+          <p class="hint" style="margin:0 0 10px">Works with any AI you already have &#8212; ChatGPT, Gemini, Claude, Copilot, DeepSeek, a local model. No account or API key needed.</p>
+          <ol class="ai-steps">
+            <li><b>Copy the prompt</b> and paste it into your AI.
+              <div style="margin-top:6px"><button class="btn action small" id="bCopyPrompt">Copy the rubric prompt</button></div></li>
+            <li style="margin-top:14px"><b>Paste the AI's answer here</b> &#8212; the JSON it writes back, <em>not</em> the prompt.
+              <textarea id="aiPasteIn" class="cloin" style="min-height:96px;margin-top:6px" placeholder='Paste the AI answer. It looks like: { "A": [ {"l1":"...","l2":"...","l3":"...","l4":"..."}, ... ], "B": [ ... ] }'></textarea></li>
+            <li style="margin-top:14px"><b>Fill the rubric.</b>
+              <div style="margin-top:6px"><button class="btn small" id="bFillPaste">Fill rubric from answer</button></div></li>
+          </ol>
           <div class="status" id="aiPasteStatus" style="margin-top:8px"></div>
-        </div>
-        <div class="aiopt">
-          <div class="aiopt-h">Option B &#183; Connect an AI provider (one click)</div>
-          <p class="hint" style="margin:0 0 10px">Do it automatically instead of copy and paste. Default is Claude (inside Claude, no key); or plug in any OpenAI-compatible endpoint, the Anthropic API, or Google Gemini with your own key.</p>
-          ${aiSettingsHTML()}
-          <button class="btn action small" id="bSuggestRub" style="margin-top:12px">Build the rubric with the connected AI</button>
-          <div id="aiRubOut" style="margin-top:12px"></div>
         </div>
       </div>`;
     b.comps.forEach((k,ci)=>{
@@ -1469,32 +1468,8 @@ function wireBuild(){
   }));
   const at=document.getElementById("bAssignText");
   if(at)at.addEventListener("input",e=>{b.assignment=e.target.value;saveLocal();updateAlign();markBuildTick();});
-  const sg=document.getElementById("bSuggestRub"); if(sg)sg.addEventListener("click",suggestRubric);
   const cpp=document.getElementById("bCopyPrompt"); if(cpp)cpp.addEventListener("click",copyRubricPrompt);
   const flp=document.getElementById("bFillPaste"); if(flp)flp.addEventListener("click",fillRubricFromPaste);
-  const aip=document.getElementById("aiProvider");
-  if(aip)aip.addEventListener("change",e=>{
-    const p=e.target.value, fields=document.getElementById("aiFields");
-    if(fields)fields.style.display=(p==="claude")?"none":"";
-    const bu=document.getElementById("aiBaseUrl"), md=document.getElementById("aiModel");
-    const defs={openai:["https://api.openai.com/v1","gpt-4o-mini"],anthropic:["https://api.anthropic.com","claude-3-5-sonnet-latest"],gemini:["https://generativelanguage.googleapis.com","gemini-1.5-flash"]};
-    if(defs[p]){ if(bu&&!bu.value.trim())bu.value=defs[p][0]; if(md&&!md.value.trim())md.value=defs[p][1]; }
-  });
-  const aisv=document.getElementById("aiSave");
-  if(aisv)aisv.addEventListener("click",()=>{
-    const g=id=>{const el=document.getElementById(id);return el?el.value:"";};
-    const cfg={provider:g("aiProvider"),baseUrl:g("aiBaseUrl").trim(),apiKey:g("aiKey").trim(),model:g("aiModel").trim()};
-    const okc=setAICfg(cfg); const st=document.getElementById("aiCfgStatus");
-    if(st)st.textContent=okc?("Saved \u2014 the rubric will use "+cfg.provider+"."):"Could not save settings in this browser.";
-  });
-  const aicl=document.getElementById("aiClear");
-  if(aicl)aicl.addEventListener("click",()=>{
-    clearAICfg();
-    const aip2=document.getElementById("aiProvider"); if(aip2)aip2.value="claude";
-    const fields=document.getElementById("aiFields"); if(fields)fields.style.display="none";
-    ["aiBaseUrl","aiKey","aiModel"].forEach(id=>{const el=document.getElementById(id);if(el)el.value="";});
-    const st=document.getElementById("aiCfgStatus"); if(st)st.textContent="Cleared \u2014 back to the default (Claude).";
-  });
   const pr=document.getElementById("bPrint"); if(pr)pr.addEventListener("click",()=>window.print());
   const cp=document.getElementById("bCopy"); if(cp)cp.addEventListener("click",copyModule);
   const rs=document.getElementById("bReset"); if(rs)rs.addEventListener("click",()=>{
@@ -1557,105 +1532,11 @@ function fallbackCopy(txt,done){
 }
 
 /* ============================================================
-   08 BUILD \u2014 AI-assisted rubric (provider-agnostic)
-   The default path uses Claude and only connects inside Claude;
-   any other provider uses the user's own endpoint, key and model.
+   08 BUILD \u2014 rubric (bring your own AI, by copy and paste)
+   The prompt is copied out to any AI the lecturer has; the AI's
+   answer is pasted back and parsed in. No key, no API, no CORS.
    Everything else in the app works with no AI at all.
    ============================================================ */
-const AIBOX={brief:null,rub:null};
-function esc(s){return (s==null?"":String(s)).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
-function aiErr(msg){return '<div class="status"><span class="err">'+msg+'</span></div>';}
-
-async function callClaude(prompt){
-  const res=await fetch("https://api.anthropic.com/v1/messages",{
-    method:"POST",
-    headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:1000,messages:[{role:"user",content:prompt}]})
-  });
-  if(!res.ok)throw new Error("service returned "+res.status);
-  const data=await res.json();
-  return (data.content||[]).filter(x=>x&&x.type==="text").map(x=>x.text).join("\n");
-}
-function extractJSON(text){
-  let t=(text||"").trim();
-  t=t.replace(/^```json/i,"").replace(/^```/,"").replace(/```$/,"").trim();
-  const a=t.indexOf("{"),z=t.lastIndexOf("}");
-  if(a>=0&&z>a)t=t.slice(a,z+1);
-  return JSON.parse(t);
-}
-
-/* ---- provider-agnostic AI adapter ----
-   Default "claude" uses the in-app path (no key, works only inside Claude).
-   Any other provider uses the user's own endpoint, key and model, stored in this browser. */
-function getAICfg(){ try{const r=localStorage.getItem("esd8:aicfg");return r?JSON.parse(r):null;}catch(e){return null;} }
-function setAICfg(c){ try{localStorage.setItem("esd8:aicfg",JSON.stringify(c));return true;}catch(e){return false;} }
-function clearAICfg(){ try{localStorage.removeItem("esd8:aicfg");}catch(e){} }
-function aiMsg(d,status){ const e=d&&d.error; return (e&&(e.message||(typeof e==="string"?e:null)))||("service returned "+status); }
-
-async function callModel(prompt){
-  const cfg=getAICfg()||{};
-  const provider=cfg.provider||"claude";
-  if(provider==="claude"){ return callClaude(prompt); }
-  const key=(cfg.apiKey||"").trim();
-  if(provider==="anthropic"){
-    const base=(cfg.baseUrl||"https://api.anthropic.com").replace(/\/+$/,"");
-    const res=await fetch(base+"/v1/messages",{method:"POST",
-      headers:{"Content-Type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true"},
-      body:JSON.stringify({model:cfg.model||"claude-3-5-sonnet-latest",max_tokens:2048,messages:[{role:"user",content:prompt}]})});
-    const d=await res.json(); if(!res.ok)throw new Error(aiMsg(d,res.status));
-    return (d.content||[]).filter(x=>x&&x.type==="text").map(x=>x.text).join("\n");
-  }
-  if(provider==="gemini"){
-    const base=(cfg.baseUrl||"https://generativelanguage.googleapis.com").replace(/\/+$/,"");
-    const model=cfg.model||"gemini-1.5-flash";
-    const res=await fetch(base+"/v1beta/models/"+encodeURIComponent(model)+":generateContent?key="+encodeURIComponent(key),
-      {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({contents:[{parts:[{text:prompt}]}]})});
-    const d=await res.json(); if(!res.ok)throw new Error(aiMsg(d,res.status));
-    return ((((d.candidates||[])[0]||{}).content||{}).parts||[]).map(p=>p.text||"").join("");
-  }
-  // openai-compatible chat completions (OpenAI, OpenRouter, Groq, Together, local Ollama / LM Studio, ...)
-  const base=(cfg.baseUrl||"https://api.openai.com/v1").replace(/\/+$/,"");
-  const res=await fetch(base+"/chat/completions",{method:"POST",
-    headers:{"Content-Type":"application/json","Authorization":"Bearer "+key},
-    body:JSON.stringify({model:cfg.model||"gpt-4o-mini",messages:[{role:"user",content:prompt}],temperature:0.3,max_tokens:2048})});
-  const d=await res.json(); if(!res.ok)throw new Error(aiMsg(d,res.status));
-  return (((d.choices||[])[0]||{}).message||{}).content||"";
-}
-
-function escA(s){return esc(s).replace(/"/g,"&quot;");}
-function aiSettingsHTML(){
-  const cfg=getAICfg()||{provider:"claude",baseUrl:"",apiKey:"",model:""};
-  const p=cfg.provider||"claude";
-  const sel=v=>p===v?" selected":"";
-  return `<details class="aicfg"${p!=="claude"?" open":""}>
-    <summary>AI provider settings${p!=="claude"?" \u2014 using "+p:" \u2014 default: Claude"}</summary>
-    <div class="aicfgbody">
-      <p class="hint" style="margin:0 0 10px">Choose who generates the rubric. The default uses Claude and needs no key, but only works when this page is opened inside Claude. To use any other AI, pick a provider and paste your own key. Settings are stored only in this browser, on this device.</p>
-      <label class="fl">Provider</label>
-      <select id="aiProvider">
-        <option value="claude"${sel("claude")}>Claude (inside Claude \u2014 no key needed)</option>
-        <option value="openai"${sel("openai")}>OpenAI-compatible (OpenAI, OpenRouter, Groq, Together, local Ollama / LM Studio)</option>
-        <option value="anthropic"${sel("anthropic")}>Anthropic API (your own key)</option>
-        <option value="gemini"${sel("gemini")}>Google Gemini</option>
-      </select>
-      <div id="aiFields"${p==="claude"?' style="display:none"':""}>
-        <label class="fl" style="margin-top:10px">API base URL</label>
-        <input type="text" id="aiBaseUrl" value="${escA(cfg.baseUrl||"")}" placeholder="e.g. https://api.openai.com/v1  (or http://localhost:11434/v1 for Ollama)">
-        <label class="fl" style="margin-top:10px">API key</label>
-        <input type="password" id="aiKey" value="${escA(cfg.apiKey||"")}" placeholder="paste your key" autocomplete="off">
-        <label class="fl" style="margin-top:10px">Model</label>
-        <input type="text" id="aiModel" value="${escA(cfg.model||"")}" placeholder="e.g. gpt-4o-mini">
-      </div>
-      <div style="margin-top:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-        <button class="btn small" id="aiSave">Save settings</button>
-        <button class="btn ghost small" id="aiClear">Clear</button>
-        <span class="hint" id="aiCfgStatus"></span>
-      </div>
-      <p class="hint" style="margin-top:8px">Note: some hosted providers block direct calls from a web page (CORS). Local models (Ollama, LM Studio) and OpenRouter generally work from the browser; for others you may need their browser-access option, or run the page through a small proxy.</p>
-    </div>
-  </details>`;
-}
-
 function rubricPrompt(b){
   const oneClo=isOneClo(b);
   const lineOf=r=>r.crit+" ("+(r.prov||"institutional")+")";
@@ -1700,48 +1581,6 @@ function rubricPrompt(b){
   return L.join("\n");
 }
 
-function rubricPreviewHTML(b){
-  let h='<div class="alignprev" style="margin-top:0"><span class="tag">Suggested complete rubric \u2014 review before inserting</span>';
-  b.comps.forEach(k=>{
-    const c=byKey(k),rows=(AIBOX.rub&&AIBOX.rub[k])||[],base=b.rubric[k]||[];
-    h+='<h4 style="margin:14px 0 6px">'+c.name+'</h4>';
-    h+='<table class="tbl"><thead><tr><th>Criterion</th><th>1 Limited</th><th>2 Developing</th><th>3 Proficient</th><th>4 Exemplary</th></tr></thead><tbody>';
-    base.forEach((row,ri)=>{const s=rows[ri]||{};
-      h+='<tr><td class="k">'+esc(row.crit)+'<span class="prov">'+esc(row.prov||"")+'</span></td><td>'+esc(s.l1)+'</td><td>'+esc(s.l2)+'</td><td>'+esc(s.l3)+'</td><td>'+esc(s.l4)+'</td></tr>';});
-    h+='</tbody></table>';
-  });
-  h+='<div style="margin-top:12px" class="noprint"><button class="btn action small" id="bInsertRub">Insert into the rubric editor above</button></div></div>';
-  return h;
-}
-
-async function suggestRubric(){
-  const b=B();
-  const out=document.getElementById("aiRubOut");
-  const btn=document.getElementById("bSuggestRub");
-  if(!out)return;
-  if(b.comps.length<1){out.innerHTML=aiErr("Select one or two competencies first (step 3).");return;}
-  if(!(b.assignment||"").trim()){out.innerHTML=aiErr("Describe the assignment topic in step 7 first, so the rubric can be specific to it.");return;}
-  b.comps.forEach(ensureRubric);
-  const old=btn.textContent;btn.disabled=true;btn.textContent="Working\u2026";
-  out.innerHTML='<p class="bsub" style="margin:0">The AI is drafting the complete rubric for this content\u2026</p>';
-  try{
-    const txt=await callModel(rubricPrompt(b));
-    const j=extractJSON(txt);
-    AIBOX.rub={};
-    AIBOX.rub[b.comps[0]]=j.A||[];
-    if(b.comps[1])AIBOX.rub[b.comps[1]]=j.B||[];
-    out.innerHTML=rubricPreviewHTML(b);
-    const ins=document.getElementById("bInsertRub");
-    if(ins)ins.addEventListener("click",()=>{
-      const n=fillRubricInPlace(AIBOX.rub);
-      const o=document.getElementById("aiRubOut");
-      if(o)o.innerHTML='<div class="status">Rubric inserted ('+n+' cells). Review and edit every cell below.</div>';
-    });
-  }catch(e){
-    out.innerHTML=aiErr("Could not reach the AI ("+e.message+"). Check the AI provider settings above \u2014 the default only works inside Claude; to use another AI, choose a provider and paste your key. Some hosted providers also block direct browser calls (CORS). You can instead use the copy-and-paste option above, which works with any AI. The rubric editor below still works by hand.");
-  }finally{btn.disabled=false;btn.textContent=old;}
-}
-
 /* Fill the editable rubric in place (no full re-render) so the paste box and status survive. */
 function fillRubricInPlace(byComp){
   const b=B(); let filled=0;
@@ -1777,19 +1616,53 @@ function copyRubricPrompt(){
   b.comps.forEach(ensureRubric);
   copyTextTo(rubricPrompt(b),st,"Prompt copied. Paste it into any AI, let it answer, then paste the whole reply in the box below and press Fill.");
 }
+/* Pull the rubric JSON out of an AI reply, even if the reply also echoes the empty prompt template
+   or wraps the JSON in prose/fences. Prefers the object whose cells actually contain text. */
+function jsonCandidates(t){
+  const out=[]; if(!t)return out;
+  for(let i=0;i<t.length;i++){
+    if(t[i]!=="{")continue;
+    let depth=0,inStr=false,escf=false;
+    for(let j=i;j<t.length;j++){
+      const ch=t[j];
+      if(escf){escf=false;continue;}
+      if(ch==="\\"){escf=true;continue;}
+      if(ch==='"'){inStr=!inStr;continue;}
+      if(inStr)continue;
+      if(ch==="{")depth++;
+      else if(ch==="}"){depth--; if(depth===0){out.push(t.slice(i,j+1)); i=j; break;}}
+    }
+  }
+  return out;
+}
+function abHasText(o){
+  const filled=a=>Array.isArray(a)&&a.some(r=>r&&(r.l1||r.l2||r.l3||r.l4));
+  return o&&(filled(o.A)||filled(o.B));
+}
+function extractRubricJSON(text){
+  const t=(text||"").replace(/```json/gi,"").replace(/```/g,"");
+  let last=null;
+  jsonCandidates(t).forEach(c=>{
+    let o; try{o=JSON.parse(c);}catch(e){return;}
+    if(o&&(Array.isArray(o.A)||Array.isArray(o.B))){ if(abHasText(o))last=last&&abHasText(last)?last:o; else if(!last)last=o; }
+  });
+  if(last)return last;
+  try{return extractJSON(t);}catch(e){return null;}
+}
 function fillRubricFromPaste(){
   const b=B(); const st=document.getElementById("aiPasteStatus");
   const set=(m,err)=>{if(st)st.innerHTML=err?'<span class="err">'+m+'</span>':m;};
   if(b.comps.length<1){set("Select one or two competencies first (step 3).",true);return;}
   b.comps.forEach(ensureRubric);
   const ta=document.getElementById("aiPasteIn"); const raw=ta?ta.value:"";
-  if(!raw.trim()){set("Paste the AI's reply in the box first.",true);return;}
-  let j;
-  try{ j=extractJSON(raw); }catch(e){ set("Could not find JSON in that text. Paste the AI's full reply \u2014 it should contain a { ... } block with an \"A\" (and, for two competencies, a \"B\") array.",true); return; }
-  const byComp={}; byComp[b.comps[0]]=j.A||[]; if(b.comps[1])byComp[b.comps[1]]=j.B||[];
-  if(!Object.values(byComp).some(r=>Array.isArray(r)&&r.length)){ set("That JSON did not contain the expected \"A\" (and \"B\") arrays of level descriptors. Re-copy the prompt and try again.",true); return; }
+  if(!raw.trim()){set("Paste the AI's answer in the box first.",true);return;}
+  const j=extractRubricJSON(raw);
+  if(!j){ set("Could not find a rubric in that text. Paste the AI's answer \u2014 the JSON it returns, which starts with { and contains an \"A\" array (and a \"B\" array for two competencies).",true); return; }
+  const byComp={}; byComp[b.comps[0]]=Array.isArray(j.A)?j.A:[]; if(b.comps[1])byComp[b.comps[1]]=Array.isArray(j.B)?j.B:[];
+  const anyText=Object.values(byComp).some(rows=>rows.some(r=>r&&(r.l1||r.l2||r.l3||r.l4)));
+  if(!anyText){ set("That looks like the prompt template with empty cells, not the AI's answer. Copy the prompt into your AI, let it write the descriptors, then paste what it wrote back \u2014 each level should contain text.",true); return; }
   const n=fillRubricInPlace(byComp);
-  set(n?("Rubric filled ("+n+" cells) from the pasted reply. Review and edit every cell below."):"No matching descriptors were found in that reply.",!n);
+  set(n?("Rubric filled ("+n+" cells) from the answer. Review and edit every cell below."):"No matching descriptors were found in that answer.",!n);
 }
 
 
