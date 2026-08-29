@@ -1,3 +1,5 @@
+<html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Eight &#8212; ESD Competencies: understand, teach, assess, build</title>
@@ -7,9 +9,9 @@
 
 <style>
 :root{
-  --ink:#16211F; --ink-soft:#4A5A56; --paper:#F4F6F4; --card:#FFFFFF; --line:#D6DCD8;
-  --moss:#2F5D50; --moss-tint:#E4EDE9; --slate:#3A5A78; --slate-tint:#E5EBF1;
-  --amber:#B57D0E; --amber-tint:#F8EFD9; --rose:#9E3B3E; --rose-tint:#F7E4E4;--teal:#0E7C7B;--teal-tint:#DEEFEE;--orange:#C25A2B;--orange-tint:#FBE8DD;--plum:#3B2440;--plum-tint:#ECE4EE; --radius:3px;
+  --ink:#0E1A18; --ink-soft:#3C4F4A; --paper:#EDF2EF; --card:#FFFFFF; --line:#C2CDC8;
+  --moss:#1B6A55; --moss-tint:#CFE5DC; --slate:#215A86; --slate-tint:#D4E3F0;
+  --amber:#A76A00; --amber-tint:#FAE6BC; --rose:#932A2D; --rose-tint:#F6D3D3;--teal:#00706F;--teal-tint:#C7E5E3;--orange:#B84A18;--orange-tint:#FADBC8;--plum:#2E1834;--plum-tint:#E0D0E6; --radius:3px;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -31,14 +33,14 @@ button{font:inherit}
 .brandsub{font-size:12px;color:var(--ink-soft);line-height:1.4;margin-bottom:20px}
 .navbtn{display:flex;gap:11px;align-items:baseline;width:100%;text-align:left;background:none;border:0;border-left:3px solid transparent;color:var(--ink-soft);padding:11px 10px;margin:1px 0;border-radius:0 6px 6px 0;cursor:pointer;transition:background .14s,color .14s,border-color .14s}
 
-.navbtn:hover{background:#EEF3F0;color:var(--ink)}
+.navbtn:hover{background:#DEEBE4;color:var(--ink)}
 .navbtn[aria-current="true"]{background:var(--moss-tint);color:var(--moss);border-left-color:var(--moss)}
 .navbtn[aria-current="true"] .lbl{color:var(--moss)}
-.navbtn[aria-current="true"] .sub{color:#5E7D72}
-.navbtn .num{font-family:"IBM Plex Mono",monospace;font-size:11px;color:#9DB1AA;min-width:16px}
+.navbtn[aria-current="true"] .sub{color:#2E6455}
+.navbtn .num{font-family:"IBM Plex Mono",monospace;font-size:11px;color:#7FA096;min-width:16px}
 .navbtn[aria-current="true"] .num{color:var(--moss)}
 .navbtn .lbl{font-family:"Archivo",sans-serif;font-weight:600;font-size:15.5px;letter-spacing:-0.01em}
-.navbtn .sub{display:block;font-size:11.5px;color:#8A9A94;font-weight:400;font-family:"IBM Plex Sans",sans-serif;letter-spacing:0}
+.navbtn .sub{display:block;font-size:11.5px;color:#66807A;font-weight:400;font-family:"IBM Plex Sans",sans-serif;letter-spacing:0}
 .navbtn .tick{margin-left:auto;font-size:12px;color:var(--moss);font-weight:700}
 .railfoot{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;color:var(--ink-soft);line-height:1.55}
 .railfoot code{color:var(--moss);font-weight:600}
@@ -81,7 +83,7 @@ input:not([type="button"]):focus,select:focus,textarea:focus{outline:2px solid v
 .btn.small{padding:6px 12px;font-size:13.5px}
 select,input[type=text]{font:inherit;width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;color:var(--ink)}
 label.fl{display:block;font-size:12.5px;font-weight:600;letter-spacing:.02em;margin:14px 0 5px;color:var(--ink-soft)}
-label.fl .hint{font-weight:400;color:#8A9793}
+label.fl .hint{font-weight:400;color:#657873}
 :focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 
 .opt{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;margin-bottom:9px;cursor:pointer;font-size:15.2px;transition:border-color .12s,background .12s}
@@ -120,7 +122,7 @@ label.fl .hint{font-weight:400;color:#8A9793}
 .vidcap{font-size:12.5px;color:var(--ink-soft);margin-top:7px;text-align:center;line-height:1.3}
 .toggle2{display:inline-flex;border:1px solid var(--line);border-radius:22px;overflow:hidden;margin:8px 0 4px}
 .pilltog{background:var(--card);border:0;padding:9px 18px;font-size:14px;font-weight:600;color:var(--ink-soft);cursor:pointer;transition:background .14s,color .14s}
-.pilltog:hover{background:#EEF3F0}
+.pilltog:hover{background:#DEEBE4}
 .pilltog.on{background:var(--moss-tint);color:var(--moss)}
 .aicfg{border:1px solid var(--line);border-radius:6px;padding:10px 14px;background:var(--paper)}
 .aicfg summary{cursor:pointer;font-weight:600;font-size:14px;color:var(--moss)}
@@ -185,7 +187,7 @@ label.fl .hint{font-weight:400;color:#8A9793}
 .devaff{font-size:13px;color:var(--ink-soft);margin-top:3px}
 .tbl tr td:first-child{width:26%}
 
-.callout{background:var(--ink);color:#E4EDE9;padding:18px 20px;border-radius:var(--radius);margin:18px 0}
+.callout{background:var(--ink);color:#D8EAE2;padding:18px 20px;border-radius:var(--radius);margin:18px 0}
 .callout strong{color:#fff}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:14px}
 .split>div{padding:18px 20px;background:#fff}
@@ -223,7 +225,7 @@ summary{cursor:pointer;font-size:14.4px;color:var(--moss);font-weight:500}
 /* ---- Build tab ---- */
 .wf-steps{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 26px}
 .wf-steps .wf{flex:1 1 90px;min-width:84px;border:1px solid var(--line);border-radius:6px;background:#fff;padding:9px 10px;font-size:11.5px;color:var(--ink-soft);position:relative}
-.wf-steps .wf .wn{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;color:#9DB1AA;display:block}
+.wf-steps .wf .wn{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;color:#7FA096;display:block}
 .wf-steps .wf .wl{font-family:"Archivo",sans-serif;font-weight:600;font-size:13px;color:var(--ink);margin-top:2px;display:block;line-height:1.15}
 .wf-steps .wf.done{border-color:var(--moss);background:var(--moss-tint)}
 .wf-steps .wf.done .wl{color:var(--moss)}
@@ -240,32 +242,44 @@ summary{cursor:pointer;font-size:14.4px;color:var(--moss);font-weight:500}
 .pick{border:1px solid var(--line);border-radius:6px;background:#fff;padding:10px 12px;cursor:pointer;text-align:left;font-size:13.5px;transition:border-color .12s,background .12s;color:var(--ink)}
 .pick:hover{border-color:var(--moss)}
 .pick[aria-pressed="true"]{border-color:var(--moss);background:var(--moss-tint);color:var(--moss);font-weight:600}
-.pick .pk{font-family:"IBM Plex Mono",monospace;font-size:10px;color:#9DB1AA;display:block}
+.pick .pk{font-family:"IBM Plex Mono",monospace;font-size:10px;color:#7FA096;display:block}
 .pick[aria-pressed="true"] .pk{color:var(--moss)}
 .sdgpick{border:1px solid var(--line);border-radius:6px;background:#fff;padding:8px 10px;cursor:pointer;text-align:left;font-size:12.5px;display:flex;gap:8px;align-items:center;transition:border-color .12s,background .12s;color:var(--ink)}
 .sdgpick:hover{border-color:var(--slate)}
 .sdgpick[aria-pressed="true"]{border-color:var(--slate);background:var(--slate-tint);color:var(--slate);font-weight:600}
 .sdgpick .sn{font-family:"IBM Plex Mono",monospace;font-weight:700;min-width:20px}
-.blk{margin-left:36px;margin-bottom:16px;padding:16px;border:1px solid var(--line);border-radius:6px;background:#FAFBFA}
+.blk{margin-left:36px;margin-bottom:16px;padding:16px;border:1px solid var(--line);border-radius:6px;background:#F2F8F4}
 .blk h4{font-size:14.5px;margin-bottom:2px}
 .blk .bsub{font-size:12.5px;color:var(--ink-soft);margin-bottom:10px}
 .rubedit{width:100%;border-collapse:collapse;margin-top:8px;font-size:12.5px}
 .rubedit th{background:var(--ink);color:#fff;font-family:"Archivo",sans-serif;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;padding:6px 7px;text-align:left}
 .rubedit td{border:1px solid var(--line);padding:0;vertical-align:top}
 .rubedit td.rc{background:var(--moss-tint);font-weight:500;padding:8px;width:22%;font-size:12px}
-.rubedit textarea{width:100%;border:0;background:transparent;padding:7px 8px;font:inherit;font-size:12px;line-height:1.4;resize:vertical;min-height:60px;color:var(--ink)}
-.rubedit td:nth-child(2){background:#FBEDED}
-.rubedit td:nth-child(3){background:#FBF3E2}
-.rubedit td:nth-child(4){background:#EDF3F0}
-.rubedit td:nth-child(5){background:#E4EDE9}
+.rubedit textarea{width:100%;border:0;background:transparent;padding:7px 8px;font:inherit;font-size:12px;line-height:1.4;resize:vertical;min-height:60px;overflow:hidden;color:var(--ink)}
+.taprint{display:none;white-space:pre-wrap}
+.rubedit td:nth-child(2){background:#F8DCDC}
+.rubedit td:nth-child(3){background:#FAEDC6}
+.rubedit td:nth-child(4){background:#DCECE4}
+.rubedit td:nth-child(5){background:#CBE4D9}
 textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1px solid var(--line);border-radius:6px;min-height:56px;resize:vertical;line-height:1.45;color:var(--ink)}
 .verbhint{font-size:12px;color:var(--ink-soft);margin-top:6px}
 .verbhint b{color:var(--moss);font-family:"IBM Plex Mono",monospace;font-weight:600}
 .alignprev{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px 22px;margin-top:8px}
-.wchip{display:inline-block;font-size:12px;background:var(--amber-tint);color:var(--amber);border:1px solid #E9D9AE;padding:4px 10px;border-radius:20px;margin-left:36px;margin-bottom:8px}
+.wchip{display:inline-block;font-size:12px;background:var(--amber-tint);color:var(--amber);border:1px solid #DFC183;padding:4px 10px;border-radius:20px;margin-left:36px;margin-bottom:8px}
 @media(max-width:860px){.pickgrid{grid-template-columns:1fr 1fr}.stepsub,.pickgrid,.blk,.wchip{margin-left:0}.rubedit td.rc{width:30%}}
 @media(prefers-reduced-motion:reduce){*{transition:none !important}}
+@media print{
+  #buildBody textarea,#buildBody input[type=text]{display:none !important}
+  .taprint{display:block !important;padding:7px 8px;font-size:11.5px;line-height:1.45;color:var(--ink)}
+  .rubedit td .taprint{font-size:11px}
+  .rubedit{page-break-inside:auto}
+  .rubedit tr,.blk,.stepcard,.alignprev{break-inside:avoid;page-break-inside:avoid}
+  .rubedit th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .rubedit td,.tbl td,.domcard,.chklist2 li{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
 </style>
+</head>
+<body>
 
 <div class="shell">
   <nav class="rail">
@@ -298,7 +312,6 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
   <main class="main">
 
-  <!-- ================= 01 UNDERSTAND ================= -->
   <!-- ================= 01 INTRODUCTION ================= -->
   <section id="view-intro">
     <div class="eyebrow">Stage 01 &#183; Introduction</div>
@@ -473,7 +486,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
       <span class="tag">Watch</span>
       <h3 style="margin:12px 0 6px">Short explainers to go with the eight</h3>
       <p style="color:var(--ink-soft);font-size:15px">Start with the overview, then one short per competency.</p>
-      <div class="vidfeature" style="margin-top:14px"><iframe src="https://www.youtube.com/embed/N0eB2n5L-xE" title="Education for Sustainable Development \u2014 overview" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      <div class="vidfeature" style="margin-top:14px"><iframe src="https://www.youtube.com/embed/N0eB2n5L-xE" title="Education for Sustainable Development &#8212; overview" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
       <div class="vidgrid">
         <div class="vidshort"><div class="frame"><iframe src="https://www.youtube.com/embed/VVtdcICaVu0" title="Systems Thinking" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="vidcap">01 &#183; Systems Thinking</div></div>
         <div class="vidshort"><div class="frame"><iframe src="https://www.youtube.com/embed/Bk4Nu1mfh_o" title="Anticipatory Competency" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="vidcap">02 &#183; Anticipatory Competency</div></div>
@@ -518,7 +531,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     <div id="detailBody" style="margin-top:20px"></div>
   </section>
 
-  <!-- ================= 02 DISCIPLINE LENS ================= -->
+  <!-- ================= 03 DISCIPLINE LENS ================= -->
   <section id="view-lens" class="hidden">
     <div class="eyebrow">Stage 03 &#183; Your field</div>
     <h1>Same demand. Your vocabulary.</h1>
@@ -534,7 +547,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     <p class="noprint"><button class="btn moss" data-goto="quiz1">Next: quiz on stages 02 and 03 &#8594;</button></p>
   </section>
 
-  <!-- ================= 03 QUIZ 1 ================= -->
+  <!-- ================= 04 QUIZ 1 ================= -->
   <section id="view-quiz1" class="hidden">
     <div class="eyebrow">Stage 04 &#183; Quiz 1</div>
     <h1>Can you name it, and tell it apart?</h1>
@@ -555,7 +568,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     <div class="qdone hidden" data-done="q1"></div>
   </section>
 
-  <!-- ================= 04 PEDAGOGY ================= -->
+  <!-- ================= 05 PEDAGOGY ================= -->
   <section id="view-pedagogy" class="hidden">
     <div class="eyebrow">Stage 05 &#183; Pedagogy</div>
     <h1>Coverage means students practise it.</h1>
@@ -617,7 +630,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     <p class="noprint"><button class="btn moss" data-goto="assess">Next: assessment and rubrics &#8594;</button></p>
   </section>
 
-  <!-- ================= 05 ASSESS ================= -->
+  <!-- ================= 06 ASSESS ================= -->
   <section id="view-assess" class="hidden">
     <div class="eyebrow">Stage 06 &#183; Assess</div>
     <h1>The mark has to survive being questioned.</h1>
@@ -758,7 +771,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     <p class="noprint"><button class="btn moss" data-goto="quiz2">Next: quiz on assessment and rubrics &#8594;</button></p>
   </section>
 
-  <!-- ================= 06 QUIZ 2 ================= -->
+  <!-- ================= 07 QUIZ 2 ================= -->
   <section id="view-quiz2" class="hidden">
     <div class="eyebrow">Stage 07 &#183; Quiz 2</div>
     <h1>Would this mark survive being questioned?</h1>
@@ -779,7 +792,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     <div class="qdone hidden" data-done="q2"></div>
   </section>
 
-  <!-- ================= 07 BUILD ================= -->
+  <!-- ================= 09 BUILD ================= -->
   <section id="view-build" class="hidden">
     <div class="eyebrow">Stage 09 &#183; Build your module</div>
     <h1>One course, turned into an ESD module.</h1>
@@ -853,8 +866,6 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     <div class="qrun hidden" data-run="q3"></div>
     <div class="qdone hidden" data-done="q3"></div>
   </section>
-
-
 
   </main>
 </div>
@@ -1106,7 +1117,8 @@ async function loadLocal(){
   if(saved)Object.assign(state,saved,{pid});
   if(!state.build)state.build={course:"",cluster:"",sdg:"",comps:[],clo:{},cloMode:"two",cloOne:"",activity:{},output:{},rubric:{},assignment:""};
   if(typeof state.build.assignment!=="string")state.build.assignment="";
-  if(state.build.cloMode!=="one"&&state.build.cloMode!=="two")state.build.cloMode="two";
+  if(["one","two","multi"].indexOf(state.build.cloMode)<0)state.build.cloMode="two";
+  if(Array.isArray(state.build.comps)&&state.build.comps.length>2&&state.build.cloMode==="one")state.build.cloMode="multi";
   if(typeof state.build.cloOne!=="string")state.build.cloOne="";
 }
 let saveTimer=null;
@@ -1186,7 +1198,7 @@ function openDetail(key,from){
     <div class="callout"><strong>Facilitator note.</strong> ${c.note}</div>
     ${d?`<div class="card"><span class="tag slate">In ${d}</span><h3 style="margin:12px 0 6px">${c.ex[d]}</h3>
       <p style="font-size:13.6px;color:var(--ink-soft)">Adapt the wording; keep the demand.</p></div>`:
-      `<div class="card"><p style="margin:0;color:var(--ink-soft)">Set your discipline in stage 02 to see this competency in your own field.</p></div>`}
+      `<div class="card"><p style="margin:0;color:var(--ink-soft)">Set your discipline in stage 03 to see this competency in your own field.</p></div>`}
     <p class="noprint"><button class="btn ghost small" id="prevC">\u2190 ${C[(c.n+6)%8].name}</button>
     <button class="btn ghost small" id="nextC">${C[c.n%8].name} \u2192</button></p>`;
   show("detail");
@@ -1413,11 +1425,11 @@ function finishQuiz(id){
   el.querySelector(`[data-retake="${id}"]`).addEventListener("click",()=>{
     document.getElementById(id+"intro").classList.remove("hidden");el.classList.add("hidden");
   });
-  el.querySelectorAll("[data-goto]").forEach(b=>b.addEventListener("click",()=>{const v=b.dataset.goto;show(v);}));
+  el.querySelectorAll("[data-goto]").forEach(b=>b.addEventListener("click",()=>{const v=b.dataset.goto;show(v);if(v==="build")renderBuild();}));
 }
 
 /* ============================================================
-   04 PEDAGOGY + 05 ASSESS rendering
+   05 PEDAGOGY + 06 ASSESS rendering
    ============================================================ */
 function renderPedagogy(){
   const w=document.getElementById("pedCards");w.innerHTML="";
@@ -1454,11 +1466,7 @@ function renderRubricPicker(){
 }
 
 /* ============================================================
-   BOOT
-   ============================================================ */
-
-/* ============================================================
-   07 BUILD  \u2014 interactive guidebook workflow
+   09 BUILD  \u2014 interactive guidebook workflow
    ============================================================ */
 const SDGS=[
  [1,"No Poverty"],[2,"Zero Hunger"],[3,"Good Health & Well-being"],[4,"Quality Education"],
@@ -1478,11 +1486,37 @@ const VERBS={
  selfaware:["locate","situate","examine one's own","account for"],
  integrated:["recommend","defend","decide between","produce a defensible"]
 };
-function pedForComp(key){
-  const strong=PEDAGOGIES.filter(pd=>pd.develops.includes(key));
-  return (strong.length?strong:PEDAGOGIES);
+const LETTERS=["A","B","C","D","E","F","G","H"];
+const FAMILIES=[...new Set(PEDAGOGIES.map(p=>p.fam))];
+function strongFor(key){return new Set(PEDAGOGIES.filter(pd=>pd.develops.includes(key)).map(pd=>pd.name));}
+function pedByName(n){return PEDAGOGIES.find(pd=>pd.name===n);}
+function listNames(keys){
+  const n=keys.map(k=>byKey(k).name);
+  return n.length<2?(n[0]||""):n.slice(0,-1).join(", ")+" and "+n[n.length-1];
 }
 function B(){return state.build;}
+
+/* Textareas grow to fit their content, so a filled rubric is readable without dragging,
+   and a hidden mirror div carries the same text into print. */
+function autoGrow(el){
+  if(!el)return;
+  const prev=el.style.height;
+  el.style.height="auto";
+  const h=el.scrollHeight;
+  el.style.height=h>0?(h+2)+"px":prev;
+}
+function autoGrowAll(){document.querySelectorAll("#buildBody textarea").forEach(autoGrow);}
+function syncPrintMirrors(){
+  document.querySelectorAll("#buildBody textarea, #buildBody input[type=text]").forEach(el=>{
+    let m=el.nextElementSibling;
+    if(!m||!m.classList||!m.classList.contains("taprint")){
+      m=document.createElement("div");m.className="taprint";el.insertAdjacentElement("afterend",m);
+    }
+    m.textContent=el.value;
+  });
+}
+function preparePrint(){autoGrowAll();syncPrintMirrors();}
+window.addEventListener("beforeprint",preparePrint);
 
 function renderWfSteps(){
   const b=B();
@@ -1506,7 +1540,10 @@ function rubricFilled(key){
   const r=B().rubric[key]; if(!r)return false;
   return r.every(row=>row.l1&&row.l2&&row.l3&&row.l4);
 }
-function isOneClo(b){return b.comps.length===2 && b.cloMode==="one";}
+/* Step 3 is free: one, two, or more. Two is the UPM default; more than two is the
+   isolated case, which step 4 then handles with a single shared CLO. */
+const MAXCOMPS=8;
+function isOneClo(b){return b.comps.length>=2 && (b.cloMode==="one"||b.cloMode==="multi");}
 function cloReady(b){
   if(b.comps.length===0)return false;
   if(isOneClo(b))return (b.cloOne||"").trim().length>0;
@@ -1544,12 +1581,14 @@ function renderBuild(){
       ${SDGS.map(([n,t])=>`<button class="sdgpick" data-sdg="${n}" aria-pressed="${b.sdg==(''+n)}"><span class="sn">${n}</span><span>${t}</span></button>`).join("")}
     </div></div>`;
 
-  // STEP 3 \u2014 competencies (one or two)
+  // STEP 3 \u2014 competencies: one, two, or more
   const nsel=b.comps.length;
   h+=`<div class="stepcard${nsel>=1?' ok':''}">
-    <div class="stephead"><span class="stepnum">3</span><h3>Select one or two competencies</h3></div>
-    <div class="stepsub">Both are assessed under PLO12. Pick one or two your content can genuinely produce evidence for &#8212; two per course is UPM's default.</div>
-    ${nsel===0?`<div class="wchip">Pick one or two to continue</div>`:''}
+    <div class="stephead"><span class="stepnum">3</span><h3>Select your competencies &#8212; one, two or more</h3></div>
+    <div class="stepsub">All are assessed under PLO12. Pick the ones your content can genuinely produce evidence for. Two per course is UPM's default; one is fine where the content only supports one, and more than two is an isolated case you will need to justify.</div>
+    ${nsel===0?`<div class="wchip">Pick at least one to continue</div>`:''}
+    ${nsel>2?`<div class="wchip">${nsel} selected &#8212; beyond UPM's default of two. Each one needs its own four criteria and its own individual evidence, so only keep the ones the task genuinely forces students to use.</div>`:''}
+    ${nsel>=MAXCOMPS?`<div class="wchip">Maximum of ${MAXCOMPS} reached. Deselect one to swap.</div>`:''}
     ${b.comps.includes('integrated')?`<div class="wchip">Integrated Problem-solving is capstone / final-year work. Met mid-programme, assess it as emerging: mark all four levels, set the attainment threshold at Developing, and declare that in the course outline.</div>`:''}
     <div class="pickgrid" id="bCompGrid">
       ${C.map(c=>`<button class="pick" data-comp="${c.key}" aria-pressed="${b.comps.includes(c.key)}"><span class="pk">${String(c.n).padStart(2,'0')}</span>${c.name}</button>`).join("")}
@@ -1558,23 +1597,31 @@ function renderBuild(){
   // STEPS 4-8 per competency (once one or two chosen)
   if(b.comps.length>=1){
     b.comps.forEach(ensureRubric);
+    if(b.comps.length>2&&b.cloMode==="one")b.cloMode="multi";
     const oneClo=isOneClo(b);
 
     // STEP 4 CLO \u2014 with a two-CLOs / one-CLO toggle when two competencies are selected
     h+=`<div class="stepcard${cloReady(b)?' ok':''}">
       <div class="stephead"><span class="stepnum">4</span><h3>Write the CLO, mapped to PLO12</h3></div>
       <div class="stepsub">Use an observable verb. The test: can you write four rubric levels for it?</div>`;
-    if(b.comps.length===2){
+    if(b.comps.length>=2){
+      const nC=b.comps.length;
       h+=`<div class="toggle2 noprint">
-        <button class="pilltog${!oneClo?' on':''}" data-clomode="two">Two CLOs &#8212; one per competency</button>
-        <button class="pilltog${oneClo?' on':''}" data-clomode="one">One CLO &#8212; carrying both</button>
-      </div>
-      <div class="stepsub" style="margin:2px 0 0">Choose one CLO only when the task cannot be done without both competencies together &#8212; typically capstone or design work. Both blocks of rubric criteria (1&#8211;4 and 5&#8211;8) then hang off this one CLO; state which criteria evidence which competency.</div>`;
+        <button class="pilltog${b.cloMode==='two'?' on':''}" data-clomode="two">${nC>2?'One CLO per competency':'Two CLOs &#8212; one per competency'}</button>
+        ${nC===2?`<button class="pilltog${b.cloMode==='one'?' on':''}" data-clomode="one">One CLO &#8212; carrying both</button>`:''}
+        <button class="pilltog${b.cloMode==='multi'?' on':''}" data-clomode="multi">One CLO &#8212; three or more competencies</button>
+      </div>`;
+      if(b.cloMode==='multi'){
+        h+=`<div class="stepsub" style="margin:2px 0 0"><b>Isolated case.</b> One CLO carrying three or more competencies is rare and hard to defend: the more competencies hang off a single sentence, the harder it is to show which criterion evidenced which. Use it only where the task genuinely cannot be done without all of them &#8212; a capstone, a live client project, clinical or industrial placement. Every block of four criteria then hangs off this one CLO, so state in the course outline which criteria evidence which competency.</div>`;
+        if(nC<3)h+=`<div class="wchip">Now select a third competency in step 3.</div>`;
+      }else{
+        h+=`<div class="stepsub" style="margin:2px 0 0">Choose one CLO only when the task cannot be done without both competencies together &#8212; typically capstone or design work. Both blocks of rubric criteria (1&#8211;4 and 5&#8211;8) then hang off this one CLO; state which criteria evidence which competency.</div>`;
+      }
     }
     if(oneClo){
-      const A=byKey(b.comps[0]),Bc=byKey(b.comps[1]);
-      const verbs=[...new Set([...VERBS[b.comps[0]],...VERBS[b.comps[1]]])];
-      h+=`<div class="blk"><h4>${A.name} + ${Bc.name}</h4><div class="bsub">One CLO carrying both competencies</div>
+      const names=b.comps.map(k=>byKey(k).name);
+      const verbs=[...new Set(b.comps.reduce((a,k)=>a.concat(VERBS[k]),[]))];
+      h+=`<div class="blk"><h4>${names.join(" + ")}</h4><div class="bsub">One CLO carrying ${names.length===2?'both':'all '+names.length} competencies</div>
         <textarea class="cloin" id="bCloOne" placeholder="e.g. Produce and defend an integrated option, tracing the system effects and justifying the trade-offs...">${(b.cloOne||'').replace(/</g,'&lt;')}</textarea>
         <div class="verbhint">Verbs that work: ${verbs.map(v=>`<b>${v}</b>`).join(" &middot; ")}</div></div>`;
     }else{
@@ -1592,13 +1639,20 @@ function renderBuild(){
       <div class="stephead"><span class="stepnum">5</span><h3>Design the learning activity</h3></div>
       <div class="stepsub">Choose a pedagogy that makes students practise the competency &#8212; twice, with feedback.</div>`;
     b.comps.forEach(k=>{
-      const c=byKey(k); const peds=pedForComp(k);
+      const c=byKey(k); const strong=strongFor(k);
       h+=`<div class="blk"><h4>${c.name}</h4>
-        <label class="fl">Suggested pedagogy <span class="hint">&#8212; strong fits for this competency</span></label>
+        <label class="fl">Pedagogy <span class="hint">&#8212; every method is listed; &#9733; marks the strongest fits for this competency</span></label>
         <select data-act="${k}"><option value="">&#8212; choose a method &#8212;</option>
-        ${peds.map(pd=>`<option value="${pd.name}"${b.activity[k]===pd.name?' selected':''}>${pd.name}</option>`).join("")}</select>`;
-      const chosen=peds.find(pd=>pd.name===b.activity[k]);
-      if(chosen)h+=`<div class="bsub" style="margin-top:8px"><b>Assess by:</b> ${chosen.assess}</div>`;
+        ${FAMILIES.map(f=>`<optgroup label="${f}">${PEDAGOGIES.filter(pd=>pd.fam===f).map(pd=>
+          `<option value="${pd.name}"${b.activity[k]===pd.name?' selected':''}>${strong.has(pd.name)?'\u2605 ':''}${pd.name}</option>`).join("")}</optgroup>`).join("")}
+        </select>`;
+      const chosen=pedByName(b.activity[k]);
+      if(chosen){
+        h+=`<div class="bsub" style="margin-top:8px"><b>What students do:</b> ${chosen.does}</div>
+            <div class="bsub" style="margin-top:4px"><b>Assess by:</b> ${chosen.assess}</div>`;
+        if(chosen.watch)h+=`<div class="verbhint"><b>Watch:</b> ${chosen.watch}</div>`;
+        if(!strong.has(chosen.name))h+=`<div class="verbhint">This is not one of the starred fits for ${c.name} &#8212; it most naturally develops ${chosen.develops.map(x=>byKey(x).name).join(", ")}. It can still work, but check that a student cannot complete the task well without using ${c.name}.</div>`;
+      }
       h+=`</div>`;
     });
     h+=`</div>`;
@@ -1620,7 +1674,7 @@ function renderBuild(){
     // STEP 7 describe the assignment topic
     h+=`<div class="stepcard${(b.assignment||'').trim()?' ok':''}">
       <div class="stephead"><span class="stepnum">7</span><h3>Describe the assignment topic</h3></div>
-      <div class="stepsub">Describe the task students will do to demonstrate ${b.comps.map(k=>byKey(k).name).join(" and ")}. Give the situation, what each student produces, and any group element &#8212; enough for a rubric to be tied to it.</div>
+      <div class="stepsub">Describe the task students will do to demonstrate ${listNames(b.comps)}. Give the situation, what each student produces, and any group element &#8212; enough for a rubric to be tied to it.</div>
       <div style="margin-left:36px">
         <label class="fl">Assignment topic and task <span class="hint">&#8212; the situation and the individual output</span></label>
         <textarea class="cloin" id="bAssignText" style="min-height:110px" placeholder="e.g. Students receive a real catchment dataset and a drought scenario. Individually, they produce an annotated allocation map (Part A) and a two-page justification memo (Part B) defending who gets water and why.">${(b.assignment||'').replace(/</g,'&lt;')}</textarea>
@@ -1639,7 +1693,7 @@ function renderBuild(){
             <li><b>Copy the prompt</b> and paste it into your AI.
               <div style="margin-top:6px"><button class="btn action small" id="bCopyPrompt">Copy the rubric prompt</button></div></li>
             <li style="margin-top:14px"><b>Paste the AI's answer here</b> &#8212; the JSON it writes back, <em>not</em> the prompt.
-              <textarea id="aiPasteIn" class="cloin" style="min-height:96px;margin-top:6px" placeholder='Paste the AI answer. It looks like: { "A": [ {"l1":"...","l2":"...","l3":"...","l4":"..."}, ... ], "B": [ ... ] }'></textarea></li>
+              <textarea id="aiPasteIn" class="cloin" style="min-height:96px;margin-top:6px" placeholder='Paste the AI answer. It looks like: { "A": [ {"l1":"...","l2":"...","l3":"...","l4":"..."}, ... ]${b.comps.length>1?', "B": [ ... ]':''}${b.comps.length>2?', "C": [ ... ]':''} }'></textarea></li>
             <li style="margin-top:14px"><b>Fill the rubric.</b>
               <div style="margin-top:6px"><button class="btn small" id="bFillPaste">Fill rubric from answer</button></div></li>
           </ol>
@@ -1666,6 +1720,7 @@ function renderBuild(){
   body.innerHTML=h;
   wireBuild();
   renderWfSteps();
+  autoGrowAll();
 }
 
 function renderAlignPreview(){
@@ -1676,16 +1731,16 @@ function renderAlignPreview(){
   let rows="";
   if(n>=1){
     if(oneClo){
-      const A=byKey(b.comps[0]),Bc=byKey(b.comps[1]);
-      rows=`<tr><td>${(b.cloOne||'<span style="color:#9DB1AA">CLO not written</span>')}</td>
+      const cs=b.comps.map(byKey);
+      rows=`<tr><td>${(b.cloOne||'<span style="color:#7FA096">CLO not written</span>')}</td>
         <td class="k" style="width:auto;background:var(--slate-tint);color:var(--slate);font-weight:600">PLO12</td>
         <td>${sdgCell}</td>
-        <td>${A.name} + ${Bc.name}</td>
-        <td>${A.evidence} / ${Bc.evidence}, criteria 1&#8211;8</td></tr>`;
+        <td>${cs.map(c=>c.name).join(" + ")}</td>
+        <td>${b.comps.map(k=>b.output[k]||byKey(k).evidence).join(" / ")}, criteria 1&#8211;${n*4}</td></tr>`;
     }else{
       b.comps.forEach((k,ci)=>{
         const c=byKey(k);
-        rows+=`<tr><td>${(b.clo[k]||'<span style="color:#9DB1AA">CLO not written</span>')}</td>
+        rows+=`<tr><td>${(b.clo[k]||'<span style="color:#7FA096">CLO not written</span>')}</td>
           <td class="k" style="width:auto;background:var(--slate-tint);color:var(--slate);font-weight:600">PLO12</td>
           <td>${sdgCell}</td>
           <td>${c.name}</td>
@@ -1698,7 +1753,7 @@ function renderAlignPreview(){
     <h3 style="margin:12px 0 4px">${b.course||'Your course'}${b.cluster?' &#183; '+b.cluster:''}</h3>
     <p style="font-size:13.5px;color:var(--ink-soft)">Only the CLO is directly assessed; every other column is a claim traceable through it.</p>
     ${(b.assignment||'').trim()?`<div style="margin:14px 0"><div class="mono" style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss)">Assignment topic</div><p style="font-size:14px;margin-top:4px;white-space:pre-wrap">${(b.assignment||'').replace(/</g,'&lt;')}</p></div>`:''}
-    ${n>=1?`<table class="tbl"><thead><tr><th>CLO</th><th>PLO</th><th>SDG</th><th>ESDC</th><th>Assessed by</th></tr></thead><tbody>${rows}</tbody></table>`:'<p style="color:#9DB1AA;font-size:14px">Select one or two competencies to assemble the table.</p>'}
+    ${n>=1?`<table class="tbl"><thead><tr><th>CLO</th><th>PLO</th><th>SDG</th><th>ESDC</th><th>Assessed by</th></tr></thead><tbody>${rows}</tbody></table>`:'<p style="color:#7FA096;font-size:14px">Select one or two competencies to assemble the table.</p>'}
     <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap" class="noprint">
       <button class="btn moss small" id="bPrint">Print / save as PDF</button>
       <button class="btn ghost small" id="bCopy">Copy as text</button>
@@ -1720,32 +1775,32 @@ function wireBuild(){
   document.querySelectorAll("[data-comp]").forEach(btn=>btn.addEventListener("click",()=>{
     const k=btn.dataset.comp; const i=b.comps.indexOf(k);
     if(i>=0)b.comps.splice(i,1);
-    else{ if(b.comps.length>=2)b.comps.shift(); b.comps.push(k); }
+    else{ if(b.comps.length>=MAXCOMPS)return; b.comps.push(k); }
     saveLocal();renderBuild();
   }));
   document.querySelectorAll("[data-clo]").forEach(t=>t.addEventListener("input",e=>{
-    b.clo[e.target.dataset.clo]=e.target.value;saveLocal();updateAlign();markBuildTick();
+    b.clo[e.target.dataset.clo]=e.target.value;autoGrow(e.target);saveLocal();updateAlign();markBuildTick();
   }));
   document.querySelectorAll("[data-clomode]").forEach(btn=>btn.addEventListener("click",()=>{
     b.cloMode=btn.dataset.clomode;saveLocal();renderBuild();
   }));
   const co=document.getElementById("bCloOne");
-  if(co)co.addEventListener("input",e=>{b.cloOne=e.target.value;saveLocal();updateAlign();markBuildTick();});
+  if(co)co.addEventListener("input",e=>{b.cloOne=e.target.value;autoGrow(e.target);saveLocal();updateAlign();markBuildTick();});
   document.querySelectorAll("[data-act]").forEach(sel=>sel.addEventListener("change",e=>{
     b.activity[e.target.dataset.act]=e.target.value;saveLocal();renderBuild();
   }));
   document.querySelectorAll("[data-out]").forEach(t=>t.addEventListener("input",e=>{
-    b.output[e.target.dataset.out]=e.target.value;saveLocal();updateAlign();
+    b.output[e.target.dataset.out]=e.target.value;autoGrow(e.target);saveLocal();updateAlign();
   }));
   document.querySelectorAll("[data-rub]").forEach(t=>t.addEventListener("input",e=>{
     const [k,ri,lv]=e.target.dataset.rub.split("|");
-    b.rubric[k][+ri][lv]=e.target.value;saveLocal();markBuildTick();
+    b.rubric[k][+ri][lv]=e.target.value;autoGrow(e.target);saveLocal();markBuildTick();
   }));
   const at=document.getElementById("bAssignText");
-  if(at)at.addEventListener("input",e=>{b.assignment=e.target.value;saveLocal();updateAlign();markBuildTick();});
+  if(at)at.addEventListener("input",e=>{b.assignment=e.target.value;autoGrow(e.target);saveLocal();updateAlign();markBuildTick();});
   const cpp=document.getElementById("bCopyPrompt"); if(cpp)cpp.addEventListener("click",copyRubricPrompt);
   const flp=document.getElementById("bFillPaste"); if(flp)flp.addEventListener("click",fillRubricFromPaste);
-  const pr=document.getElementById("bPrint"); if(pr)pr.addEventListener("click",()=>window.print());
+  const pr=document.getElementById("bPrint"); if(pr)pr.addEventListener("click",()=>{preparePrint();window.print();});
   const cp=document.getElementById("bCopy"); if(cp)cp.addEventListener("click",copyModule);
   const rs=document.getElementById("bReset"); if(rs)rs.addEventListener("click",()=>{
     if(confirm("Clear this module and start over?")){
@@ -1757,7 +1812,7 @@ function wireBuild(){
 function updateAlign(){
   const host=document.querySelector("#buildBody .alignprev");
   if(host){ host.outerHTML=renderAlignPreview();
-    const pr=document.getElementById("bPrint"); if(pr)pr.addEventListener("click",()=>window.print());
+    const pr=document.getElementById("bPrint"); if(pr)pr.addEventListener("click",()=>{preparePrint();window.print();});
     const cp=document.getElementById("bCopy"); if(cp)cp.addEventListener("click",copyModule);
     const rs=document.getElementById("bReset"); if(rs)rs.addEventListener("click",()=>{
       if(confirm("Clear this module and start over?")){state.build={course:"",cluster:"",sdg:"",comps:[],clo:{},cloMode:"two",cloOne:"",activity:{},output:{},rubric:{},assignment:""};saveLocal();renderBuild();}});
@@ -1776,7 +1831,7 @@ function copyModule(){
   L.push(b.assignment||"\u2014");
   L.push("");
   if(oneClo){
-    L.push("CLO (\u2192PLO12, carries both competencies): "+(b.cloOne||"\u2014"));
+    L.push("CLO (\u2192PLO12, carries "+(b.comps.length===2?"both":"all "+b.comps.length)+" competencies): "+(b.cloOne||"\u2014"));
     L.push("");
   }
   b.comps.forEach((k,ci)=>{
@@ -1807,7 +1862,7 @@ function fallbackCopy(txt,done){
 }
 
 /* ============================================================
-   08 BUILD \u2014 rubric (bring your own AI, by copy and paste)
+   BUILD \u2014 rubric (bring your own AI, by copy and paste)
    The prompt is copied out to any AI the lecturer has; the AI's
    answer is pasted back and parsed in. No key, no API, no CORS.
    Everything else in the app works with no AI at all.
@@ -1816,7 +1871,7 @@ function rubricPrompt(b){
   const oneClo=isOneClo(b);
   const lineOf=r=>r.crit+" ("+(r.prov||"institutional")+")";
   const topic=(b.assignment||"").trim();
-  const letters=["A","B"];
+  const letters=LETTERS;
   const L=[
 "You are helping a Malaysian university lecturer build a complete, defensible PLO12 marking rubric for the assignment below. It follows UNESCO (2017) ESD competencies and the UPM guidebook (four criteria per competency, four levels each).",
 "",
@@ -1825,7 +1880,7 @@ function rubricPrompt(b){
 "Discipline cluster: "+(b.cluster||"(none)"),
 "Primary SDG: "+(b.sdg?("SDG "+b.sdg):"(none)"),
 ""];
-  if(oneClo){ L.push("One CLO carrying both competencies: "+(b.cloOne||"(not written)")); L.push(""); }
+  if(oneClo){ L.push("One CLO carrying "+(b.comps.length===2?"both":"all "+b.comps.length)+" competencies: "+(b.cloOne||"(not written)")); L.push(""); }
   L.push("ASSIGNMENT TOPIC AND TASK", (topic||"(not described)"), "");
   b.comps.forEach((k,ci)=>{
     const c=byKey(k), rr=(b.rubric[k]||c.rubric);
@@ -1846,13 +1901,8 @@ function rubricPrompt(b){
 "Each descriptor: one sentence, under 22 words, plain punctuation, no em dashes.",
 "");
   const four='[{"l1":"","l2":"","l3":"","l4":""},{"l1":"","l2":"","l3":"","l4":""},{"l1":"","l2":"","l3":"","l4":""},{"l1":"","l2":"","l3":"","l4":""}]';
-  if(b.comps.length===2){
-    L.push('Return ONLY valid JSON, no preamble and no markdown fences. Exactly FOUR rows per competency, in the given order:');
-    L.push('{"A":'+four+',"B":'+four+'}');
-  }else{
-    L.push('Return ONLY valid JSON, no preamble and no markdown fences. Exactly FOUR rows, in the given order:');
-    L.push('{"A":'+four+'}');
-  }
+  L.push('Return ONLY valid JSON, no preamble and no markdown fences. Exactly FOUR rows per competency, in the given order:');
+  L.push('{'+b.comps.map((k,i)=>'"'+letters[i]+'":'+four).join(",")+'}');
   return L.join("\n");
 }
 
@@ -1866,7 +1916,7 @@ function fillRubricInPlace(byComp){
       ["l1","l2","l3","l4"].forEach(lv=>{
         if(s[lv]){ row[lv]=s[lv];
           const el=document.querySelector('[data-rub="'+k+"|"+ri+"|"+lv+'"]');
-          if(el)el.value=s[lv];
+          if(el){el.value=s[lv];autoGrow(el);}
           filled++;
         }
       });
@@ -1912,17 +1962,16 @@ function jsonCandidates(t){
 }
 function abHasText(o){
   const filled=a=>Array.isArray(a)&&a.some(r=>r&&(r.l1||r.l2||r.l3||r.l4));
-  return o&&(filled(o.A)||filled(o.B));
+  return !!o&&LETTERS.some(L=>filled(o[L]));
 }
 function extractRubricJSON(text){
   const t=(text||"").replace(/```json/gi,"").replace(/```/g,"");
   let last=null;
   jsonCandidates(t).forEach(c=>{
     let o; try{o=JSON.parse(c);}catch(e){return;}
-    if(o&&(Array.isArray(o.A)||Array.isArray(o.B))){ if(abHasText(o))last=last&&abHasText(last)?last:o; else if(!last)last=o; }
+    if(o&&LETTERS.some(L=>Array.isArray(o[L]))){ if(abHasText(o))last=last&&abHasText(last)?last:o; else if(!last)last=o; }
   });
-  if(last)return last;
-  try{return extractJSON(t);}catch(e){return null;}
+  return last;
 }
 function fillRubricFromPaste(){
   const b=B(); const st=document.getElementById("aiPasteStatus");
@@ -1932,15 +1981,17 @@ function fillRubricFromPaste(){
   const ta=document.getElementById("aiPasteIn"); const raw=ta?ta.value:"";
   if(!raw.trim()){set("Paste the AI's answer in the box first.",true);return;}
   const j=extractRubricJSON(raw);
-  if(!j){ set("Could not find a rubric in that text. Paste the AI's answer \u2014 the JSON it returns, which starts with { and contains an \"A\" array (and a \"B\" array for two competencies).",true); return; }
-  const byComp={}; byComp[b.comps[0]]=Array.isArray(j.A)?j.A:[]; if(b.comps[1])byComp[b.comps[1]]=Array.isArray(j.B)?j.B:[];
+  if(!j){ set("Could not find a rubric in that text. Paste the AI's answer \u2014 the JSON it returns, which starts with { and contains an \"A\" array (one lettered array per competency).",true); return; }
+  const byComp={}; b.comps.forEach((k,i)=>{const arr=j[LETTERS[i]];byComp[k]=Array.isArray(arr)?arr:[];});
   const anyText=Object.values(byComp).some(rows=>rows.some(r=>r&&(r.l1||r.l2||r.l3||r.l4)));
   if(!anyText){ set("That looks like the prompt template with empty cells, not the AI's answer. Copy the prompt into your AI, let it write the descriptors, then paste what it wrote back \u2014 each level should contain text.",true); return; }
   const n=fillRubricInPlace(byComp);
   set(n?("Rubric filled ("+n+" cells) from the answer. Review and edit every cell below."):"No matching descriptors were found in that answer.",!n);
 }
 
-
+/* ============================================================
+   BOOT
+   ============================================================ */
 (async function(){
   await loadLocal();
   renderLedger();fillDisc();fillQuizDiscs();renderPedagogy();renderRubricPicker();renderBuild();
@@ -1950,3 +2001,5 @@ function fillRubricFromPaste(){
   if(!hasS)document.getElementById("railSaved").textContent="Progress saves in this browser.";
 })();
 </script>
+</body>
+</html>
