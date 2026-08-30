@@ -352,8 +352,27 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     </div>
 
     <div class="card">
+      <span class="tag slate">How to use this site</span>
+      <h3 style="margin:12px 0 2px">1.3 &#183; How to use this site</h3>
+      <p style="color:var(--ink-soft);font-size:15px">Ten stages, in menu order. Work through them in sequence the first time.</p>
+      <table class="tbl"><thead><tr><th>Stages</th><th>What you do there</th></tr></thead><tbody>
+        <tr><td class="k">01&#8211;04 &#183; Read and learn</td><td>How the parts align, the eight competencies, and the same eight restated in your own field.</td></tr>
+        <tr><td class="k">05 and 08 &#183; Quizzes</td><td>Name them, tell them apart, then diagnose real tasks and rubrics.</td></tr>
+        <tr><td class="k">06&#8211;07 &#183; Teach and assess</td><td>Methods that develop each competency, and how to write a rubric that holds up.</td></tr>
+        <tr><td class="k">09&#8211;10 &#183; Build and check</td><td>Eight steps that produce your module, then a checklist before you publish.</td></tr>
+      </tbody></table>
+      <h4 style="margin:20px 0 4px">Practical notes</h4>
+      <ul class="chklist">
+        <li>Set your discipline in stage 04 first &#8212; the quizzes use tasks from your field.</li>
+        <li>Quizzes can be retaken; the questions are regenerated each time.</li>
+        <li>Stage 09 saves as you type, in this browser on this device only.</li>
+        <li>Export your module with <b>Print / save as PDF</b> or <b>Copy as text</b> before you finish.</li>
+      </ul>
+    </div>
+
+    <div class="card">
       <span class="tag slate">Content developers</span>
-      <h3 style="margin:12px 0 8px">1.3 &#183; Developed by</h3>
+      <h3 style="margin:12px 0 8px">1.4 &#183; Developed by</h3>
       <div class="devgrid">
         <div class="dev"><div class="devname">Prof. Dr Zurina Zainal Abidin</div><div class="devaff">Department of Chemical and Environmental Engineering, Faculty of Engineering, Universiti Putra Malaysia</div></div>
         <div class="dev"><div class="devname">Assoc. Prof. Dr Suriati Paiman</div><div class="devaff">Department of Physics, Faculty of Science, Universiti Putra Malaysia</div></div>
@@ -364,7 +383,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
     <div class="card">
       <span class="tag">References</span>
-      <h3 style="margin:12px 0 8px">1.4 &#183; References</h3>
+      <h3 style="margin:12px 0 8px">1.5 &#183; References</h3>
       <ul class="reflist">
         <li><b>UNESCO (2017).</b> Education for Sustainable Development Goals: Learning Objectives. Paris: UNESCO. Primary source for the eight key competencies (Box 1.1, p.10), the three learning domains, pedagogy and assessment.</li>
         <li><b>Malaysian Qualifications Agency (2024).</b> Malaysian Qualifications Framework (MQF), Second Edition. Cyberjaya: MQA.</li>
