@@ -9,7 +9,7 @@
 
 <style>
 :root{
-  --ink:#08120F; --ink-soft:#33453F; --paper:#EDF2EF; --card:#FFFFFF; --line:#B4C2BC;
+  --ink:#13211D; --ink-block:#27403A; --ink-soft:#33453F; --paper:#EDF2EF; --card:#FFFFFF; --line:#B4C2BC;
   --moss:#0F6247; --moss-tint:#BEDDD0; --slate:#0F5486; --slate-tint:#C3D9EC;
   --amber:#AD6600; --amber-tint:#F8DCA0; --rose:#8B1F23; --rose-tint:#F3C3C3;--teal:#00615F;--teal-tint:#B3DCD9;--orange:#B03E0B;--orange-tint:#F8CCB1;--plum:#280E30;--plum-tint:#D5BFDE; --radius:3px;
 }
@@ -50,7 +50,7 @@ button{font:inherit}
 .lede{font-size:17px;color:var(--ink-soft);max-width:64ch;margin:12px 0 28px}
 .hidden{display:none !important}
 
-.ledger{border-top:2px solid var(--ink);margin-top:6px}
+.ledger{border-top:2px solid var(--ink-block);margin-top:6px}
 .lrow{display:grid;grid-template-columns:46px minmax(0,1fr) minmax(0,1.2fr) 92px;gap:16px;align-items:center;border-bottom:1px solid var(--line);padding:14px 6px;cursor:pointer;background:none;border-left:0;border-right:0;border-top:0;width:100%;text-align:left;transition:background .14s}
 .lrow:hover{background:var(--moss-tint)}
 .lrow .idx{font-family:"IBM Plex Mono",monospace;font-size:20px;color:var(--moss);font-weight:600}
@@ -73,7 +73,7 @@ button{font:inherit}
 .obslist li:last-child{border-bottom:0}
 .obslist li::before{content:counter(o);position:absolute;left:0;top:10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:#fff;background:var(--moss);width:20px;height:20px;border-radius:50%;display:grid;place-items:center}
 
-.btn{background:var(--ink);color:#fff;border:1px solid var(--ink);padding:10px 18px;border-radius:var(--radius);cursor:pointer;font-weight:500;font-size:15px;transition:opacity .15s}
+.btn{background:var(--ink-block);color:#fff;border:1px solid var(--ink-block);padding:10px 18px;border-radius:var(--radius);cursor:pointer;font-weight:500;font-size:15px;transition:opacity .15s}
 .btn.action{background:var(--amber);border-color:var(--amber);color:#fff;font-weight:600;box-shadow:0 1px 0 rgba(181,125,14,.35)}
 .btn.action:hover{opacity:.9}
 input:not([type="button"]):focus,select:focus,textarea:focus{outline:2px solid var(--amber);outline-offset:1px;border-color:var(--amber)}
@@ -104,7 +104,7 @@ label.fl .hint{font-weight:400;color:#657873}
 .meter .val{text-align:right;font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-soft)}
 
 .tbl{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
-.tbl th{background:var(--ink);color:#fff;font-family:"Archivo",sans-serif;font-weight:600;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;padding:9px 10px;text-align:left}
+.tbl th{background:var(--ink-block);color:#fff;font-family:"Archivo",sans-serif;font-weight:600;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;padding:9px 10px;text-align:left}
 .tbl td{border:1px solid var(--line);padding:9px 10px;vertical-align:top;background:#fff}
 .tbl td.k{background:var(--moss-tint);font-weight:500;width:26%}
 .prov{display:block;margin-top:4px;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.02em;text-transform:none;font-weight:400;color:var(--ink-soft);opacity:.85}
@@ -187,7 +187,7 @@ label.fl .hint{font-weight:400;color:#657873}
 .devaff{font-size:13px;color:var(--ink-soft);margin-top:3px}
 .tbl tr td:first-child{width:26%}
 
-.callout{background:var(--ink);color:#D8EAE2;padding:18px 20px;border-radius:var(--radius);margin:18px 0}
+.callout{background:var(--ink-block);color:#E3EFEB;padding:18px 20px;border-radius:var(--radius);margin:18px 0}
 .callout strong{color:#fff}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:14px}
 .split>div{padding:18px 20px;background:#fff}
@@ -233,7 +233,7 @@ summary{cursor:pointer;font-size:14.4px;color:var(--moss);font-weight:500}
 .stepcard{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px 22px;margin-bottom:16px;border-left:4px solid var(--line)}
 .stepcard.ok{border-left-color:var(--moss)}
 .stepcard.warn{border-left-color:var(--amber)}
-.stepnum{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:#fff;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;margin-right:10px}
+.stepnum{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--ink-block);color:#fff;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;margin-right:10px}
 .stepcard.ok .stepnum{background:var(--moss)}
 .stephead{display:flex;align-items:center;margin-bottom:6px}
 .stephead h3{font-size:18px}
@@ -252,7 +252,7 @@ summary{cursor:pointer;font-size:14.4px;color:var(--moss);font-weight:500}
 .blk h4{font-size:14.5px;margin-bottom:2px}
 .blk .bsub{font-size:12.5px;color:var(--ink-soft);margin-bottom:10px}
 .rubedit{width:100%;border-collapse:collapse;margin-top:8px;font-size:12.5px}
-.rubedit th{background:var(--ink);color:#fff;font-family:"Archivo",sans-serif;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;padding:6px 7px;text-align:left}
+.rubedit th{background:var(--ink-block);color:#fff;font-family:"Archivo",sans-serif;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;padding:6px 7px;text-align:left}
 .rubedit td{border:1px solid var(--line);padding:0;vertical-align:top}
 .rubedit td.rc{background:var(--moss-tint);font-weight:500;padding:8px;width:22%;font-size:12px}
 .rubedit textarea{width:100%;border:0;background:transparent;padding:7px 8px;font:inherit;font-size:12px;line-height:1.4;resize:vertical;min-height:60px;overflow:hidden;color:var(--ink)}
