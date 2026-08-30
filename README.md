@@ -9,9 +9,9 @@
 
 <style>
 :root{
-  --ink:#0E1A18; --ink-soft:#3C4F4A; --paper:#EDF2EF; --card:#FFFFFF; --line:#C2CDC8;
-  --moss:#1B6A55; --moss-tint:#CFE5DC; --slate:#215A86; --slate-tint:#D4E3F0;
-  --amber:#A76A00; --amber-tint:#FAE6BC; --rose:#932A2D; --rose-tint:#F6D3D3;--teal:#00706F;--teal-tint:#C7E5E3;--orange:#B84A18;--orange-tint:#FADBC8;--plum:#2E1834;--plum-tint:#E0D0E6; --radius:3px;
+  --ink:#08120F; --ink-soft:#33453F; --paper:#EDF2EF; --card:#FFFFFF; --line:#B4C2BC;
+  --moss:#0F6247; --moss-tint:#BEDDD0; --slate:#0F5486; --slate-tint:#C3D9EC;
+  --amber:#AD6600; --amber-tint:#F8DCA0; --rose:#8B1F23; --rose-tint:#F3C3C3;--teal:#00615F;--teal-tint:#B3DCD9;--orange:#B03E0B;--orange-tint:#F8CCB1;--plum:#280E30;--plum-tint:#D5BFDE; --radius:3px;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -33,7 +33,7 @@ button{font:inherit}
 .brandsub{font-size:12px;color:var(--ink-soft);line-height:1.4;margin-bottom:20px}
 .navbtn{display:flex;gap:11px;align-items:baseline;width:100%;text-align:left;background:none;border:0;border-left:3px solid transparent;color:var(--ink-soft);padding:11px 10px;margin:1px 0;border-radius:0 6px 6px 0;cursor:pointer;transition:background .14s,color .14s,border-color .14s}
 
-.navbtn:hover{background:#DEEBE4;color:var(--ink)}
+.navbtn:hover{background:#D2E5DA;color:var(--ink)}
 .navbtn[aria-current="true"]{background:var(--moss-tint);color:var(--moss);border-left-color:var(--moss)}
 .navbtn[aria-current="true"] .lbl{color:var(--moss)}
 .navbtn[aria-current="true"] .sub{color:#2E6455}
@@ -46,7 +46,7 @@ button{font:inherit}
 .railfoot code{color:var(--moss);font-weight:600}
 
 .main{padding:36px clamp(18px,4vw,54px) 90px;max-width:1080px}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--moss);margin-bottom:10px}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);margin-bottom:14px}
 .lede{font-size:17px;color:var(--ink-soft);max-width:64ch;margin:12px 0 28px}
 .hidden{display:none !important}
 
@@ -122,7 +122,7 @@ label.fl .hint{font-weight:400;color:#657873}
 .vidcap{font-size:12.5px;color:var(--ink-soft);margin-top:7px;text-align:center;line-height:1.3}
 .toggle2{display:inline-flex;border:1px solid var(--line);border-radius:22px;overflow:hidden;margin:8px 0 4px}
 .pilltog{background:var(--card);border:0;padding:9px 18px;font-size:14px;font-weight:600;color:var(--ink-soft);cursor:pointer;transition:background .14s,color .14s}
-.pilltog:hover{background:#DEEBE4}
+.pilltog:hover{background:#D2E5DA}
 .pilltog.on{background:var(--moss-tint);color:var(--moss)}
 .aicfg{border:1px solid var(--line);border-radius:6px;padding:10px 14px;background:var(--paper)}
 .aicfg summary{cursor:pointer;font-weight:600;font-size:14px;color:var(--moss)}
@@ -257,10 +257,10 @@ summary{cursor:pointer;font-size:14.4px;color:var(--moss);font-weight:500}
 .rubedit td.rc{background:var(--moss-tint);font-weight:500;padding:8px;width:22%;font-size:12px}
 .rubedit textarea{width:100%;border:0;background:transparent;padding:7px 8px;font:inherit;font-size:12px;line-height:1.4;resize:vertical;min-height:60px;overflow:hidden;color:var(--ink)}
 .taprint{display:none;white-space:pre-wrap}
-.rubedit td:nth-child(2){background:#F8DCDC}
-.rubedit td:nth-child(3){background:#FAEDC6}
-.rubedit td:nth-child(4){background:#DCECE4}
-.rubedit td:nth-child(5){background:#CBE4D9}
+.rubedit td:nth-child(2){background:#F4CDCD}
+.rubedit td:nth-child(3){background:#F8E3AC}
+.rubedit td:nth-child(4){background:#CDE5D9}
+.rubedit td:nth-child(5){background:#B7DBCB}
 textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1px solid var(--line);border-radius:6px;min-height:56px;resize:vertical;line-height:1.45;color:var(--ink)}
 .verbhint{font-size:12px;color:var(--ink-soft);margin-top:6px}
 .verbhint b{color:var(--moss);font-family:"IBM Plex Mono",monospace;font-weight:600}
@@ -283,7 +283,6 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
 <div class="shell">
   <nav class="rail">
-    <div class="brandmark">UNESCO 2030 framework</div>
     <div class="brandtitle">The<br>Eight</div>
     <div class="brandsub">Understand the competencies, see them in your field, teach them, and assess them with a rubric you can defend.</div>
     <div class="navrow">
@@ -303,7 +302,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
       <span id="railSaved">Progress saves on this device.</span>
       <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--line)">
         <div class="mono" style="font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);margin-bottom:6px">References</div>
-        UNESCO (2020). <i>ESD: A Roadmap (ESD for 2030)</i>.<br>
+        UNESCO (2017). <i>ESD Goals: Learning Objectives</i>.<br>
         MQA. <i>Malaysian Qualifications Framework (MQF)</i>, Second Edition 2024.<br>
         UPM Policy on ESD &#183; assessed under PLO12.
       </div>
@@ -415,7 +414,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
         <tr><td class="k">ESD competency</td><td>One of UNESCO's eight key competencies for sustainability (2017).</td><td>One or two per course &#8212; the capacities your content can actually develop.</td></tr>
         <tr><td class="k">PLO12</td><td>UPM's dedicated Programme Learning Outcome for ESD.</td><td>The eight competencies are assessed under PLO12 and nowhere else.</td></tr>
         <tr><td class="k">CLO</td><td>The Course Learning Outcome, written with an observable verb.</td><td>One or two CLOs, mapped to PLO12, each carrying a competency.</td></tr>
-        <tr><td class="k">Rubric criteria</td><td>Four criteria per competency, four levels each, each naming its UNESCO clause.</td><td>Criteria 1&#8211;3 from the observable behaviours; criterion 4 is the &#8220;so what&#8221;.</td></tr>
+        <tr><td class="k">Rubric criteria</td><td>Four criteria per competency, four levels each, each naming its UNESCO clause.</td><td>Criteria 1&#8211;3 from the observable behaviours; criterion 4 assesses what the student does with the analysis.</td></tr>
         <tr><td class="k">Marked script</td><td>The student's individual evidence, scored against the rubric.</td><td>PLO12 attainment is computed from these criteria alone.</td></tr>
       </tbody></table>
       <p style="font-size:13.5px;color:var(--ink-soft);margin-top:10px">National context: the Malaysian Qualifications Framework (MQF, 2024) makes embedding the SDGs and sustainability competencies a requirement; PLO12 is the traceable route through which UPM meets it.</p>
@@ -464,10 +463,8 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
       <span class="tag">References</span>
       <ul class="reflist">
         <li><b>UNESCO (2017).</b> Education for Sustainable Development Goals: Learning Objectives. Paris: UNESCO. Primary source for the eight key competencies (Box 1.1, p.10), the three learning domains, pedagogy and assessment.</li>
-        <li><b>UNESCO (2020).</b> Education for Sustainable Development: A Roadmap (ESD for 2030). Paris: UNESCO. The current implementation framework.</li>
         <li><b>Malaysian Qualifications Agency (2024).</b> Malaysian Qualifications Framework (MQF), Second Edition. Cyberjaya: MQA.</li>
         <li><b>Universiti Putra Malaysia.</b> Policy on Education for Sustainable Development and the PLO12 architecture.</li>
-        <li><b>Supporting sources.</b> Meadows, D. (1999), Leverage Points; Wiek, A., Withycombe, L. &amp; Redman, C. (2011), Key competencies in sustainability, Sustainability Science 6(2); Kolb, D. (1984), Experiential Learning.</li>
       </ul>
     </div>
 
@@ -477,7 +474,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
   <!-- ================= 02 UNDERSTAND ================= -->
   <section id="view-understand" class="hidden">
     <div class="eyebrow">Stage 02 &#183; Understand</div>
-    <h1>Seven capacities, plus one that integrates them.</h1>
+    <h1>The eight key competencies for sustainability</h1>
     <p class="lede">Open each row for what the competency actually claims, the shift it demands of student work, and the three observable behaviours &#8212; these seed criteria 1&#8211;3 of every rubric later, with a fourth criterion added for what the student does with the analysis.</p>
 
     <div class="ledger" id="ledger"></div>
@@ -534,7 +531,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
   <!-- ================= 03 DISCIPLINE LENS ================= -->
   <section id="view-lens" class="hidden">
     <div class="eyebrow">Stage 03 &#183; Your field</div>
-    <h1>Same demand. Your vocabulary.</h1>
+    <h1>The eight competencies in your discipline</h1>
     <p class="lede">Choose your discipline and the eight are restated as things a student in your field would actually be asked to do. Adapt the wording; keep the demand. If your field is not listed, pick the nearest and write your own equivalent &#8212; that improvisation is itself the exercise.</p>
 
     <div class="card noprint">
@@ -585,7 +582,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     </div>
 
     <h2 style="margin:30px 0 6px">Methods that develop each competency</h2>
-    <p style="color:var(--ink-soft);margin-bottom:16px">Drawn from UNESCO's four method families (guidebook Part 3.3). Pick one you can run in week 5 and repeat in week 9 &#8212; one activity produces an anecdote, two spaced with feedback produce a capability. Gamification is left out on purpose: it develops motivation only and evidences no competency on its own.</p>
+    <p style="color:var(--ink-soft);margin-bottom:16px">These teaching methods are grouped by method family, following UNESCO (2017). Choose one method that you can use twice in the semester, for example in week 5 and again in week 9, with feedback in between. One activity is not enough for a student to develop a competency. Gamification is not included here because it increases motivation but does not by itself produce evidence of a competency.</p>
     <div id="pedCards"></div>
 
     <div class="card">
@@ -633,12 +630,12 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
   <!-- ================= 06 ASSESS ================= -->
   <section id="view-assess" class="hidden">
     <div class="eyebrow">Stage 06 &#183; Assess</div>
-    <h1>The mark has to survive being questioned.</h1>
-    <p class="lede">A knowledge question cannot assess a competency. This stage covers the task that can, the output each of the eight produces, the anatomy of a usable rubric and the four faults that break one &#8212; then gives you rubric anchors for all eight competencies.</p>
+    <h1>Assessment tasks and rubrics</h1>
+    <p class="lede">A knowledge question cannot assess a competency. This stage explains the type of assessment task that can, the evidence each of the eight competencies produces, the structure of a usable rubric, and the four common faults in rubric design. It ends with rubric anchors for all eight competencies.</p>
 
     <div class="card">
       <span class="tag">Task design</span>
-      <h3 style="margin:12px 0 4px">Two questions, same topic</h3>
+      <h3 style="margin:12px 0 4px">Comparing two assessment questions</h3>
       <p style="color:var(--ink-soft);font-size:15px">Only one assesses a competency.</p>
       <div class="split">
         <div>
@@ -715,7 +712,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
     <div class="card">
       <h3>Rubric anchors for all eight</h3>
-      <p style="font-size:14.6px;color:var(--ink-soft)">Four criteria per competency: three taken from its observable behaviours and a fourth for the &#8220;so what&#8221;. Each names the UNESCO (2017) clause it operationalises, or is declared institutional. The two anchor levels are written; fill the middle using the gradient above.</p>
+      <p style="font-size:14.6px;color:var(--ink-soft)">Four criteria per competency: three taken from its observable behaviours, and a fourth for what the student does with the analysis. Each names the UNESCO (2017) clause it operationalises, or is declared institutional. The two anchor levels are written; fill the middle using the gradient above.</p>
       <label class="fl" for="rubPick">Show rubric anchors for</label>
       <select id="rubPick"></select>
       <div id="rubOut" style="margin-top:14px"></div>
@@ -774,7 +771,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
   <!-- ================= 07 QUIZ 2 ================= -->
   <section id="view-quiz2" class="hidden">
     <div class="eyebrow">Stage 07 &#183; Quiz 2</div>
-    <h1>Would this mark survive being questioned?</h1>
+    <h1>Identifying faults in tasks, rubrics and alignment</h1>
     <div id="q2intro">
       <p class="lede">Fifteen questions on stages 04 and 05. Diagnose the fault in a rubric descriptor, pick the output that carries the evidence, judge whether a task assesses the competency it names, and match a pedagogy to what it actually develops.</p>
       <div class="grid3">
@@ -997,7 +994,7 @@ const C=[
  shift:"The shift is from analysis to a decision somebody could act on.",
  obs:["Applies three or more lenses and shows what each revealed","Produces a viable option, and states who it includes and who it leaves out","States what it trades off, and who bears that"],
  note:"Placement: capstone, final-year project, industrial training and clinical practice. Where it is met mid-programme, assess it as emerging: mark all four levels as normal, set the attainment threshold at Developing, and declare that in the course outline. Do not cap the rubric.",
- methods:"Real-client projects \u00b7 design charrettes \u00b7 capstone defence",
+ methods:"Real-client projects \u00b7 collaborative design workshops \u00b7 capstone defence",
  ped:"Capstone project \u00b7 work-based learning",
  evidence:"Capstone report with an oral defence",
  rubric:[
@@ -1026,7 +1023,7 @@ const PEDAGOGIES=[
  {name:"Socratic Seminar",fam:"Inquiry and problem-centred",does:"Rule-governed discussion of a difficult text or case.",develops:["critical","normative"],assess:"A position paper written after and revised in light of the seminar."},
  {name:"Project-Based Learning",fam:"Project and production",does:"Work over weeks toward an output for a defined client, with milestones.",develops:["strategic","integrated","collaboration"],assess:"Milestone reviews, the output, and an individual contribution record.",watch:"A polished output can hide a weak process; assess at milestones, not only at submission."},
  {name:"Design Thinking",fam:"Project and production",does:"Empathise, define, ideate, prototype and test with real users.",develops:["collaboration","selfaware","strategic"],assess:"The problem reframing after user contact."},
- {name:"Design Charrette",fam:"Project and production",does:"Time-boxed collaborative design against real constraints.",develops:["integrated","collaboration"],assess:"The trade-off log and the defence of the final option."},
+ {name:"Collaborative Design Workshop",fam:"Project and production",does:"Design a solution as a team within a fixed time limit and under real constraints.",develops:["integrated","collaboration"],assess:"The trade-off log and the defence of the final option."},
  {name:"Studio Critique",fam:"Project and production",does:"Work presented and critiqued publicly at intervals.",develops:["critical","selfaware"],assess:"The revision made in response, not the final piece."},
  {name:"Challenge-Based Learning",fam:"Project and production",does:"An organisation poses a genuine challenge to solve.",develops:["integrated","strategic"],assess:"The client deliverable plus an individual justification."},
  {name:"SULAM / Service Learning",fam:"Experiential and work-based",does:"Apply content to a genuine community need, with the partner as collaborator.",develops:["collaboration","selfaware","normative"],assess:"A prompted reflective journal, partner feedback, and the delivered output.",watch:"Hours served is not evidence, and neither is gratitude; mark the specificity of the reflection."},
@@ -1460,7 +1457,7 @@ function renderRubricPicker(){
       ${c.fromDeck?'<span class="tag">Worked example from the workshop</span>':'<span class="tag slate">Built on the same gradient</span>'}
       <table class="tbl" style="margin-top:12px"><thead><tr><th>Criterion</th><th>Level 1 \u00b7 Limited</th><th>Level 4 \u00b7 Exemplary</th></tr></thead>
       <tbody>${c.rubric.map(r=>`<tr><td class="k">${r.crit}<span class="prov">${r.prov||""}</span></td><td>${r.l1}</td><td>${r.l4}</td></tr>`).join("")}</tbody></table>
-      <p style="margin-top:12px;font-size:14.4px;color:var(--ink-soft)">Four criteria per competency: criteria 1&#8211;3 come from the observable behaviours; criterion 4 is the &#8220;so what&#8221;. Each states the UNESCO (2017) Box 1.1 clause it operationalises, or is declared institutional (Appendix C). Fill levels 2 and 3 by splitting the gap \u2014 connects, then justifies.</p>`;
+      <p style="margin-top:12px;font-size:14.4px;color:var(--ink-soft)">Four criteria per competency: criteria 1&#8211;3 come from the observable behaviours; criterion 4 assesses what the student does with the analysis. Each states the UNESCO (2017) Box 1.1 clause it operationalises, or is declared institutional (Appendix C). Fill levels 2 and 3 by splitting the gap \u2014 connects, then justifies.</p>`;
   };
   s.addEventListener("change",paint);paint();
 }
@@ -1684,7 +1681,7 @@ function renderBuild(){
     // STEP 8 suggest the complete rubric
     h+=`<div class="stepcard${b.comps.every(k=>rubricFilled(k))?' ok':''}">
       <div class="stephead"><span class="stepnum">8</span><h3>Build the rubric</h3></div>
-      <div class="stepsub">From the course name, topic, CLO and competencies, an AI drafts the complete rubric for this content. Copy the prompt into any AI you already have, then paste its answer back to fill the rubric. Criteria 1&#8211;3 come from the observable behaviours; criterion 4 is the &#8220;so what&#8221;. Review and edit every cell &#8212; the mark must be one you could defend at an exam board.</div>
+      <div class="stepsub">From the course name, topic, CLO and competencies, an AI drafts the complete rubric for this content. Copy the prompt into any AI you already have, then paste its answer back to fill the rubric. Criteria 1&#8211;3 come from the observable behaviours; criterion 4 assesses what the student does with the analysis. Review and edit every cell &#8212; the mark must be one you could defend at an exam board.</div>
       <div style="margin-left:36px;margin-bottom:14px" class="noprint">
         <div class="aiopt">
           <div class="aiopt-h">Use any AI to draft the rubric <span class="aiopt-tag">works with anything, no key</span></div>
