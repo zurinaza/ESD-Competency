@@ -286,14 +286,14 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     <div class="brandtitle">The<br>Eight</div>
     <div class="brandsub">Understand the competencies, see them in your field, teach them, and assess them with a rubric you can defend.</div>
     <div class="navrow">
-      <button class="navbtn" data-view="intro"><span class="num">01</span><span><span class="lbl">Introduction</span><span class="sub">Start here</span></span><span class="tick" data-tick="intro"></span></button>
-      <button class="navbtn" data-view="understand"><span class="num">02</span><span><span class="lbl">Understand</span><span class="sub">The eight in general</span></span><span class="tick" data-tick="understand"></span></button>
-      <button class="navbtn" data-view="lens"><span class="num">03</span><span><span class="lbl">Your field</span><span class="sub">The eight, from your discipline</span></span><span class="tick" data-tick="lens"></span></button>
-      <button class="navbtn" data-view="quiz1"><span class="num">04</span><span><span class="lbl">Quiz 1</span><span class="sub">Meaning and field</span></span><span class="tick" data-tick="quiz1"></span></button>
-      <button class="navbtn" data-view="pedagogy"><span class="num">05</span><span><span class="lbl">Pedagogy</span><span class="sub">How to teach each one</span></span><span class="tick" data-tick="pedagogy"></span></button>
-      <button class="navbtn" data-view="assess"><span class="num">06</span><span><span class="lbl">Assess</span><span class="sub">Tasks and rubrics, all eight</span></span><span class="tick" data-tick="assess"></span></button>
-      <button class="navbtn" data-view="quiz2"><span class="num">07</span><span><span class="lbl">Quiz 2</span><span class="sub">Assessment and rubrics</span></span><span class="tick" data-tick="quiz2"></span></button>
-      <button class="navbtn" data-view="quiz3"><span class="num">08</span><span><span class="lbl">Quiz 3</span><span class="sub">Diagnose real assignments</span></span><span class="tick" data-tick="quiz3"></span></button>
+      <button class="navbtn" data-view="intro"><span class="num">01</span><span><span class="lbl">Introduction</span><span class="sub">About this module</span></span><span class="tick" data-tick="intro"></span></button>
+      <button class="navbtn" data-view="framework"><span class="num">02</span><span><span class="lbl">The framework</span><span class="sub">How the parts fit together</span></span><span class="tick" data-tick="framework"></span></button>
+      <button class="navbtn" data-view="understand"><span class="num">03</span><span><span class="lbl">Understand</span><span class="sub">The eight in general</span></span><span class="tick" data-tick="understand"></span></button>
+      <button class="navbtn" data-view="lens"><span class="num">04</span><span><span class="lbl">Your field</span><span class="sub">The eight, from your discipline</span></span><span class="tick" data-tick="lens"></span></button>
+      <button class="navbtn" data-view="quiz1"><span class="num">05</span><span><span class="lbl">Quiz 1</span><span class="sub">Meaning and field</span></span><span class="tick" data-tick="quiz1"></span></button>
+      <button class="navbtn" data-view="pedagogy"><span class="num">06</span><span><span class="lbl">Pedagogy</span><span class="sub">How to teach each one</span></span><span class="tick" data-tick="pedagogy"></span></button>
+      <button class="navbtn" data-view="assess"><span class="num">07</span><span><span class="lbl">Assess</span><span class="sub">Tasks and rubrics, all eight</span></span><span class="tick" data-tick="assess"></span></button>
+      <button class="navbtn" data-view="quiz2"><span class="num">08</span><span><span class="lbl">Quiz 2</span><span class="sub">Rubrics, and real assignments</span></span><span class="tick" data-tick="quiz2"></span></button>
       <button class="navbtn" data-view="build"><span class="num">09</span><span><span class="lbl">Build a module</span><span class="sub">The full workflow, end to end</span></span><span class="tick" data-tick="build"></span></button>
       <button class="navbtn" data-view="summary"><span class="num">10</span><span><span class="lbl">Summary</span><span class="sub">Key take-aways</span></span><span class="tick" data-tick="summary"></span></button>
     </div>
@@ -314,8 +314,8 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
   <!-- ================= 01 INTRODUCTION ================= -->
   <section id="view-intro">
     <div class="eyebrow">Stage 01 &#183; Introduction</div>
-    <h1>Teaching and assessing the eight ESD competencies</h1>
-    <p class="lede">A working module for embedding Education for Sustainable Development into a course you already teach &#8212; from each competency, through the pedagogy that develops it, to a rubric that survives an exam board. Built clause by clause on UNESCO (2017) and assessed under UPM's PLO12.</p>
+    <h1>About this module</h1>
+    <p class="lede">A working module for embedding Education for Sustainable Development into a course you already teach, built on UNESCO (2017) and assessed under UPM's PLO12.</p>
 
     <div class="heroband">
       <div class="herobadge">ESD</div>
@@ -325,15 +325,10 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
       </div>
     </div>
 
-    <div class="quoteband">
-      <span class="qmark">&#8220;</span>
-      <div class="quotetext">The eight competencies are not something you teach. They are something you practise in front of people until they practise too.</div>
-      <div class="quoteby">The heart of ESD pedagogy</div>
-    </div>
 
     <div class="card">
       <span class="tag">Learning outcomes</span>
-      <h3 style="margin:12px 0 2px">Three objectives to achieve by the end of this module</h3>
+      <h3 style="margin:12px 0 2px">1.1 &#183; Three objectives to achieve by the end of this module</h3>
       <div class="grid3" style="margin-top:14px">
         <div class="locard"><span class="lonum" style="background:var(--moss)">1</span><h4>Understand &amp; internalise</h4><p>Deeply comprehend and internalise the core Education for Sustainable Development (ESD) competencies.</p></div>
         <div class="locard"><span class="lonum" style="background:var(--amber)">2</span><h4>Design course content</h4><p>Structure curriculum and content capable of delivering ESD competencies through active and suitable pedagogy.</p></div>
@@ -343,7 +338,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
     <div class="card">
       <span class="tag orange">Expected output</span>
-      <h3 style="margin:12px 0 2px">What you leave this module with</h3>
+      <h3 style="margin:12px 0 2px">1.2 &#183; What you leave this module with</h3>
       <p style="color:var(--ink-soft);font-size:15px">Seven outputs. All of them for one course &#8212; yours.</p>
       <ul class="chklist2">
         <li><span class="cbox"></span><span>One ESD-integrated module for one course.</span></li>
@@ -357,8 +352,44 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     </div>
 
     <div class="card">
+      <span class="tag slate">Content developers</span>
+      <h3 style="margin:12px 0 8px">1.3 &#183; Developed by</h3>
+      <div class="devgrid">
+        <div class="dev"><div class="devname">Prof. Dr Zurina Zainal Abidin</div><div class="devaff">Department of Chemical and Environmental Engineering, Faculty of Engineering, Universiti Putra Malaysia</div></div>
+        <div class="dev"><div class="devname">Assoc. Prof. Dr Suriati Paiman</div><div class="devaff">Department of Physics, Faculty of Science, Universiti Putra Malaysia</div></div>
+        <div class="dev"><div class="devname">Dr Rafidah Hod</div><div class="devaff">Department of Medical Education, Faculty of Medicine and Life Sciences, Universiti Putra Malaysia</div></div>
+        <div class="dev"><div class="devname">Dr Siti Mastura Md Ishak</div><div class="devaff">Department of Industrial Design, Faculty of Design and Architecture, Universiti Putra Malaysia</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="tag">References</span>
+      <h3 style="margin:12px 0 8px">1.4 &#183; References</h3>
+      <ul class="reflist">
+        <li><b>UNESCO (2017).</b> Education for Sustainable Development Goals: Learning Objectives. Paris: UNESCO. Primary source for the eight key competencies (Box 1.1, p.10), the three learning domains, pedagogy and assessment.</li>
+        <li><b>Malaysian Qualifications Agency (2024).</b> Malaysian Qualifications Framework (MQF), Second Edition. Cyberjaya: MQA.</li>
+        <li><b>Universiti Putra Malaysia.</b> Policy on Education for Sustainable Development and the PLO12 architecture.</li>
+      </ul>
+    </div>
+
+    <p class="noprint"><button class="btn moss" data-goto="framework">Next: the framework &#8594;</button></p>
+  </section>
+
+  <!-- ================= 02 FRAMEWORK ================= -->
+  <section id="view-framework" class="hidden">
+    <div class="eyebrow">Stage 02 &#183; The framework</div>
+    <h1>Teaching and assessing the eight ESD competencies</h1>
+    <p class="lede">How the parts fit together: the three learning domains that decide what a task is able to measure, UPM's PLO12 architecture, the alignment that runs from a global goal down to a marked script, and the workflow that turns a course you already teach into an ESD module.</p>
+
+    <div class="quoteband">
+      <span class="qmark">&#8220;</span>
+      <div class="quotetext">The eight competencies are not something you teach. They are something you practise in front of people until they practise too.</div>
+      <div class="quoteby">The heart of ESD pedagogy</div>
+    </div>
+
+    <div class="card">
       <span class="tag teal">Foundations</span>
-      <h3 style="margin:12px 0 2px">The three learning domains</h3>
+      <h3 style="margin:12px 0 2px">2.1 &#183; The three learning domains</h3>
       <p style="color:var(--ink-soft);font-size:15px">UNESCO expresses learning objectives in three domains &#8212; the most useful diagnostic here, and the one that rules out half the assessment methods you were considering. Sometimes summarised as head, heart and hands.</p>
       <div class="domaingrid">
         <div class="domcard t">
@@ -385,7 +416,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
     <div class="card">
       <span class="tag plum">UPM policy</span>
-      <h3 style="margin:12px 0 2px">The UPM architecture: PLO12</h3>
+      <h3 style="margin:12px 0 2px">2.2 &#183; The UPM architecture: PLO12</h3>
       <p style="color:var(--ink-soft);font-size:15px">A dedicated programme learning outcome for ESD, and the rules that govern it. UPM has added a dedicated PLO12; the eight competencies are assessed under PLO12 and nowhere else.</p>
       <table class="tbl"><thead><tr><th>Rule</th><th>Requirement</th></tr></thead><tbody>
         <tr><td class="k">Where competencies are assessed</td><td>PLO12 only</td></tr>
@@ -399,7 +430,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
     <div class="card">
       <span class="tag slate">The alignment</span>
-      <h3 style="margin:12px 0 2px">How SDG, ESD competency, PLO and your CLO fit together</h3>
+      <h3 style="margin:12px 0 2px">2.3 &#183; How SDG, ESD competency, PLO and your CLO fit together</h3>
       <p style="color:var(--ink-soft);font-size:15px">Sustainability is not extra content. A topic you already teach is taught and assessed so that it also develops a sustainability competency &#8212; and every claim is traceable, from the global goal down to a marked script.</p>
       <div class="alignflow">
         <span class="alignnode amb">SDG</span><span class="alignarrow">&#8594;</span>
@@ -422,7 +453,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
     <div class="card">
       <span class="tag amber">The workflow</span>
-      <h3 style="margin:12px 0 2px">The workflow at a glance</h3>
+      <h3 style="margin:12px 0 2px">2.4 &#183; The workflow at a glance</h3>
       <p style="color:var(--ink-soft);font-size:15px">Seven steps take a course you already teach and turn it into an ESD-integrated module. Build in this order &#8212; never start from the SDG list and work backwards.</p>
       <table class="tbl"><thead><tr><th>Step</th><th>What you decide</th></tr></thead><tbody>
         <tr><td class="k">1 &#183; Content</td><td>A topic you already teach that contains a real sustainability tension.</td></tr>
@@ -436,7 +467,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
       </tbody></table>
       <p style="font-size:13.5px;color:var(--ink-soft);margin-top:8px">Each step feeds the next. If you cannot complete a step, the problem is usually upstream &#8212; a challenge that is not messy enough (step 1), or a competency the content cannot evidence (step 3).</p>
 
-      <h3 style="margin:22px 0 2px">Workflow at course level</h3>
+      <h3 style="margin:22px 0 2px">2.5 &#183; Workflow at course level</h3>
       <p style="color:var(--ink-soft);font-size:15px">Break any link and the claim collapses.</p>
       <div class="wflow">
         <div class="wbox t">COMPETENCY</div><span class="warrow">&#8594;</span>
@@ -448,40 +479,21 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
       <div class="callout" style="border-left-color:var(--teal)"><strong style="color:var(--teal)">The one sentence that decides everything.</strong> Your course learning outcome is where the competency either enters the course or never does. Every later decision &#8212; the activity, the task and the rubric &#8212; is downstream of how that sentence is written.</div>
     </div>
 
-    <div class="card">
-      <span class="tag slate">Content developers</span>
-      <h3 style="margin:12px 0 8px">Developed by</h3>
-      <div class="devgrid">
-        <div class="dev"><div class="devname">Prof. Dr Zurina Zainal Abidin</div><div class="devaff">Department of Chemical and Environmental Engineering, Faculty of Engineering, Universiti Putra Malaysia</div></div>
-        <div class="dev"><div class="devname">Assoc. Prof. Dr Suriati Paiman</div><div class="devaff">Department of Physics, Faculty of Science, Universiti Putra Malaysia</div></div>
-        <div class="dev"><div class="devname">Dr Rafidah Hod</div><div class="devaff">Department of Medical Education, Faculty of Medicine and Life Sciences, Universiti Putra Malaysia</div></div>
-        <div class="dev"><div class="devname">Dr Siti Mastura Md Ishak</div><div class="devaff">Department of Industrial Design, Faculty of Design and Architecture, Universiti Putra Malaysia</div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <span class="tag">References</span>
-      <ul class="reflist">
-        <li><b>UNESCO (2017).</b> Education for Sustainable Development Goals: Learning Objectives. Paris: UNESCO. Primary source for the eight key competencies (Box 1.1, p.10), the three learning domains, pedagogy and assessment.</li>
-        <li><b>Malaysian Qualifications Agency (2024).</b> Malaysian Qualifications Framework (MQF), Second Edition. Cyberjaya: MQA.</li>
-        <li><b>Universiti Putra Malaysia.</b> Policy on Education for Sustainable Development and the PLO12 architecture.</li>
-      </ul>
-    </div>
-
-    <p class="noprint"><button class="btn moss" data-goto="understand">Enter the module: understand the eight &#8594;</button></p>
+    <p class="noprint"><button class="btn moss" data-goto="understand">Next: understand the eight &#8594;</button></p>
   </section>
 
   <!-- ================= 02 UNDERSTAND ================= -->
   <section id="view-understand" class="hidden">
-    <div class="eyebrow">Stage 02 &#183; Understand</div>
+    <div class="eyebrow">Stage 03 &#183; Understand</div>
     <h1>The eight key competencies for sustainability</h1>
     <p class="lede">Open each row for what the competency actually claims, the shift it demands of student work, and the three observable behaviours &#8212; these seed criteria 1&#8211;3 of every rubric later, with a fourth criterion added for what the student does with the analysis.</p>
 
+    <h3 style="margin:26px 0 4px">3.1 &#183; The eight competencies</h3>
     <div class="ledger" id="ledger"></div>
 
     <div class="card noprint" style="margin-top:26px">
       <span class="tag">Watch</span>
-      <h3 style="margin:12px 0 6px">Short explainers to go with the eight</h3>
+      <h3 style="margin:12px 0 6px">3.2 &#183; Short explainers to go with the eight</h3>
       <p style="color:var(--ink-soft);font-size:15px">Start with the overview, then one short per competency.</p>
       <div class="vidfeature" style="margin-top:14px"><iframe src="https://www.youtube.com/embed/N0eB2n5L-xE" title="Education for Sustainable Development &#8212; overview" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
       <div class="vidgrid">
@@ -498,7 +510,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
     <div class="card" style="margin-top:26px">
       <span class="tag">Checkpoint</span>
-      <h3 style="margin:12px 0 8px">Four distinctions worth getting right</h3>
+      <h3 style="margin:12px 0 8px">3.3 &#183; Four distinctions worth getting right</h3>
       <p style="color:var(--ink-soft);font-size:15px">These confusions are the ones that show up in course outlines.</p>
       <div class="grid2" id="distinctions"></div>
     </div>
@@ -509,7 +521,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
     <div class="card" style="margin-top:26px">
       <span class="tag amber">Checkpoint</span>
-      <h3 style="margin:12px 0 8px">Before you move on</h3>
+      <h3 style="margin:12px 0 8px">3.4 &#183; Before you move on</h3>
       <p style="color:var(--ink-soft);font-size:15px">You are ready for your own discipline when you can:</p>
       <ul class="chklist">
         <li>Name the shift each competency demands of student work.</li>
@@ -530,32 +542,35 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
   <!-- ================= 03 DISCIPLINE LENS ================= -->
   <section id="view-lens" class="hidden">
-    <div class="eyebrow">Stage 03 &#183; Your field</div>
+    <div class="eyebrow">Stage 04 &#183; Your field</div>
     <h1>The eight competencies in your discipline</h1>
     <p class="lede">Choose your discipline and the eight are restated as things a student in your field would actually be asked to do. Adapt the wording; keep the demand. If your field is not listed, pick the nearest and write your own equivalent &#8212; that improvisation is itself the exercise.</p>
 
     <div class="card noprint">
+      <h3 style="margin:0 0 4px">4.1 &#183; Select your discipline</h3>
       <label class="fl" for="disc">My discipline</label>
       <select id="disc"></select>
       <p style="margin:12px 0 0;font-size:13.6px;color:var(--ink-soft)">Quiz 1 uses your field, so set this before you start it.</p>
     </div>
 
     <div id="lensOut"></div>
-    <p class="noprint"><button class="btn moss" data-goto="quiz1">Next: quiz on stages 02 and 03 &#8594;</button></p>
+    <p class="noprint"><button class="btn moss" data-goto="quiz1">Next: quiz on stages 03 and 04 &#8594;</button></p>
   </section>
 
   <!-- ================= 04 QUIZ 1 ================= -->
   <section id="view-quiz1" class="hidden">
-    <div class="eyebrow">Stage 04 &#183; Quiz 1</div>
+    <div class="eyebrow">Stage 05 &#183; Quiz 1</div>
     <h1>Can you name it, and tell it apart?</h1>
     <div id="q1intro">
       <p class="lede">Fifteen questions on meaning and on your field. Identify the competency from a student behaviour, from a plain-language description, and from a task in your discipline &#8212; then separate the four pairs people confuse. Every answer comes with the reason, not just a tick.</p>
+      <h3 style="margin:24px 0 10px">5.1 &#183; What this quiz covers</h3>
       <div class="grid3">
         <div class="card"><span class="tag">Identify</span><p style="margin-top:10px;font-size:14.6px">A student does this &#8212; which of the eight is it evidence of?</p></div>
         <div class="card"><span class="tag slate">In your field</span><p style="margin-top:10px;font-size:14.6px">A task from your discipline &#8212; which competency does it carry?</p></div>
         <div class="card"><span class="tag amber">Distinguish</span><p style="margin-top:10px;font-size:14.6px">The four pairs that get mis-selected in outlines.</p></div>
       </div>
       <div class="card" style="margin-top:18px">
+        <h3 style="margin:0 0 4px">5.2 &#183; Set your discipline</h3>
         <label class="fl" for="q1disc">Choose your discipline &#8212; the field questions use tasks from it</label>
         <select id="q1disc"></select>
       </div>
@@ -567,12 +582,13 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
   <!-- ================= 05 PEDAGOGY ================= -->
   <section id="view-pedagogy" class="hidden">
-    <div class="eyebrow">Stage 05 &#183; Pedagogy</div>
+    <div class="eyebrow">Stage 06 &#183; Pedagogy</div>
     <h1>Coverage means students practise it.</h1>
     <p class="lede">Explaining a competency is not covering it. This stage shows what each competency looks like under a real teaching approach &#8212; and why changing how you teach means nothing unless the assessment changes with it.</p>
 
     <div class="card">
       <span class="tag">The framing that prevents the commonest error</span>
+      <h3 style="margin:12px 0 2px">6.1 &#183; Pedagogy, competency and assessment</h3>
       <div class="grid3" style="margin-top:14px">
         <div><h4>The pedagogy</h4><p style="font-size:14.6px;margin-top:6px">Delivers the experience where students practise the competency.</p></div>
         <div><h4>The competency</h4><p style="font-size:14.6px;margin-top:6px">Stays the same regardless of the method you choose.</p></div>
@@ -581,19 +597,19 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
       <div class="callout" style="margin-bottom:0">A gamified course that still marks a written exam has changed nothing that matters.</div>
     </div>
 
-    <h2 style="margin:30px 0 6px">Methods that develop each competency</h2>
+    <h2 style="margin:30px 0 6px">6.2 &#183; Methods that develop each competency</h2>
     <p style="color:var(--ink-soft);margin-bottom:16px">These teaching methods are grouped by method family, following UNESCO (2017). Choose one method that you can use twice in the semester, for example in week 5 and again in week 9, with feedback in between. One activity is not enough for a student to develop a competency. Gamification is not included here because it increases motivation but does not by itself produce evidence of a competency.</p>
     <div id="pedCards"></div>
 
     <div class="card">
-      <h3>Classroom methods, competency by competency</h3>
+      <h3>6.3 &#183; Classroom methods, competency by competency</h3>
       <p style="font-size:14.6px;color:var(--ink-soft)">Pick one you could run in week 5 and repeat in week 9. Repetition matters &#8212; one activity produces an anecdote, not a capability.</p>
       <table class="tbl"><thead><tr><th>Competency</th><th>Methods</th><th>Strongest pedagogy</th></tr></thead><tbody id="methodRows"></tbody></table>
     </div>
 
     <div class="card">
       <span class="tag">Worked example</span>
-      <h3 style="margin:12px 0 4px">One session, redesigned</h3>
+      <h3 style="margin:12px 0 4px">6.4 &#183; One session, redesigned</h3>
       <p style="color:var(--ink-soft);font-size:15px">Same topic. Same hours. Different question.</p>
       <div class="split">
         <div>
@@ -617,6 +633,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
     <div class="card">
       <span class="tag amber">Three things must always be true</span>
+      <h3 style="margin:12px 0 2px">6.5 &#183; Three conditions that must always hold</h3>
       <p style="margin:12px 0 0;color:var(--ink-soft);font-size:15px">Whatever teaching method you choose.</p>
       <div class="grid3" style="margin-top:12px">
         <div><h4>1 &#183; Individual evidence exists</h4><p style="font-size:14.4px;margin-top:6px">Something each student personally produced can be judged.</p></div>
@@ -629,13 +646,13 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
   <!-- ================= 06 ASSESS ================= -->
   <section id="view-assess" class="hidden">
-    <div class="eyebrow">Stage 06 &#183; Assess</div>
+    <div class="eyebrow">Stage 07 &#183; Assess</div>
     <h1>Assessment tasks and rubrics</h1>
     <p class="lede">A knowledge question cannot assess a competency. This stage explains the type of assessment task that can, the evidence each of the eight competencies produces, the structure of a usable rubric, and the four common faults in rubric design. It ends with rubric anchors for all eight competencies.</p>
 
     <div class="card">
       <span class="tag">Task design</span>
-      <h3 style="margin:12px 0 4px">Comparing two assessment questions</h3>
+      <h3 style="margin:12px 0 4px">7.1 &#183; Comparing two assessment questions</h3>
       <p style="color:var(--ink-soft);font-size:15px">Only one assesses a competency.</p>
       <div class="split">
         <div>
@@ -652,7 +669,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     </div>
 
     <div class="card">
-      <h3>What evidence does each competency produce?</h3>
+      <h3>7.2 &#183; What evidence does each competency produce?</h3>
       <p style="font-size:14.6px;color:var(--ink-soft)">Choose the output first. The rubric follows.</p>
       <table class="tbl"><thead><tr><th>Competency</th><th>Output that carries the evidence</th></tr></thead><tbody id="evidenceRows"></tbody></table>
       <p style="margin-top:12px;font-size:14.4px">The collaboration row matters most: a group report is evidence of a group, not of an individual. Every group task needs an individual output attached, or the rubric cannot be applied to a person.</p>
@@ -660,6 +677,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
     <div class="card">
       <span class="tag rose">Three traps when marking</span>
+      <h3 style="margin:12px 0 2px">7.3 &#183; Three traps when marking</h3>
       <p style="margin:12px 0 0;color:var(--ink-soft);font-size:15px">Each one produces a mark you cannot defend.</p>
       <div class="grid3" style="margin-top:12px">
         <div><h4>Marking the group</h4><p style="font-size:14.4px;margin:6px 0">A group report used as evidence that an individual holds the competency.</p><p style="font-size:14.4px;color:var(--moss);margin:0">Attach a short individual output.</p></div>
@@ -671,6 +689,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     <div class="grid2">
       <div class="card">
         <span class="tag">Anatomy of a usable rubric</span>
+        <h3 style="margin:12px 0 2px">7.4 &#183; Anatomy of a usable rubric</h3>
         <table class="tbl"><tbody>
           <tr><td class="k">Criteria</td><td>Taken from the observable behaviours. Three per competency.</td></tr>
           <tr><td class="k">Levels</td><td>Four: Limited, Developing, Proficient, Exemplary.</td></tr>
@@ -680,6 +699,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
       </div>
       <div class="card">
         <span class="tag rose">The four faults</span>
+        <h3 style="margin:12px 0 2px">7.5 &#183; The four faults</h3>
         <table class="tbl"><tbody>
           <tr><td class="k">Adjectives, not descriptors</td><td>&#8220;Excellent / Good / Fair / Poor&#8221; is a grading scale. It tells the student nothing.</td></tr>
           <tr><td class="k">Levels separated by counting</td><td>&#8220;Three factors&#8221; versus &#8220;one factor&#8221; measures volume, not competence.</td></tr>
@@ -691,7 +711,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
     <div class="card">
       <span class="tag amber">The technique</span>
-      <h3 style="margin:12px 0 4px">Write level 1 and level 4 first, then split the gap</h3>
+      <h3 style="margin:12px 0 4px">7.6 &#183; Write level 1 and level 4 first, then split the gap</h3>
       <p style="font-size:15px;color:var(--ink-soft)">Writing levels in order produces a flat, undifferentiated middle. The gradient below transfers to any of the eight: <strong style="color:var(--ink)">lists &#8594; connects &#8594; justifies &#8594; sees its own choice as a choice.</strong></p>
       <p style="font-size:14.4px;margin-bottom:4px"><strong>Systems Thinking &#183; criterion: boundary and elements</strong></p>
       <div class="gradient">
@@ -711,7 +731,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     </div>
 
     <div class="card">
-      <h3>Rubric anchors for all eight</h3>
+      <h3>7.7 &#183; Rubric anchors for all eight</h3>
       <p style="font-size:14.6px;color:var(--ink-soft)">Four criteria per competency: three taken from its observable behaviours, and a fourth for what the student does with the analysis. Each names the UNESCO (2017) clause it operationalises, or is declared institutional. The two anchor levels are written; fill the middle using the gradient above.</p>
       <label class="fl" for="rubPick">Show rubric anchors for</label>
       <select id="rubPick"></select>
@@ -720,7 +740,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
     <div class="card">
       <span class="tag slate">Alignment</span>
-      <h3 style="margin:12px 0 4px">One worked alignment table</h3>
+      <h3 style="margin:12px 0 4px">7.8 &#183; One worked alignment table</h3>
       <p style="color:var(--ink-soft);font-size:15px">Urban Water Resources Management &#183; Year 3. Only the CLO is directly assessed &#8212; every other layer is a claim that must be traceable through it.</p>
       <table class="tbl"><thead><tr><th>CLO</th><th>PLO</th><th>SDG</th><th>ESDC</th><th>Assessed by</th></tr></thead><tbody>
         <tr><td>Evaluate competing water allocation options for an urban catchment.</td><td>PLO2 &#183; Problem analysis</td><td>SDG 6</td><td>Systems Thinking</td><td>Case report, criteria 1&#8211;3</td></tr>
@@ -742,6 +762,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     <div class="grid2">
       <div class="card">
         <span class="tag">Student learning resources</span>
+        <h3 style="margin:12px 0 2px">7.9 &#183; Student learning resources</h3>
         <table class="tbl"><tbody>
           <tr><td class="k">Case file or data set</td><td>Real and messy. A tidy case cannot evidence systems or values reasoning.</td></tr>
           <tr><td class="k">Stakeholder briefs</td><td>Needed for any negotiation, role-play or SULAM activity.</td></tr>
@@ -753,6 +774,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
       </div>
       <div class="card">
         <span class="tag">Implementation, next semester</span>
+        <h3 style="margin:12px 0 2px">7.10 &#183; Implementation, next semester</h3>
         <table class="tbl"><tbody>
           <tr><td class="k">Before semester</td><td>Finalise the CLO and publish the rubric inside the course outline.</td></tr>
           <tr><td class="k">Week 1</td><td>Tell students the two competencies in plain language.</td></tr>
@@ -770,10 +792,13 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
   <!-- ================= 07 QUIZ 2 ================= -->
   <section id="view-quiz2" class="hidden">
-    <div class="eyebrow">Stage 07 &#183; Quiz 2</div>
-    <h1>Identifying faults in tasks, rubrics and alignment</h1>
+    <div class="eyebrow">Stage 08 &#183; Quiz 2</div>
+    <h1>Diagnosing assessment tasks, rubrics and alignment</h1>
+    <p class="lede">Two parts. Part A tests the design of tasks and rubrics. Part B gives you ten assignment tasks written for your own discipline and asks which competency each one assesses, and whether it assesses it at all.</p>
+
+    <h2 style="margin:30px 0 10px">8.1 &#183; Part A: assessment and rubrics</h2>
     <div id="q2intro">
-      <p class="lede">Fifteen questions on stages 04 and 05. Diagnose the fault in a rubric descriptor, pick the output that carries the evidence, judge whether a task assesses the competency it names, and match a pedagogy to what it actually develops.</p>
+      <p class="lede">Fifteen questions on stages 06 and 07. Diagnose the fault in a rubric descriptor, pick the output that carries the evidence, judge whether a task assesses the competency it names, and match a pedagogy to what it actually develops.</p>
       <div class="grid3">
         <div class="card"><span class="tag rose">Diagnose</span><p style="margin-top:10px;font-size:14.6px">What is wrong with this descriptor, task or alignment?</p></div>
         <div class="card"><span class="tag">Evidence</span><p style="margin-top:10px;font-size:14.6px">Which output carries evidence for this competency?</p></div>
@@ -787,6 +812,23 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     </div>
     <div class="qrun hidden" data-run="q2"></div>
     <div class="qdone hidden" data-done="q2"></div>
+
+    <h2 style="margin:38px 0 10px;padding-top:24px;border-top:1px solid var(--line)">8.2 &#183; Part B: diagnosing real assignments</h2>
+    <div id="q3intro">
+      <p class="lede">Ten assignment tasks written for <em>your</em> discipline. For some, name the competency the task primarily assesses. For others, judge whether the task is suitable to assess a named competency at all &#8212; the one rule decides it: if a student could score full marks without using the competency, it does not assess it.</p>
+      <div class="grid3">
+        <div class="card"><span class="tag">Name it</span><p style="margin-top:10px;font-size:14.6px">A real task in your field &#8212; which of the eight does it primarily assess?</p></div>
+        <div class="card"><span class="tag slate">Judge it</span><p style="margin-top:10px;font-size:14.6px">Is this task suitable to assess the named competency? Yes or no.</p></div>
+        <div class="card"><span class="tag amber">The one rule</span><p style="margin-top:10px;font-size:14.6px">Could a student score without using it? Then it is not assessed.</p></div>
+      </div>
+      <div class="card" style="margin-top:18px">
+        <label class="fl" for="q3disc">Choose your discipline &#8212; the questions are built from tasks in this field</label>
+        <select id="q3disc"></select>
+      </div>
+      <p style="margin-top:18px"><button class="btn action" data-start="q3">Start quiz 3</button></p>
+    </div>
+    <div class="qrun hidden" data-run="q3"></div>
+    <div class="qdone hidden" data-done="q3"></div>
   </section>
 
   <!-- ================= 09 BUILD ================= -->
@@ -807,7 +849,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
     <div class="card">
       <span class="tag amber">Key take-aways</span>
-      <h3 style="margin:12px 0 8px">Seven things to carry out of this module</h3>
+      <h3 style="margin:12px 0 8px">10.1 &#183; Seven things to carry out of this module</h3>
       <ul class="chklist2">
         <li><span class="cbox"></span><span><b>Educators are the delivery mechanism.</b> Sustainability policies reach students directly through lecturers, making you the crucial agent of change.</span></li>
         <li><span class="cbox"></span><span><b>Change the task, not the content.</b> Integrating ESD does not mean adding new topics to your syllabus; it means designing tasks that require students to practise the competencies.</span></li>
@@ -821,7 +863,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 
     <div class="card" style="margin-top:26px">
       <span class="tag slate">Before you publish</span>
-      <h3 style="margin:12px 0 8px">A design checklist</h3>
+      <h3 style="margin:12px 0 8px">10.2 &#183; A design checklist</h3>
       <ul class="chklist">
         <li>The content contains a real sustainability tension.</li>
         <li>One primary SDG is claimed, not five.</li>
@@ -843,26 +885,6 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     <p class="noprint" style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn moss" data-goto="build">Back to build a module</button><button class="btn ghost" data-goto="intro">Back to the start</button></p>
   </section>
 
-  <!-- ================= 08 QUIZ 3 ================= -->
-  <section id="view-quiz3" class="hidden">
-    <div class="eyebrow">Stage 08 &#183; Quiz 3</div>
-    <h1>Given a real task in your field, which competency does it assess?</h1>
-    <div id="q3intro">
-      <p class="lede">Ten assignment tasks written for <em>your</em> discipline. For some, name the competency the task primarily assesses. For others, judge whether the task is suitable to assess a named competency at all &#8212; the one rule decides it: if a student could score full marks without using the competency, it does not assess it.</p>
-      <div class="grid3">
-        <div class="card"><span class="tag">Name it</span><p style="margin-top:10px;font-size:14.6px">A real task in your field &#8212; which of the eight does it primarily assess?</p></div>
-        <div class="card"><span class="tag slate">Judge it</span><p style="margin-top:10px;font-size:14.6px">Is this task suitable to assess the named competency? Yes or no.</p></div>
-        <div class="card"><span class="tag amber">The one rule</span><p style="margin-top:10px;font-size:14.6px">Could a student score without using it? Then it is not assessed.</p></div>
-      </div>
-      <div class="card" style="margin-top:18px">
-        <label class="fl" for="q3disc">Choose your discipline &#8212; the questions are built from tasks in this field</label>
-        <select id="q3disc"></select>
-      </div>
-      <p style="margin-top:18px"><button class="btn action" data-start="q3">Start quiz 3</button></p>
-    </div>
-    <div class="qrun hidden" data-run="q3"></div>
-    <div class="qdone hidden" data-done="q3"></div>
-  </section>
 
   </main>
 </div>
@@ -1126,13 +1148,12 @@ function saveLocal(){
     const el=document.getElementById("railSaved");if(el)el.textContent="Saved on this device.";
   },400);
 }
-function markSeen(v){ if(["intro","understand","lens","pedagogy","assess","summary"].includes(v)){state.seen[v]=true;saveLocal();paintTicks();} }
+function markSeen(v){ if(["intro","framework","understand","lens","pedagogy","assess","summary"].includes(v)){state.seen[v]=true;saveLocal();paintTicks();} }
 function paintTicks(){
   document.querySelectorAll("[data-tick]").forEach(t=>{
     const k=t.dataset.tick;
     if(k==="quiz1")t.textContent=state.q1?"\u2713":"";
-    else if(k==="quiz2")t.textContent=state.q2?"\u2713":"";
-    else if(k==="quiz3")t.textContent=state.q3?"\u2713":"";
+    else if(k==="quiz2")t.textContent=(state.q2&&state.q3)?"\u2713":"";
     else t.textContent=state.seen[k]?"\u2713":"";
   });
 }
@@ -1140,7 +1161,7 @@ function paintTicks(){
 /* ============================================================
    NAV
    ============================================================ */
-const VIEWS=["intro","understand","lens","quiz1","pedagogy","assess","quiz2","quiz3","build","summary","detail"];
+const VIEWS=["intro","framework","understand","lens","quiz1","pedagogy","assess","quiz2","build","summary","detail"];
 function show(v){
   VIEWS.forEach(x=>{const el=document.getElementById("view-"+x);if(el)el.classList.toggle("hidden",x!==v);});
   document.querySelectorAll(".navbtn").forEach(b=>b.setAttribute("aria-current",String(b.dataset.view===v)));
@@ -1189,13 +1210,13 @@ function openDetail(key,from){
     <div class="grid2">
       <div class="card"><span class="tag">What it means</span><p style="margin-top:12px">${c.meaning}</p><div class="shift">${c.shift}</div></div>
       <div class="card"><span class="tag amber">Observable when a student\u2026</span>
-        <p style="margin:10px 0 4px;font-size:13.4px;color:var(--ink-soft)">These three become the rubric criteria in stage 05.</p>
+        <p style="margin:10px 0 4px;font-size:13.4px;color:var(--ink-soft)">These three become the rubric criteria in stage 07.</p>
         <ul class="obslist">${c.obs.map(o=>`<li>${o}</li>`).join("")}</ul></div>
     </div>
     <div class="callout"><strong>Facilitator note.</strong> ${c.note}</div>
     ${d?`<div class="card"><span class="tag slate">In ${d}</span><h3 style="margin:12px 0 6px">${c.ex[d]}</h3>
       <p style="font-size:13.6px;color:var(--ink-soft)">Adapt the wording; keep the demand.</p></div>`:
-      `<div class="card"><p style="margin:0;color:var(--ink-soft)">Set your discipline in stage 03 to see this competency in your own field.</p></div>`}
+      `<div class="card"><p style="margin:0;color:var(--ink-soft)">Set your discipline in stage 04 to see this competency in your own field.</p></div>`}
     <p class="noprint"><button class="btn ghost small" id="prevC">\u2190 ${C[(c.n+6)%8].name}</button>
     <button class="btn ghost small" id="nextC">${C[c.n%8].name} \u2192</button></p>`;
   show("detail");
@@ -1216,7 +1237,7 @@ function fillDisc(){
 function renderLens(){
   const out=document.getElementById("lensOut");
   if(!state.disc){out.innerHTML=`<div class="card"><p style="margin:0;color:var(--ink-soft)">Choose a discipline above and the eight competencies reappear as tasks a student in your field would be given.</p></div>`;return;}
-  out.innerHTML=`<div class="ledger">${C.map(c=>`
+  out.innerHTML=`<h3 style="margin:6px 0 4px">4.2${'\u00a0\u00b7\u00a0'}The eight competencies in ${state.disc}</h3><div class="ledger">${C.map(c=>`
     <div class="lrow" style="cursor:default" data-nohover>
       <span class="idx">${String(c.n).padStart(2,"0")}</span>
       <span class="nm">${c.name}</span>
@@ -1224,7 +1245,7 @@ function renderLens(){
       <span class="go">${c.one}</span>
     </div>`).join("")}</div>
     <div class="card" style="margin-top:24px"><span class="tag slate">Compare</span>
-      <h3 style="margin:12px 0 8px">The same competency, elsewhere</h3>
+      <h3 style="margin:12px 0 8px">4.3 &#183; The same competency, elsewhere</h3>
       <p style="font-size:14.6px;color:var(--ink-soft)">Useful when you teach a shared or service course, or when a colleague's version helps you see your own.</p>
       <label class="fl" for="cmpPick">Show all eight as they appear in</label>
       <select id="cmpPick">${DISCIPLINES.filter(d=>d!==state.disc).map(d=>`<option>${d}</option>`).join("")}</select>
@@ -1417,12 +1438,15 @@ function finishQuiz(id){
     ${weak.length?`<div class="callout" style="margin-top:20px"><strong>Revisit before you move on:</strong> ${weak.join(", ")}.</div>`:""}
     <p class="noprint" style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
       <button class="btn action" data-retake="${id}">Take it again</button>
-      ${id==="q1"?'<button class="btn ghost" data-goto="pedagogy">Continue to pedagogy \u2192</button>':id==="q2"?'<button class="btn ghost" data-goto="quiz3">Continue to quiz 3 \u2192</button>':'<button class="btn ghost" data-goto="build">Continue to build a module \u2192</button>'}
+      ${id==="q1"?'<button class="btn ghost" data-goto="pedagogy">Continue to pedagogy \u2192</button>':id==="q2"?'<button class="btn ghost" data-scrollto="q3intro">Continue to Part B \u2192</button>':'<button class="btn ghost" data-goto="build">Continue to build a module \u2192</button>'}
     </p></div>`;
   el.querySelector(`[data-retake="${id}"]`).addEventListener("click",()=>{
     document.getElementById(id+"intro").classList.remove("hidden");el.classList.add("hidden");
   });
   el.querySelectorAll("[data-goto]").forEach(b=>b.addEventListener("click",()=>{const v=b.dataset.goto;show(v);if(v==="build")renderBuild();}));
+  el.querySelectorAll("[data-scrollto]").forEach(b=>b.addEventListener("click",()=>{
+    const t=document.getElementById(b.dataset.scrollto); if(t)t.scrollIntoView({behavior:"smooth",block:"start"});
+  }));
 }
 
 /* ============================================================
@@ -1561,7 +1585,7 @@ function renderBuild(){
 
   // STEP 1 \u2014 content + cluster
   h+=`<div class="stepcard${b.cluster?' ok':''}">
-    <div class="stephead"><span class="stepnum">1</span><h3>Content &amp; cluster</h3></div>
+    <div class="stephead"><span class="stepnum">1</span><h3>9.1 &#183; Content &amp; cluster</h3></div>
     <div class="stepsub">Start from a course you already teach. Pick the discipline cluster it belongs to.</div>
     <div style="margin-left:36px">
       <label class="fl">Course name <span class="hint">&#8212; code and title</span></label>
@@ -1572,7 +1596,7 @@ function renderBuild(){
 
   // STEP 2 \u2014 SDG
   h+=`<div class="stepcard${b.sdg?' ok':''}">
-    <div class="stephead"><span class="stepnum">2</span><h3>Sustainability challenge &amp; SDG</h3></div>
+    <div class="stephead"><span class="stepnum">2</span><h3>9.2 &#183; Sustainability challenge &amp; SDG</h3></div>
     <div class="stepsub">Choose one primary SDG your content genuinely touches. One, at most two &#8212; broad mapping fails audit.</div>
     <div class="pickgrid" id="bSdgGrid" style="grid-template-columns:repeat(auto-fill,minmax(210px,1fr))">
       ${SDGS.map(([n,t])=>`<button class="sdgpick" data-sdg="${n}" aria-pressed="${b.sdg==(''+n)}"><span class="sn">${n}</span><span>${t}</span></button>`).join("")}
@@ -1581,7 +1605,7 @@ function renderBuild(){
   // STEP 3 \u2014 competencies: one, two, or more
   const nsel=b.comps.length;
   h+=`<div class="stepcard${nsel>=1?' ok':''}">
-    <div class="stephead"><span class="stepnum">3</span><h3>Select your competencies &#8212; one, two or more</h3></div>
+    <div class="stephead"><span class="stepnum">3</span><h3>9.3 &#183; Select your competencies &#8212; one, two or more</h3></div>
     <div class="stepsub">All are assessed under PLO12. Pick the ones your content can genuinely produce evidence for. Two per course is UPM's default; one is fine where the content only supports one, and more than two is an isolated case you will need to justify.</div>
     ${nsel===0?`<div class="wchip">Pick at least one to continue</div>`:''}
     ${nsel>2?`<div class="wchip">${nsel} selected &#8212; beyond UPM's default of two. Each one needs its own four criteria and its own individual evidence, so only keep the ones the task genuinely forces students to use.</div>`:''}
@@ -1599,7 +1623,7 @@ function renderBuild(){
 
     // STEP 4 CLO \u2014 with a two-CLOs / one-CLO toggle when two competencies are selected
     h+=`<div class="stepcard${cloReady(b)?' ok':''}">
-      <div class="stephead"><span class="stepnum">4</span><h3>Write the CLO, mapped to PLO12</h3></div>
+      <div class="stephead"><span class="stepnum">4</span><h3>9.4 &#183; Write the CLO, mapped to PLO12</h3></div>
       <div class="stepsub">Use an observable verb. The test: can you write four rubric levels for it?</div>`;
     if(b.comps.length>=2){
       const nC=b.comps.length;
@@ -1633,7 +1657,7 @@ function renderBuild(){
 
     // STEP 5 activity
     h+=`<div class="stepcard${b.comps.every(k=>b.activity[k])?' ok':''}">
-      <div class="stephead"><span class="stepnum">5</span><h3>Design the learning activity</h3></div>
+      <div class="stephead"><span class="stepnum">5</span><h3>9.5 &#183; Design the learning activity</h3></div>
       <div class="stepsub">Choose a pedagogy that makes students practise the competency &#8212; twice, with feedback.</div>`;
     b.comps.forEach(k=>{
       const c=byKey(k); const strong=strongFor(k);
@@ -1656,7 +1680,7 @@ function renderBuild(){
 
     // STEP 6 output
     h+=`<div class="stepcard${b.comps.every(k=>(b.output[k]||'').trim())?' ok':''}">
-      <div class="stephead"><span class="stepnum">6</span><h3>Choose the output that carries the evidence</h3></div>
+      <div class="stephead"><span class="stepnum">6</span><h3>9.6 &#183; Choose the output that carries the evidence</h3></div>
       <div class="stepsub">Pick the individual output first; the rubric follows from it.</div>`;
     b.comps.forEach(k=>{
       const c=byKey(k);
@@ -1670,7 +1694,7 @@ function renderBuild(){
 
     // STEP 7 describe the assignment topic
     h+=`<div class="stepcard${(b.assignment||'').trim()?' ok':''}">
-      <div class="stephead"><span class="stepnum">7</span><h3>Describe the assignment topic</h3></div>
+      <div class="stephead"><span class="stepnum">7</span><h3>9.7 &#183; Describe the assignment topic</h3></div>
       <div class="stepsub">Describe the task students will do to demonstrate ${listNames(b.comps)}. Give the situation, what each student produces, and any group element &#8212; enough for a rubric to be tied to it.</div>
       <div style="margin-left:36px">
         <label class="fl">Assignment topic and task <span class="hint">&#8212; the situation and the individual output</span></label>
@@ -1680,7 +1704,7 @@ function renderBuild(){
 
     // STEP 8 suggest the complete rubric
     h+=`<div class="stepcard${b.comps.every(k=>rubricFilled(k))?' ok':''}">
-      <div class="stephead"><span class="stepnum">8</span><h3>Build the rubric</h3></div>
+      <div class="stephead"><span class="stepnum">8</span><h3>9.8 &#183; Build the rubric</h3></div>
       <div class="stepsub">From the course name, topic, CLO and competencies, an AI drafts the complete rubric for this content. Copy the prompt into any AI you already have, then paste its answer back to fill the rubric. Criteria 1&#8211;3 come from the observable behaviours; criterion 4 assesses what the student does with the analysis. Review and edit every cell &#8212; the mark must be one you could defend at an exam board.</div>
       <div style="margin-left:36px;margin-bottom:14px" class="noprint">
         <div class="aiopt">
