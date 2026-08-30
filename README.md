@@ -495,7 +495,7 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
         <div class="wbox o">TASK / ASSIGNMENT</div><span class="warrow">&#8594;</span>
         <div class="wbox p">RUBRIC</div>
       </div>
-      <div class="callout" style="border-left-color:var(--teal)"><strong style="color:var(--teal)">The one sentence that decides everything.</strong> Your course learning outcome is where the competency either enters the course or never does. Every later decision &#8212; the activity, the task and the rubric &#8212; is downstream of how that sentence is written.</div>
+      <div class="callout" style="border-left:4px solid #7ED8D2"><strong style="color:#7ED8D2">The one sentence that decides everything.</strong> Your course learning outcome is where the competency either enters the course or never does. Every later decision &#8212; the activity, the task and the rubric &#8212; is downstream of how that sentence is written.</div>
     </div>
 
     <p class="noprint"><button class="btn moss" data-goto="understand">Next: understand the eight &#8594;</button></p>
