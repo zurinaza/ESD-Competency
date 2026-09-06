@@ -1062,32 +1062,32 @@ const DISTINCT=[
 /* Method families from UNESCO (2017) Section 2.4 / guidebook Part 3.3, expanded for university use.
    develops[] follows the guidebook's DEVELOPS columns and the pedagogy-competency matrix (Part 3.4). */
 const PEDAGOGIES=[
- {name:"Problem-Based Learning",fam:"Inquiry and problem-centred",does:"Work an ill-structured problem with no single right answer, define what they need to know, then learn it.",develops:["systems","critical","collaboration"],assess:"The problem definition and reasoning trail, plus an individual reasoning log.",watch:"Marking only the solution rewards the group that guessed well; the competency is in how the problem was framed."},
- {name:"Case-Based Learning",fam:"Inquiry and problem-centred",does:"Analyse a real case with incomplete information and defend a recommendation.",develops:["critical","normative","systems"],assess:"The analysis and the justification of the recommendation."},
- {name:"Guided Inquiry",fam:"Inquiry and problem-centred",does:"Generate the questions before being given the method.",develops:["critical","systems"],assess:"The quality and framing of the questions asked."},
- {name:"Jigsaw",fam:"Inquiry and problem-centred",does:"Master one component, then teach it to a group that needs it.",develops:["collaboration","systems"],assess:"An individual mastery check plus the group product."},
- {name:"Socratic Seminar",fam:"Inquiry and problem-centred",does:"Rule-governed discussion of a difficult text or case.",develops:["critical","normative"],assess:"A position paper written after and revised in light of the seminar."},
- {name:"Project-Based Learning",fam:"Project and production",does:"Work over weeks toward an output for a defined client, with milestones.",develops:["strategic","integrated","collaboration"],assess:"Milestone reviews, the output, and an individual contribution record.",watch:"A polished output can hide a weak process; assess at milestones, not only at submission."},
- {name:"Design Thinking",fam:"Project and production",does:"Empathise, define, ideate, prototype and test with real users.",develops:["collaboration","selfaware","strategic"],assess:"The problem reframing after user contact."},
- {name:"Collaborative Design Workshop",fam:"Project and production",does:"Design a solution as a team within a fixed time limit and under real constraints.",develops:["integrated","collaboration"],assess:"The trade-off log and the defence of the final option."},
- {name:"Studio Critique",fam:"Project and production",does:"Work presented and critiqued publicly at intervals.",develops:["critical","selfaware"],assess:"The revision made in response, not the final piece."},
- {name:"Challenge-Based Learning",fam:"Project and production",does:"An organisation poses a genuine challenge to solve.",develops:["integrated","strategic"],assess:"The client deliverable plus an individual justification."},
- {name:"SULAM / Service Learning",fam:"Experiential and work-based",does:"Apply content to a genuine community need, with the partner as collaborator.",develops:["collaboration","selfaware","normative"],assess:"A prompted reflective journal, partner feedback, and the delivered output.",watch:"Hours served is not evidence, and neither is gratitude; mark the specificity of the reflection."},
- {name:"Field and Work-Based Learning",fam:"Experiential and work-based",does:"Work in a site, lab or workplace under real, non-idealised conditions.",develops:["systems","selfaware","integrated"],assess:"Supervised observation against criteria, plus an interpretive account.",watch:"Attendance is not competence; observation needs published criteria or it becomes an impression."},
- {name:"Living Lab",fam:"Experiential and work-based",does:"Use the campus or neighbourhood as the site of a real intervention.",develops:["strategic","integrated","collaboration"],assess:"The intervention, its monitoring plan, and what failed."},
- {name:"Role-Play",fam:"Simulation and role",does:"Take a stakeholder role and decide under constraints.",develops:["normative","collaboration"],assess:"The written justification afterwards, and the revision after challenge.",watch:"Performance skill is not competence; a confident speaker with weak reasoning should not score highly."},
- {name:"Negotiation / Mock Hearing",fam:"Simulation and role",does:"Reach agreement across conflicting interests.",develops:["collaboration","normative"],assess:"The agreement, the concession log, and each party's account of the other."},
- {name:"Systems Simulation",fam:"Simulation and role",does:"Operate a model with delayed, non-obvious consequences.",develops:["systems","anticipatory"],assess:"The debrief: strategy used, system inferred, what they would change."},
- {name:"Futures Workshop",fam:"Simulation and role",does:"Critique the present, build a desired future, then plan toward it.",develops:["anticipatory","strategic"],assess:"The scenario set, the desired future argued for, and a decision tested against it.",watch:"The utopia stage is where UNESCO's create-one's-own-visions clause is actually practised; do not skip it."},
- {name:"Structured Academic Controversy",fam:"Dialogic and deliberative",does:"Argue a position, then its opposite, then seek a joint position.",develops:["normative","collaboration","critical"],assess:"The joint statement plus each student's account of what changed their mind."},
- {name:"Deliberative Forum",fam:"Dialogic and deliberative",does:"Weigh options as a mini-public with briefing materials.",develops:["normative","collaboration"],assess:"A reasoned recommendation and a minority report."},
- {name:"Prompted Reflective Journal",fam:"Reflective and narrative",does:"Write to specific prompts at set intervals.",develops:["selfaware"],assess:"Reasoning about what they want and resist, never the warmth of the sentiment.",watch:"Highest risk of rewarding fluency; anchor every criterion in specificity."},
- {name:"Critical Incident Analysis",fam:"Reflective and narrative",does:"Analyse one moment where assumptions were challenged.",develops:["selfaware","critical"],assess:"Depth on one incident, not breadth."},
- {name:"Backcasting",fam:"Analytical tools",does:"Work backward from a desired future to milestones and dependencies.",develops:["anticipatory","strategic"],assess:"The backward pathway with milestones and the assumptions it rests on."},
- {name:"Causal Loop Diagram",fam:"Analytical tools",does:"Map elements and the loops that connect them.",develops:["systems"],assess:"The annotated map with loop polarity, interpretation, and what it cannot settle."},
- {name:"Leverage Point Analysis",fam:"Analytical tools",does:"Rank where a small intervention moves the system most.",develops:["strategic"],assess:"Ranked intervention points with justification."},
- {name:"Claim and Practice Audit",fam:"Analytical tools",does:"Interrogate a claim and the accepted practice behind it.",develops:["critical"],assess:"Source, method, limits, the norm the practice rests on, and what the evidence cannot show."},
- {name:"Trade-off Matrix",fam:"Analytical tools",does:"Weigh options against criteria and name who bears each cost.",develops:["integrated"],assess:"The matrix plus who bears each cost."}
+ {name:"Problem-Based Learning",fam:"Inquiry and problem-centred",does:"Work an ill-structured problem with no single right answer, define what they need to know, then learn it.",develops:["systems","critical","collaboration"],out:"Individual reasoning log, with the written problem definition",assess:"The problem definition and reasoning trail, plus an individual reasoning log.",watch:"Marking only the solution rewards the group that guessed well; the competency is in how the problem was framed."},
+ {name:"Case-Based Learning",fam:"Inquiry and problem-centred",does:"Analyse a real case with incomplete information and defend a recommendation.",develops:["critical","normative","systems"],out:"Individual case analysis with a justified recommendation",assess:"The analysis and the justification of the recommendation."},
+ {name:"Guided Inquiry",fam:"Inquiry and problem-centred",does:"Generate the questions before being given the method.",develops:["critical","systems"],out:"The written question set, with a note on why each question was asked",assess:"The quality and framing of the questions asked."},
+ {name:"Jigsaw",fam:"Inquiry and problem-centred",does:"Master one component, then teach it to a group that needs it.",develops:["collaboration","systems"],out:"Individual mastery check, plus the student's contribution to the group product",assess:"An individual mastery check plus the group product."},
+ {name:"Socratic Seminar",fam:"Inquiry and problem-centred",does:"Rule-governed discussion of a difficult text or case.",develops:["critical","normative"],out:"Individual position paper, revised after the seminar",assess:"A position paper written after and revised in light of the seminar."},
+ {name:"Project-Based Learning",fam:"Project and production",does:"Work over weeks toward an output for a defined client, with milestones.",develops:["strategic","integrated","collaboration"],out:"Project output, plus an individual contribution record against milestones",assess:"Milestone reviews, the output, and an individual contribution record.",watch:"A polished output can hide a weak process; assess at milestones, not only at submission."},
+ {name:"Design Thinking",fam:"Project and production",does:"Empathise, define, ideate, prototype and test with real users.",develops:["collaboration","selfaware","strategic"],out:"Prototype, with an individual account of how user contact reframed the problem",assess:"The problem reframing after user contact."},
+ {name:"Collaborative Design Workshop",fam:"Project and production",does:"Design a solution as a team within a fixed time limit and under real constraints.",develops:["integrated","collaboration"],out:"Individual trade-off log and a written defence of the final option",assess:"The trade-off log and the defence of the final option."},
+ {name:"Studio Critique",fam:"Project and production",does:"Work presented and critiqued publicly at intervals.",develops:["critical","selfaware"],out:"The revised piece, with an individual account of what changed and why",assess:"The revision made in response, not the final piece."},
+ {name:"Challenge-Based Learning",fam:"Project and production",does:"An organisation poses a genuine challenge to solve.",develops:["integrated","strategic"],out:"Client deliverable, plus an individual written justification",assess:"The client deliverable plus an individual justification."},
+ {name:"SULAM / Service Learning",fam:"Experiential and work-based",does:"Apply content to a genuine community need, with the partner as collaborator.",develops:["collaboration","selfaware","normative"],out:"Prompted reflective journal, partner feedback and the delivered output",assess:"A prompted reflective journal, partner feedback, and the delivered output.",watch:"Hours served is not evidence, and neither is gratitude; mark the specificity of the reflection."},
+ {name:"Field and Work-Based Learning",fam:"Experiential and work-based",does:"Work in a site, lab or workplace under real, non-idealised conditions.",develops:["systems","selfaware","integrated"],out:"Supervised observation record against published criteria, plus an interpretive account",assess:"Supervised observation against criteria, plus an interpretive account.",watch:"Attendance is not competence; observation needs published criteria or it becomes an impression."},
+ {name:"Living Lab",fam:"Experiential and work-based",does:"Use the campus or neighbourhood as the site of a real intervention.",develops:["strategic","integrated","collaboration"],out:"The intervention and its monitoring plan, plus an individual account of what failed",assess:"The intervention, its monitoring plan, and what failed."},
+ {name:"Role-Play",fam:"Simulation and role",does:"Take a stakeholder role and decide under constraints.",develops:["normative","collaboration"],out:"Individual written justification of the position taken, and the revision after challenge",assess:"The written justification afterwards, and the revision after challenge.",watch:"Performance skill is not competence; a confident speaker with weak reasoning should not score highly."},
+ {name:"Negotiation / Mock Hearing",fam:"Simulation and role",does:"Reach agreement across conflicting interests.",develops:["collaboration","normative"],out:"Individual concession log, and a written account of the other party's position",assess:"The agreement, the concession log, and each party's account of the other."},
+ {name:"Systems Simulation",fam:"Simulation and role",does:"Operate a model with delayed, non-obvious consequences.",develops:["systems","anticipatory"],out:"Individual debrief: the strategy used, the system inferred, and what they would change",assess:"The debrief: strategy used, system inferred, what they would change."},
+ {name:"Futures Workshop",fam:"Simulation and role",does:"Critique the present, build a desired future, then plan toward it.",develops:["anticipatory","strategic"],out:"Scenario set with the desired future argued for, and one decision tested against each",assess:"The scenario set, the desired future argued for, and a decision tested against it.",watch:"The utopia stage is where UNESCO's create-one's-own-visions clause is actually practised; do not skip it."},
+ {name:"Structured Academic Controversy",fam:"Dialogic and deliberative",does:"Argue a position, then its opposite, then seek a joint position.",develops:["normative","collaboration","critical"],out:"Joint statement, plus an individual account of what changed their mind",assess:"The joint statement plus each student's account of what changed their mind."},
+ {name:"Deliberative Forum",fam:"Dialogic and deliberative",does:"Weigh options as a mini-public with briefing materials.",develops:["normative","collaboration"],out:"Individual reasoned recommendation, with a minority report where they dissent",assess:"A reasoned recommendation and a minority report."},
+ {name:"Prompted Reflective Journal",fam:"Reflective and narrative",does:"Write to specific prompts at set intervals.",develops:["selfaware"],out:"Reflective account written against set prompts",assess:"Reasoning about what they want and resist, never the warmth of the sentiment.",watch:"Highest risk of rewarding fluency; anchor every criterion in specificity."},
+ {name:"Critical Incident Analysis",fam:"Reflective and narrative",does:"Analyse one moment where assumptions were challenged.",develops:["selfaware","critical"],out:"Written analysis of one critical incident, in depth",assess:"Depth on one incident, not breadth."},
+ {name:"Backcasting",fam:"Analytical tools",does:"Work backward from a desired future to milestones and dependencies.",develops:["anticipatory","strategic"],out:"Backward pathway with milestones, and the assumptions it rests on",assess:"The backward pathway with milestones and the assumptions it rests on."},
+ {name:"Causal Loop Diagram",fam:"Analytical tools",does:"Map elements and the loops that connect them.",develops:["systems"],out:"Annotated causal loop diagram with written interpretation",assess:"The annotated map with loop polarity, interpretation, and what it cannot settle."},
+ {name:"Leverage Point Analysis",fam:"Analytical tools",does:"Rank where a small intervention moves the system most.",develops:["strategic"],out:"Ranked intervention points with written justification",assess:"Ranked intervention points with justification."},
+ {name:"Claim and Practice Audit",fam:"Analytical tools",does:"Interrogate a claim and the accepted practice behind it.",develops:["critical"],out:"Written claim audit: source, method, limits, and the norm behind the practice",assess:"Source, method, limits, the norm the practice rests on, and what the evidence cannot show."},
+ {name:"Trade-off Matrix",fam:"Analytical tools",does:"Weigh options against criteria and name who bears each cost.",develops:["integrated"],out:"Trade-off matrix with a written statement of who bears each cost",assess:"The matrix plus who bears each cost."}
 ];
 /* Gamification develops motivation only; the guidebook is explicit that it evidences no competency on its own. */
 
@@ -1150,7 +1150,7 @@ const S={
 /* ============================================================
    STATE
    ============================================================ */
-const state={pid:null,code:"",disc:"",seen:{},q1:null,q2:null,q3:null,build:{course:"",cluster:"",sdg:"",comps:[],clo:{},cloMode:"two",cloOne:"",activity:{},output:{},rubric:{},topic:"",assignment:"",brief:null}};
+const state={pid:null,code:"",disc:"",seen:{},q1:null,q2:null,q3:null,build:{course:"",cluster:"",sdg:"",comps:[],clo:{},cloMode:"two",cloOne:"",activity:{},output:{},rubric:{},outputEdited:{},topic:"",assignment:"",brief:null}};
 function uid(){return "p"+Math.random().toString(36).slice(2,9)+Date.now().toString(36).slice(-4);}
 async function loadLocal(){
   let pid=await S.get("esd8v2:pid");
@@ -1158,9 +1158,10 @@ async function loadLocal(){
   state.pid=pid;
   const saved=await S.get("esd8v2:progress");
   if(saved)Object.assign(state,saved,{pid});
-  if(!state.build)state.build={course:"",cluster:"",sdg:"",comps:[],clo:{},cloMode:"two",cloOne:"",activity:{},output:{},rubric:{},topic:"",assignment:"",brief:null};
+  if(!state.build)state.build={course:"",cluster:"",sdg:"",comps:[],clo:{},cloMode:"two",cloOne:"",activity:{},output:{},rubric:{},outputEdited:{},topic:"",assignment:"",brief:null};
   if(typeof state.build.assignment!=="string")state.build.assignment="";
   if(typeof state.build.topic!=="string")state.build.topic="";
+  if(!state.build.outputEdited||typeof state.build.outputEdited!=="object")state.build.outputEdited={};
   if(typeof state.build.brief!=="object")state.build.brief=null;
   if(["one","two","multi"].indexOf(state.build.cloMode)<0)state.build.cloMode="two";
   if(Array.isArray(state.build.comps)&&state.build.comps.length>2&&state.build.cloMode==="one")state.build.cloMode="multi";
@@ -1542,6 +1543,12 @@ function listNames(keys){
   return n.length<2?(n[0]||""):n.slice(0,-1).join(", ")+" and "+n[n.length-1];
 }
 function B(){return state.build;}
+/* The output that carries the evidence follows the pedagogy chosen in step 5,
+   falling back to the competency default until a method is picked. */
+function suggestedOutput(k){
+  const pd=pedByName(B().activity[k]);
+  return (pd&&pd.out)?pd.out:byKey(k).evidence;
+}
 
 /* Textareas grow to fit their content, so a filled rubric is readable without dragging,
    and a hidden mirror div carries the same text into print. */
@@ -1709,10 +1716,13 @@ function renderBuild(){
       <div class="stephead"><span class="stepnum">6</span><h3>9.6 &#183; Choose the output that carries the evidence</h3></div>
       <div class="stepsub">Pick the individual output first; the rubric follows from it.</div>`;
     b.comps.forEach(k=>{
-      const c=byKey(k);
-      if(!b.output[k])b.output[k]=c.evidence;
+      const c=byKey(k); const pd=pedByName(b.activity[k]); const sug=suggestedOutput(k);
+      if(!b.outputEdited[k])b.output[k]=sug;
       h+=`<div class="blk"><h4>${c.name}</h4>
+        <div class="bsub">${pd?`Suggested for <b>${pd.name}</b>, the method you chose in step 5. Change the method and this changes with it.`:`No method chosen yet, so this is the default output for the competency. Choose one in step 5 and this updates.`}</div>
         <textarea class="cloin" data-out="${k}" style="min-height:44px">${(b.output[k]||'').replace(/</g,'&lt;')}</textarea>
+        ${b.outputEdited[k]?`<button class="btn ghost small noprint" data-outreset="${k}" style="margin-top:8px">Reset to the suggestion</button>`:''}
+        ${(pd&&pd.out&&pd.out!==c.evidence)?`<div class="verbhint">Competency default: ${c.evidence}. <button class="btn ghost small noprint" data-outdefault="${k}" style="margin-left:6px">Use this instead</button></div>`:''}
         ${k==='collaboration'?'<div class="verbhint">Collaboration needs an individual output attached &#8212; a group report evidences a group, not a person.</div>':''}
         </div>`;
     });
@@ -1812,7 +1822,6 @@ function renderAlignPreview(){
     return `<td>${c.name}</td>
       <td>${b.activity[k]?esc(b.activity[k]):miss}</td>
       <td>${pd?esc(pd.does):miss}</td>
-      <td>${pd?esc(pd.assess):miss}</td>
       <td>${esc(b.output[k]||c.evidence)}<br><span class="mono" style="font-size:11px;color:var(--ink-soft)">criteria ${ci*4+1}&#8211;${ci*4+4}</span></td>`;
   };
   let rows="";
@@ -1837,8 +1846,8 @@ function renderAlignPreview(){
     ${(b.assignment||'').trim()?`<div style="margin:10px 0 0"><div class="mono" style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss)">Assignment topic</div><p style="font-size:14px;margin-top:4px;white-space:pre-wrap">${esc(b.assignment)}</p></div>`:''}
     ${n>=1?`<div style="overflow-x:auto;margin-top:14px"><table class="tbl aligntbl"><thead><tr>
       <th style="min-width:150px">CLO</th><th style="min-width:64px">SDG</th><th style="min-width:120px">ESDC</th>
-      <th style="min-width:130px">Pedagogy</th><th style="min-width:180px">Learning activity</th>
-      <th style="min-width:180px">Assessment method</th><th style="min-width:150px">Assessment output</th>
+      <th style="min-width:130px">Pedagogy</th><th style="min-width:190px">Learning activity</th>
+      <th style="min-width:190px">Assessment output</th>
     </tr></thead><tbody>${rows}</tbody></table></div>
     <p style="font-size:13px;color:var(--ink-soft);margin-top:10px">Every CLO above is mapped to <b>PLO12</b>; the ESD competencies are assessed under PLO12 and nowhere else.</p>`
     :'<p style="color:#7FA096;font-size:14px">Select your competencies to assemble the table.</p>'}
@@ -1878,7 +1887,15 @@ function wireBuild(){
     b.activity[e.target.dataset.act]=e.target.value;saveLocal();renderBuild();
   }));
   document.querySelectorAll("[data-out]").forEach(t=>t.addEventListener("input",e=>{
-    b.output[e.target.dataset.out]=e.target.value;autoGrow(e.target);saveLocal();updateAlign();
+    const k=e.target.dataset.out;
+    b.output[k]=e.target.value; b.outputEdited[k]=(e.target.value.trim()!==suggestedOutput(k));
+    autoGrow(e.target);saveLocal();updateAlign();
+  }));
+  document.querySelectorAll("[data-outreset]").forEach(btn=>btn.addEventListener("click",()=>{
+    const k=btn.dataset.outreset; b.outputEdited[k]=false; b.output[k]=suggestedOutput(k); saveLocal();renderBuild();
+  }));
+  document.querySelectorAll("[data-outdefault]").forEach(btn=>btn.addEventListener("click",()=>{
+    const k=btn.dataset.outdefault; b.output[k]=byKey(k).evidence; b.outputEdited[k]=true; saveLocal();renderBuild();
   }));
   document.querySelectorAll("[data-rub]").forEach(t=>t.addEventListener("input",e=>{
     const [k,ri,lv]=e.target.dataset.rub.split("|");
@@ -1896,7 +1913,7 @@ function wireBuild(){
   const cp=document.getElementById("bCopy"); if(cp)cp.addEventListener("click",copyModule);
   const rs=document.getElementById("bReset"); if(rs)rs.addEventListener("click",()=>{
     if(confirm("Clear this module and start over?")){
-      state.build={course:"",cluster:"",sdg:"",comps:[],clo:{},cloMode:"two",cloOne:"",activity:{},output:{},rubric:{},topic:"",assignment:"",brief:null};
+      state.build={course:"",cluster:"",sdg:"",comps:[],clo:{},cloMode:"two",cloOne:"",activity:{},output:{},rubric:{},outputEdited:{},topic:"",assignment:"",brief:null};
       saveLocal();renderBuild();
     }
   });
@@ -1907,7 +1924,7 @@ function updateAlign(){
     const pr=document.getElementById("bPrint"); if(pr)pr.addEventListener("click",()=>{preparePrint();window.print();});
     const cp=document.getElementById("bCopy"); if(cp)cp.addEventListener("click",copyModule);
     const rs=document.getElementById("bReset"); if(rs)rs.addEventListener("click",()=>{
-      if(confirm("Clear this module and start over?")){state.build={course:"",cluster:"",sdg:"",comps:[],clo:{},cloMode:"two",cloOne:"",activity:{},output:{},rubric:{},topic:"",assignment:"",brief:null};saveLocal();renderBuild();}});
+      if(confirm("Clear this module and start over?")){state.build={course:"",cluster:"",sdg:"",comps:[],clo:{},cloMode:"two",cloOne:"",activity:{},output:{},rubric:{},outputEdited:{},topic:"",assignment:"",brief:null};saveLocal();renderBuild();}});
   }
 }
 function markBuildTick(){ renderWfSteps(); }
@@ -1934,7 +1951,6 @@ function copyModule(){
     const pdx=pedByName(b.activity[k]);
     L.push("Pedagogy: "+(b.activity[k]||"\u2014"));
     L.push("Learning activity: "+(pdx?pdx.does:"\u2014"));
-    L.push("Assessment method: "+(pdx?pdx.assess:"\u2014"));
     L.push("Assessment output: "+(b.output[k]||c.evidence));
     L.push("Rubric (criteria "+(ci*4+1)+"\u2013"+(ci*4+4)+"):");
     (b.rubric[k]||[]).forEach(r=>{
