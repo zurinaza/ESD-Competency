@@ -6,7 +6,7 @@
 <title>The Eight &#8212; ESD Competencies: understand, teach, assess, build</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -30,7 +30,11 @@ button{font:inherit}
 .shell{display:grid;grid-template-columns:252px minmax(0,1fr);min-height:100vh}
 .rail{background:#FFFFFF;color:var(--ink);padding:24px 16px 40px;position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid var(--line)}
 .brandmark{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--moss)}
-.brandtitle{font-family:"Archivo",sans-serif;font-weight:800;font-size:30px;line-height:.95;margin:8px 0 4px;color:var(--ink);letter-spacing:-0.03em}
+.brandtitle{display:block;font-family:"Archivo",sans-serif;font-weight:800;font-size:30px;line-height:.95;margin:8px 0 4px;color:var(--ink);letter-spacing:-0.03em}
+.brandhome{display:block;width:100%;text-align:left;background:none;border:0;padding:0;cursor:pointer;color:inherit}
+.brandhome:hover .brandtitle{color:var(--moss)}
+.brandback{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--moss);margin-bottom:8px}
+.brandhome:hover .brandback{text-decoration:underline}
 .brandsub{font-size:12px;color:var(--ink-soft);line-height:1.4;margin-bottom:20px}
 .navbtn{display:flex;gap:11px;align-items:baseline;width:100%;text-align:left;background:none;border:0;border-left:3px solid transparent;color:var(--ink-soft);padding:11px 10px;margin:1px 0;border-radius:0 6px 6px 0;cursor:pointer;transition:background .14s,color .14s,border-color .14s}
 
@@ -272,6 +276,44 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 @media print{.tbl.aligntbl{font-size:10.5px}.tbl.aligntbl th{font-size:9px}}
 .wchip{display:inline-block;font-size:12px;background:var(--amber-tint);color:var(--amber);border:1px solid #DFC183;padding:4px 10px;border-radius:20px;margin-left:36px;margin-bottom:8px}
 @media(max-width:860px){.pickgrid{grid-template-columns:1fr 1fr}.stepsub,.pickgrid,.blk,.wchip{margin-left:0}.rubedit td.rc{width:30%}}
+
+.pager{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+  margin-top:36px;padding-top:18px;border-top:1px solid var(--line)}
+.pager .pcover{color:var(--ink-soft)}
+.pager .pcover:hover{color:var(--moss)}
+.pager .pnum{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;opacity:.75;margin:0 6px}
+@media(max-width:520px){.pager .btn{flex:1 1 100%}}
+
+/* ---- cover ---- */
+.cover{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:32px 24px;
+  background:radial-gradient(120% 90% at 18% 8%,#12514B 0%,#0C3A38 42%,#241130 100%);
+  color:#fff;overflow:hidden}
+.cover-art{position:absolute;inset:0;pointer-events:none;opacity:.34}
+.cover-inner{position:relative;max-width:660px;width:100%;text-align:left}
+.cover-badge{display:inline-flex;align-items:center;gap:14px;margin-bottom:36px}
+.cover-mark{width:60px;height:60px;border-radius:14px;background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;
+  font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:18px;letter-spacing:.04em}
+.cover-org{font-family:"Space Grotesk",sans-serif;font-size:15px;letter-spacing:.02em;
+  color:rgba(255,255,255,.9);line-height:1.45;font-weight:500}
+.cover-org b{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:#9FE4DF;font-weight:600;margin-top:3px}
+.cover-title{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-0.035em;
+  font-size:clamp(62px,14vw,116px);line-height:.86;margin:0;text-shadow:0 3px 26px rgba(0,0,0,.4)}
+.cover-rule{width:72px;height:4px;background:#7ED8D2;margin:28px 0 24px;border-radius:2px}
+.cover-sub{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:clamp(24px,3.8vw,34px);
+  letter-spacing:-0.01em;line-height:1.2;margin:0 0 16px;color:#fff}
+.cover-line{font-family:"Space Grotesk",sans-serif;font-size:clamp(17px,2vw,19px);font-weight:400;
+  color:rgba(255,255,255,.88);max-width:44ch;margin:0 0 36px;line-height:1.6}
+.cover-enter{font-family:"Space Grotesk",sans-serif;background:#7ED8D2;color:#0A312F;border:0;border-radius:5px;
+  padding:16px 34px;font-weight:700;font-size:18px;letter-spacing:.01em;cursor:pointer;
+  transition:transform .14s,box-shadow .14s;box-shadow:0 8px 26px rgba(0,0,0,.34)}
+.cover-enter:hover{transform:translateY(-1px);box-shadow:0 11px 30px rgba(0,0,0,.4)}
+.cover-foot{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.24);
+  font-family:"Space Grotesk",sans-serif;font-size:13.5px;letter-spacing:.01em;
+  color:rgba(255,255,255,.8);line-height:1.75;font-weight:500}
+@media(max-width:520px){.cover{padding:24px 20px}.cover-foot{letter-spacing:.1em}}
+@media print{.cover{display:none !important}}
 @media(prefers-reduced-motion:reduce){*{transition:none !important}}
 @media print{
   #buildBody textarea,#buildBody input[type=text]{display:none !important}
@@ -286,9 +328,36 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
 </head>
 <body>
 
+<div class="cover" id="cover">
+    <svg class="cover-art" viewBox="-400 -260 800 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g transform="translate(250,-40)" fill="none" stroke="#7ED8D2" stroke-width="1" opacity=".28"><line x1="0.0" y1="-150.0" x2="106.1" y2="-106.1"/><line x1="0.0" y1="-150.0" x2="150.0" y2="0.0"/><line x1="0.0" y1="-150.0" x2="106.1" y2="106.1"/><line x1="0.0" y1="-150.0" x2="0.0" y2="150.0"/><line x1="0.0" y1="-150.0" x2="-106.1" y2="106.1"/><line x1="0.0" y1="-150.0" x2="-150.0" y2="0.0"/><line x1="0.0" y1="-150.0" x2="-106.1" y2="-106.1"/><line x1="106.1" y1="-106.1" x2="150.0" y2="0.0"/><line x1="106.1" y1="-106.1" x2="106.1" y2="106.1"/><line x1="106.1" y1="-106.1" x2="0.0" y2="150.0"/><line x1="106.1" y1="-106.1" x2="-106.1" y2="106.1"/><line x1="106.1" y1="-106.1" x2="-150.0" y2="0.0"/><line x1="106.1" y1="-106.1" x2="-106.1" y2="-106.1"/><line x1="150.0" y1="0.0" x2="106.1" y2="106.1"/><line x1="150.0" y1="0.0" x2="0.0" y2="150.0"/><line x1="150.0" y1="0.0" x2="-106.1" y2="106.1"/><line x1="150.0" y1="0.0" x2="-150.0" y2="0.0"/><line x1="150.0" y1="0.0" x2="-106.1" y2="-106.1"/><line x1="106.1" y1="106.1" x2="0.0" y2="150.0"/><line x1="106.1" y1="106.1" x2="-106.1" y2="106.1"/><line x1="106.1" y1="106.1" x2="-150.0" y2="0.0"/><line x1="106.1" y1="106.1" x2="-106.1" y2="-106.1"/><line x1="0.0" y1="150.0" x2="-106.1" y2="106.1"/><line x1="0.0" y1="150.0" x2="-150.0" y2="0.0"/><line x1="0.0" y1="150.0" x2="-106.1" y2="-106.1"/><line x1="-106.1" y1="106.1" x2="-150.0" y2="0.0"/><line x1="-106.1" y1="106.1" x2="-106.1" y2="-106.1"/><line x1="-150.0" y1="0.0" x2="-106.1" y2="-106.1"/></g>
+      <g transform="translate(250,-40)" fill="#7ED8D2" opacity=".55"><circle cx="0.0" cy="-150.0" r="5"/><circle cx="106.1" cy="-106.1" r="5"/><circle cx="150.0" cy="0.0" r="5"/><circle cx="106.1" cy="106.1" r="5"/><circle cx="0.0" cy="150.0" r="5"/><circle cx="-106.1" cy="106.1" r="5"/><circle cx="-150.0" cy="0.0" r="5"/><circle cx="-106.1" cy="-106.1" r="7"/></g>
+      <g fill="none" stroke="#FFFFFF" opacity=".08">
+        <circle cx="250" cy="-40" r="200" stroke-width="1"/><circle cx="250" cy="-40" r="255" stroke-width="1"/>
+        <circle cx="-300" cy="230" r="180" stroke-width="1"/><circle cx="-300" cy="230" r="245" stroke-width="1"/>
+      </g>
+    </svg>
+    <div class="cover-inner">
+      <div class="cover-badge">
+        <!-- Swap this block for <img src="upm-logo.png" alt="Universiti Putra Malaysia" height="54"> to use the official mark. -->
+        <span class="cover-mark">ESD</span>
+        <span class="cover-org">Universiti Putra Malaysia<b>ESDC &#183; PLO12</b></span>
+      </div>
+      <h1 class="cover-title">The<br>Eight</h1>
+      <div class="cover-rule"></div>
+      <p class="cover-sub">ESD Competency Module</p>
+      <p class="cover-line">Understand the eight competencies, see them in your field, teach them, and assess them with a rubric you can defend.</p>
+      <button class="cover-enter" id="coverEnter">Enter the module</button>
+      <div class="cover-foot">UNESCO (2017) &#183; MQF (2024)<br>For educators at Universiti Putra Malaysia</div>
+    </div>
+  </div>
+
 <div class="shell">
   <nav class="rail">
-    <div class="brandtitle">The<br>Eight</div>
+    <button class="brandhome" id="toCover" title="Back to the cover" aria-label="Back to the cover">
+      <span class="brandtitle">The<br>Eight</span>
+      <span class="brandback">&#8592; Cover</span>
+    </button>
     <div class="brandsub">Understand the competencies, see them in your field, teach them, and assess them with a rubric you can defend.</div>
     <div class="navrow">
       <button class="navbtn" data-view="intro"><span class="num">01</span><span><span class="lbl">Introduction</span><span class="sub">About this module</span></span><span class="tick" data-tick="intro"></span></button>
@@ -396,7 +465,6 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
       </ul>
     </div>
 
-    <p class="noprint"><button class="btn moss" data-goto="framework">Next: the framework &#8594;</button></p>
   </section>
 
   <!-- ================= 02 FRAMEWORK ================= -->
@@ -503,7 +571,6 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
       <div class="callout" style="border-left:4px solid #7ED8D2"><strong style="color:#7ED8D2">The one sentence that decides everything.</strong> Your course learning outcome is where the competency either enters the course or never does. Every later decision &#8212; the activity, the task and the rubric &#8212; is downstream of how that sentence is written.</div>
     </div>
 
-    <p class="noprint"><button class="btn moss" data-goto="understand">Next: understand the eight &#8594;</button></p>
   </section>
 
   <!-- ================= 02 UNDERSTAND ================= -->
@@ -555,7 +622,6 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
       </ul>
       <p style="font-size:14px;margin-top:10px">You will test all of this in <b>Quiz 1</b>, two stages on.</p>
     </div>
-    <p class="noprint"><button class="btn moss" data-goto="lens">Next: see them in your field &#8594;</button></p>
   </section>
 
   <!-- ================= COMPETENCY DETAIL ================= -->
@@ -578,7 +644,6 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     </div>
 
     <div id="lensOut"></div>
-    <p class="noprint"><button class="btn moss" data-goto="quiz1">Next: quiz on stages 03 and 04 &#8594;</button></p>
   </section>
 
   <!-- ================= 04 QUIZ 1 ================= -->
@@ -665,7 +730,6 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
         <div><h4>3 &#183; The rubric was published first</h4><p style="font-size:14.4px;margin-top:6px">Students saw the criteria before they began the work.</p></div>
       </div>
     </div>
-    <p class="noprint"><button class="btn moss" data-goto="assess">Next: assessment and rubrics &#8594;</button></p>
   </section>
 
   <!-- ================= 06 ASSESS ================= -->
@@ -811,7 +875,6 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
         </tbody></table>
       </div>
     </div>
-    <p class="noprint"><button class="btn moss" data-goto="quiz2">Next: quiz on assessment and rubrics &#8594;</button></p>
   </section>
 
   <!-- ================= 07 QUIZ 2 ================= -->
@@ -862,7 +925,6 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
     <p class="lede">Work the guidebook workflow end to end: pick the SDG, choose one or two competencies, write the CLO, design the activities and output, describe the assignment topic, then let an AI build a complete rubric tied to it. Everything you enter saves on this device; the rubric step works with any AI you already have, by copy and paste.</p>
     <div class="wf-steps" id="wfSteps"></div>
     <div id="buildBody"></div>
-    <p class="noprint" style="margin-top:18px"><button class="btn moss" data-goto="summary">Next: key take-aways &#8594;</button></p>
   </section>
 
   <!-- ================= 10 SUMMARY ================= -->
@@ -906,7 +968,6 @@ textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1p
       <strong>The one rule, one last time.</strong> If a student could score full marks without using the competency, you have not assessed it &#8212; whatever your outline claims. Apply it to your own tasks and criteria before you publish them.
     </div>
 
-    <p class="noprint" style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn moss" data-goto="build">Back to build a module</button><button class="btn ghost" data-goto="intro">Back to the start</button></p>
   </section>
 
 
@@ -1188,6 +1249,24 @@ function paintTicks(){
 /* ============================================================
    NAV
    ============================================================ */
+const ORDER=[["intro","01","Introduction"],["framework","02","The framework"],["understand","03","Understand"],
+ ["lens","04","Your field"],["quiz1","05","Quiz 1"],["pedagogy","06","Pedagogy"],["assess","07","Assess"],
+ ["quiz2","08","Quiz 2"],["build","09","Build a module"],["summary","10","Summary"]];
+function goView(v){ show(v); if(v==="lens")renderLens(); if(v==="build")renderBuild(); }
+function buildPagers(){
+  ORDER.forEach((cur,i)=>{
+    const sec=document.getElementById("view-"+cur[0]); if(!sec)return;
+    const prev=ORDER[i-1], next=ORDER[i+1];
+    const d=document.createElement("div"); d.className="pager noprint";
+    d.innerHTML=(prev?`<button class="btn ghost small" data-page="${prev[0]}">&#8592;<span class="pnum">${prev[1]}</span>${prev[2]}</button>`:"<span></span>")
+      +`<button class="btn ghost small pcover" data-cover="1">&#9634;&nbsp; Cover</button>`
+      +(next?`<button class="btn moss small" data-page="${next[0]}">${next[2]}<span class="pnum">${next[1]}</span>&#8594;</button>`
+             :`<button class="btn ghost small" data-page="intro">&#8635;&nbsp; Back to the start</button>`);
+    sec.appendChild(d);
+  });
+  document.querySelectorAll("[data-page]").forEach(b=>b.addEventListener("click",()=>goView(b.dataset.page)));
+  document.querySelectorAll("[data-cover]").forEach(b=>b.addEventListener("click",openCover));
+}
 const VIEWS=["intro","framework","understand","lens","quiz1","pedagogy","assess","quiz2","build","summary","detail"];
 function show(v){
   VIEWS.forEach(x=>{const el=document.getElementById("view-"+x);if(el)el.classList.toggle("hidden",x!==v);});
@@ -2205,9 +2284,20 @@ function fillRubricFromPaste(){
 /* ============================================================
    BOOT
    ============================================================ */
+function openCover(){const cv=document.getElementById("cover"); if(cv)cv.classList.remove("hidden"); window.scrollTo({top:0,behavior:"instant"});}
+function closeCover(){const cv=document.getElementById("cover"); if(cv)cv.classList.add("hidden"); window.scrollTo({top:0,behavior:"instant"});}
+(function(){
+  const ce=document.getElementById("coverEnter"); if(ce)ce.addEventListener("click",closeCover);
+  const tc=document.getElementById("toCover"); if(tc)tc.addEventListener("click",openCover);
+  document.addEventListener("keydown",e=>{
+    const cv=document.getElementById("cover");
+    if(e.key==="Escape"&&cv&&!cv.classList.contains("hidden"))closeCover();
+  });
+})();
+
 (async function(){
   await loadLocal();
-  renderLedger();fillDisc();fillQuizDiscs();renderPedagogy();renderRubricPicker();renderBuild();
+  renderLedger();fillDisc();fillQuizDiscs();renderPedagogy();renderRubricPicker();renderBuild();buildPagers();
   document.getElementById("railDisc").textContent=state.disc||"not set";
   paintTicks();
   show("intro");
