@@ -273,6 +273,7 @@ summary{cursor:pointer;font-size:14.4px;color:var(--moss);font-weight:500}
 textarea.cloin{width:100%;font:inherit;font-size:14px;padding:9px 11px;border:1px solid var(--line);border-radius:6px;min-height:56px;resize:vertical;line-height:1.45;color:var(--ink)}
 .verbhint{font-size:12px;color:var(--ink-soft);margin-top:6px}
 .verbhint b{color:var(--moss);font-family:"IBM Plex Mono",monospace;font-weight:600}
+.brieftitle{font-family:"Archivo",sans-serif;font-weight:600;font-size:16.5px;letter-spacing:-0.01em;margin-top:6px;line-height:1.25}
 .alignprev{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px 22px;margin-top:8px}
 .tbl.aligntbl{font-size:13px}
 .tbl.aligntbl td:first-child{width:auto}
@@ -1827,9 +1828,9 @@ function renderBuild(){
     const pedReady=b.comps.every(k=>b.activity[k]);
     h+=`<div class="stepcard${step7ok?' ok':''}">
       <div class="stephead"><span class="stepnum">7</span><h3>9.7 &#183; Design the assignment</h3></div>
-      <div class="stepsub">Name the topic you already teach, then describe the task students will do to demonstrate ${listNames(b.comps)}. Write it yourself, or let an AI draft it from your choices and edit what comes back.</div>
+      <div class="stepsub">Name the assignment topic, then describe the task students will do to demonstrate ${listNames(b.comps)}. Write it yourself, or let an AI draft it from your choices and edit what comes back.</div>
       <div style="margin-left:36px">
-        <label class="fl">Topic you already teach <span class="hint">&#8212; the content this assignment sits on</span></label>
+        <label class="fl">Assignment Topic <span class="hint">&#8212; the course content this assignment sits on</span></label>
         <input type="text" id="bTopic" placeholder="e.g. Water allocation in an urban catchment" value="${(b.topic||'').replace(/"/g,'&quot;')}">
       </div>
       <div style="margin-left:36px;margin-top:14px" class="noprint">
@@ -1849,7 +1850,7 @@ function renderBuild(){
         </div>
       </div>
       <div style="margin-left:36px;margin-top:4px">
-        <label class="fl">Assignment topic and task <span class="hint">&#8212; the situation and the individual output</span></label>
+        <label class="fl">Assignment brief and task <span class="hint">&#8212; the situation and the individual output</span></label>
         <textarea class="cloin" id="bAssignText" style="min-height:110px" placeholder="e.g. Students receive a real catchment dataset and a drought scenario. Individually, they produce an annotated allocation map (Part A) and a two-page justification memo (Part B) defending who gets water and why.">${(b.assignment||'').replace(/</g,'&lt;')}</textarea>
         <div class="verbhint">Make students USE the competencies to succeed, not describe them. Attach individual evidence where any part is group work, so the mark is attributable.</div>
       </div>`;
@@ -1937,7 +1938,7 @@ function renderAlignPreview(){
     <h3 style="margin:12px 0 4px">${b.course||'Your course'}${b.cluster?' &#183; '+b.cluster:''}</h3>
     <p style="font-size:13.5px;color:var(--ink-soft)">Only the CLO is directly assessed; every other column is a claim traceable through it.</p>
     ${(b.topic||'').trim()?`<div style="margin:14px 0 0"><div class="mono" style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss)">Topic</div><p style="font-size:14px;margin-top:4px">${esc(b.topic)}</p></div>`:''}
-    ${(b.assignment||'').trim()?`<div style="margin:10px 0 0"><div class="mono" style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss)">Assignment topic</div><p style="font-size:14px;margin-top:4px;white-space:pre-wrap">${esc(b.assignment)}</p></div>`:''}
+    ${(b.assignment||'').trim()?`<div style="margin:16px 0 0"><div class="mono" style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss)">Assignment</div>${briefHTML(b.assignment)}</div>`:''}
     ${n>=1?`<div style="overflow-x:auto;margin-top:14px"><table class="tbl aligntbl"><thead><tr>
       <th style="min-width:150px">CLO</th><th style="min-width:64px">SDG</th><th style="min-width:120px">ESDC</th>
       <th style="min-width:130px">Pedagogy</th><th style="min-width:190px">Learning activity</th>
@@ -2084,7 +2085,7 @@ function assignmentPrompt(b){
 "Course: "+(b.course||"(unnamed)"),
 "Discipline cluster: "+(b.cluster||"(none)"),
 "Primary SDG: "+(b.sdg?("SDG "+b.sdg):"(none)"),
-"Topic the lecturer already teaches: "+((b.topic||"").trim()||"(not stated)"),
+"Assignment topic: "+((b.topic||"").trim()||"(not stated)"),
 ""];
   if(oneClo){ L.push("One CLO carrying "+(b.comps.length===2?"both":"all "+b.comps.length)+" competencies: "+(b.cloOne||"(not written)")); L.push(""); }
   b.comps.forEach((k,ci)=>{
@@ -2109,10 +2110,10 @@ function assignmentPrompt(b){
 "Write plainly, in one or two sentences per field, no em dashes.",
 "",
 'Return ONLY valid JSON, no preamble and no markdown fences, in exactly this shape:',
-'{"title":"","scenario":"","student_task":["",""],"deliverables":["",""],"individual_evidence":"","group_element":"","conditions":"","competency_use":['
+'{"title":"","scenario":"","student_task":["",""],"deliverables":["",""],"individual_evidence":"","group_element":"","weightage":"","competency_use":['
  + b.comps.map(k=>'{"competency":"'+byKey(k).name+'","how":""}').join(",") + ']}',
 "",
-"Field notes: scenario is the situation students are given. student_task is what each student does, in order. deliverables are the parts they hand in. individual_evidence is what is marked for one named student. group_element is any group work, or \"none\". conditions covers weighting, length and timing. competency_use says, for each competency, what in the task forces the student to use it.");
+"Field notes: scenario is the situation students are given. student_task is what each student does, in order. deliverables are the parts they hand in. individual_evidence is what is marked for one named student. group_element is any group work, or \"none\". weightage is the percentage of the course mark, with length and timing. competency_use says, for each competency, what in the task forces the student to use it.");
   return L.join("\n");
 }
 function briefToText(j){
@@ -2120,13 +2121,55 @@ function briefToText(j){
   const S=v=>(typeof v==="string"?v.trim():"");
   const L=[];
   if(S(j.title))L.push(S(j.title).toUpperCase());
-  if(S(j.scenario))L.push(S(j.scenario));
-  const t=arr(j.student_task); if(t.length){L.push("");L.push("What each student does:");t.forEach(x=>L.push("- "+S(x)));}
+  if(S(j.scenario)){L.push("");L.push("Scenario: "+S(j.scenario));}
+  const t=arr(j.student_task); if(t.length){L.push("");L.push("Student activity:");t.forEach(x=>L.push("- "+S(x)));}
   const d=arr(j.deliverables); if(d.length){L.push("");L.push("Deliverables:");d.forEach(x=>L.push("- "+S(x)));}
   if(S(j.individual_evidence)){L.push("");L.push("Individual evidence: "+S(j.individual_evidence));}
-  const g=S(j.group_element); if(g&&g.toLowerCase()!=="none")L.push("Group element: "+g);
-  if(S(j.conditions))L.push("Conditions: "+S(j.conditions));
+  const g=S(j.group_element); if(g&&g.toLowerCase()!=="none"){L.push("");L.push("Group element: "+g);}
+  const w=S(j.weightage)||S(j.conditions); if(w){L.push("");L.push("Weightage: "+w);}
   return L.join("\n").trim();
+}
+/* Render the brief as labelled rows. Older briefs used different wording, so
+   legacy labels are normalised here; anything written by hand without labels
+   falls back to plain text, so nothing is lost. */
+const BRIEF_ALIAS={
+  "what each student does":"Student activity",
+  "what students do":"Student activity",
+  "student task":"Student activity",
+  "student tasks":"Student activity",
+  "conditions":"Weightage",
+  "weighting":"Weightage",
+  "assessment conditions":"Weightage"
+};
+function briefLabel(s){
+  const k=String(s||"").trim().toLowerCase();
+  return BRIEF_ALIAS[k]||String(s||"").trim();
+}
+function briefHTML(text){
+  const t=String(text||"").trim(); if(!t)return "";
+  const E=s=>String(s||"").replace(/</g,"&lt;");
+  const LBL=/^([A-Za-z][A-Za-z /&-]{2,28}):\s*(.*)$/;
+  const head=[], rows=[]; let cur=null;
+  t.split(/\r?\n/).forEach(ln=>{
+    const s=ln.trim(); if(!s)return;
+    const m=s.charAt(0)==="-"?null:s.match(LBL);
+    if(m){cur={label:briefLabel(m[1]),body:m[2]?[m[2]]:[]};rows.push(cur);return;}
+    if(cur)cur.body.push(s); else head.push(s);
+  });
+  if(!rows.length)return `<p style="font-size:14px;margin-top:4px;white-space:pre-wrap">${E(t)}</p>`;
+  // first unlabelled line is the title; anything else above the first label is the scenario
+  const title=head.length?head[0]:"";
+  const lead=head.slice(1).join(" ").trim();
+  if(lead)rows.unshift({label:"Scenario",body:[lead]});
+  const body=r=>{
+    const b=r.body.filter(Boolean);
+    if(b.length&&b.every(x=>x.charAt(0)==="-"))
+      return `<ul style="margin:0;padding-left:17px">${b.map(x=>`<li>${E(x.replace(/^-\s*/,""))}</li>`).join("")}</ul>`;
+    return b.map(x=>`<p style="margin:0 0 4px">${E(x.replace(/^-\s*/,""))}</p>`).join("");
+  };
+  return (title?`<div class="brieftitle">${E(title)}</div>`:"")
+    +`<table class="tbl" style="margin-top:8px"><tbody>${rows.map(r=>
+      `<tr><td class="k">${E(r.label)}</td><td>${body(r)}</td></tr>`).join("")}</tbody></table>`;
 }
 function extractBriefJSON(text){
   const t=(text||"").replace(/```json/gi,"").replace(/```/g,"");
@@ -2144,7 +2187,7 @@ function copyAssignPrompt(){
   const b=B(); const st=document.getElementById("aiAssignStatus");
   const set=(m,err)=>{if(st)st.innerHTML=err?'<span class="err">'+m+'</span>':m;};
   if(b.comps.length<1){set("Select your competencies first (step 3).",true);return;}
-  if(!(b.topic||"").trim()){set("Name the topic you already teach first, in the field above.",true);return;}
+  if(!(b.topic||"").trim()){set("Name the assignment topic first, in the field above.",true);return;}
   if(!b.comps.every(k=>b.activity[k])){set("Choose a pedagogy for every competency in step 5 first \u2014 the prompt is built around it.",true);return;}
   copyTextTo(assignmentPrompt(b),st,"Prompt copied. Paste it into any AI, then paste its whole reply into the box below and press Fill.");
 }
@@ -2199,8 +2242,14 @@ function rubricPrompt(b){
     L.push("");
   });
   L.push(
+"ALIGNMENT REQUIREMENT. Every descriptor you write, at all four levels, must be anchored to the CLO and the topic above.",
+"- Level 4 describes work that fully meets what the CLO asks for, on this topic. Levels 3, 2 and 1 describe the same demand met less and less well.",
+"- Use the subject matter of the topic and the named deliverable in the wording, so a reader can tell which course this rubric belongs to.",
+"- Do not write generic descriptors that would fit any course or any assignment. If a descriptor could be moved to another subject unchanged, rewrite it.",
+"- Keep the CLO verb in view: what the CLO asks the student to do is what levels 1 to 4 measure more or less well.",
+"",
 "For EACH criterion write all four level descriptors (1 Limited, 2 Developing, 3 Proficient, 4 Exemplary) that:",
-"- describe what the student's actual work ON THIS ASSIGNMENT looks like at each level",
+"- describe what the student's actual work ON THIS ASSIGNMENT, for THIS CLO and THIS topic, looks like at each level",
 "- differentiate by QUALITY, never by counting (do not use 'three factors' vs 'one factor')",
 "- avoid bare adjectives (no 'excellent / good / fair / poor')",
 "- follow the gradient: lists, then connects, then justifies, then treats its own choice as a choice (for the values competencies: asserts, reasons, applies a principle, withstands challenge)",
